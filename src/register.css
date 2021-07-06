@@ -1,0 +1,52 @@
+
+.Register{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 150vh;
+    
+}
+
+
+.Register_btn{
+    background: #2fb93b;
+    border-radius: 2px;
+    width: 50%;
+    height: 30px;
+    border: 1px solid;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.Register_container{
+    width: 400px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 5px solid rgb(112, 88, 248);
+    background-color:rgb(194, 189, 189);
+    padding: 20px;
+    
+}
+.Register_container > h1 {
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.regstyle{
+    margin-right: 30px;
+}
+.Register_container >form >h5{
+    margin-bottom: 25px;
+    margin-left: 20px;
+}
+.Register_container > form >input{
+    height: 30px;
+    margin-bottom: 10px;
+    background-color: white;
+    width:70%;
+    margin-left: 30px;
+    justify-content: center;
+    
+}

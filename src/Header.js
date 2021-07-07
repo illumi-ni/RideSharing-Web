@@ -11,8 +11,8 @@ class Header extends Component{
         
         </Link>
             <div className ="header_search">
-                    {/* <input className="header_searchInput" type="text"/>
-                    <SearchIcon className="header_searchIcon"/> */}
+                    <input className="header_searchInput" type="text"/>
+                    {/* <SearchIcon className="header_searchIcon"/> */}
                     </div>
                     <div className="header_nav">
                     

@@ -2,7 +2,9 @@ import React from "react"
 import {BrowserRouter as Router, Switch, Route}
 from "react-router-dom";
 import Register from "./register"
+import Login from "./login";
 import './App.css';
+
 
 function App() {
   return (
@@ -11,6 +13,9 @@ function App() {
         <Switch>
           <Route path ="/register">
             <Register/>
+          </Route>
+          <Route path ="/login">
+            <Login/>
           </Route>
       </Switch>
       </div>

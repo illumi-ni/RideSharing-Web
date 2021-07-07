@@ -5,6 +5,7 @@ import Register from "./register"
 import Login from "./login";
 import './App.css';
 import Header from "./Header";
+import Driverregister from "./Driverregister";
 
 
 
@@ -18,7 +19,12 @@ function App() {
             <Register/>
           </Route>
           <Route path ="/login">
+          <Header/>
             <Login/>
+          </Route>
+          <Route path ="/Driverregister">
+          <Header/>
+            <Driverregister/>
           </Route>
       </Switch>
       </div>

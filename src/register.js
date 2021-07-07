@@ -15,8 +15,8 @@ class register extends Component{
                 <h1>Register</h1>
                 <form>
                     
-                    <h5 for ="username"><label className="regstyle">Username</label>
-                    <input type="text" placeholder="Username...... " name="username" id="username" required/>
+                    <h5 for ="fullname"><label className="regstyle">Fullname</label>
+                    <input type="text" placeholder="Fullname...... " name="fullname" id="fullname" required/>
                     </h5>
                     <h5 for="email"><label className="regstyle">Email</label>
                     <input type="text" placeholder="Email........" name="email" id="email"  required/>

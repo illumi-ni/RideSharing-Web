@@ -49,10 +49,10 @@ class register extends Component {
                         <form>
 
                             <h5 for="fullname"><label className="regstyle">Fullname</label>
-                                <input type="text" placeholder="Fullname...... " name="fullname" id="fullname" value={this.state.fullname} onChange={(event) => { this.setState({ fullname: event.target.value }) }} required />
+                                <input type="text" placeholder="Fullname...... " name="fullname"  value={this.state.fullname} onChange={(event) => { this.setState({ fullname: event.target.value }) }} required />
                             </h5>
                             <h5 for="email"><label className="regstyle">Email</label>
-                                <input type="text" placeholder="Email........" name="email" id="email" value={this.state.email} onChange={(event) => { this.setState({ email: event.target.value }) }} required />
+                                <input type="text" placeholder="Email........" name="email" value={this.state.email} onChange={(event) => { this.setState({ email: event.target.value }) }} required />
                             </h5>
                             <h5 for="gender"><label className="regstyle">Gender</label>
                                 <input type="radio" value="Male" name="gender" checked={this.state.gender === "Male"}
@@ -64,7 +64,7 @@ class register extends Component {
 
                             </h5>
                             <h5 for="context"><label className="regstyle">Contact</label>
-                                <input type="text" placeholder="Contact......." name="contact" id="contact" value={this.state.contact} onChange={(event) => { this.setState({ contact: event.target.value }) }} required />
+                                <input type="text" placeholder="Contact......." name="contact"  value={this.state.contact} onChange={(event) => { this.setState({ contact: event.target.value }) }} required />
                             </h5>
                             <button type="submit" className='Register_btn' onClick={this.sendUserData}>Register</button>
                         </form>

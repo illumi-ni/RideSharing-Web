@@ -18,6 +18,15 @@
     margin-top: 10px;
     margin-bottom: 30px;
 }
+.Login_btn{
+    background: #9ec73f;
+    border-radius: 2px;
+    width: 50%;
+    height: 30px;
+    border: 1px solid;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
 .Register_container{
     width: 300px;
     height: fit-content;

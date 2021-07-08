@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
+import './register.css';
+import background from "./background.jpg"
 
 class login extends Component {
     render() {
         return (
+            <div style={{ backgroundImage: `url(${background})`,backgroundRepeat: 'no-repeat'   }}>
             <div className="Register">
                 <div className='Register_container'>
                     <h1>Login</h1>
@@ -17,6 +20,7 @@ class login extends Component {
                     </form>
 
                 </div>
+            </div>
             </div>
         )
     }

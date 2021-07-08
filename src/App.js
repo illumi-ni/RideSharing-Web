@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Switch, Route}
 from "react-router-dom";
 import Register from "./register"
 import Login from "./login";
+import CustomerLogin from "./customerlogin";
 import './App.css';
 import Header from "./Header";
 import Driverregister from "./Driverregister";
@@ -25,6 +26,10 @@ function App() {
           <Route path ="/Driverregister">
           <Header/>
             <Driverregister/>
+          </Route>
+          <Route path ="/customerlogin">
+          <Header/>
+            <CustomerLogin/>
           </Route>
       </Switch>
       </div>

@@ -20,7 +20,7 @@ class login extends Component {
     }
     submitLogin = (e)=>{
         e.preventDefault();
-        axios.post("http://localhost:90/user/login", this.state)
+        axios.post("http://localhost:90/admin/login", this.state)
         .then((response)=>{
             console.log(response);
             localStorage.setItem('token',response.data.token)
@@ -41,12 +41,12 @@ class login extends Component {
                     <h1>Login</h1>
                     <form>
                         <h5 for="email"><label className="regstyle">Username</label>
-                            <input type="text" placeholder="Username" name="username" id="username" required />
+                            <input type="text" placeholder="Username" name="username" id="username" value={this.state.username} onChange={this.changeHandler}required />
                         </h5>
                         <h5 for="password"><label className="regstyle">Password</label>
-                            <input type="text" placeholder="Password" name="password" id="password" required />
+                            <input type="text" placeholder="Password" name="password" id="password" value={this.state.password} onChange={this.changeHandler}required />
                         </h5>
-                        <button type="submit" className='Login_btn' onClick={this.sendUserData}>Login</button>
+                        <button type="submit" className='Login_btn' onClick={this.submitLogin}>Login</button>
                     </form>
 
                 </div>

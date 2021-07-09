@@ -20,7 +20,7 @@ function App() {
              <Header/>
             <Register/>
           </Route>
-          <Route path ="/Adminlogin">
+          <Route path ="/adminlogin">
           <Header/>
             <Login/>
           </Route>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './register.css';
 import background from "./background.jpg"
 
+
 class login extends Component {
     render() {
         return (

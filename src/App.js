@@ -4,6 +4,7 @@ from "react-router-dom";
 import Register from "./register"
 import Login from "./login";
 import CustomerLogin from "./customerlogin";
+import Customer from "./customer";
 import './App.css';
 import Header from "./Header";
 import Driverregister from "./Driverregister";
@@ -30,6 +31,10 @@ function App() {
           <Route path ="/customerlogin">
           <Header/>
             <CustomerLogin/>
+          </Route>
+          <Route path ="/customer">
+          <Header/>
+            <Customer/>
           </Route>
       </Switch>
       </div>

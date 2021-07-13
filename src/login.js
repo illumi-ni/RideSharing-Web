@@ -64,26 +64,32 @@ class login extends Component {
             // </div>
             
 
- <div class="container" id="container">
-		<div class="form-container log-in-container">
-			<form >
-				<h1>Admin Login</h1>
-                    
-                <input type="text" placeholder="Username" name="username" id="username" value={this.state.username} onChange={this.changeHandler}required />
-                
-                <input type="text" placeholder="Password" name="password" id="password" value={this.state.password} onChange={this.changeHandler}required />
-                
-                <button type="submit" className='button' onClick={this.submitLogin}>Login</button>
-			</form>
-		</div>
-		<div class="overlay-container">
-			<div class="overlay">
-				<div class="overlay-panel overlay-right">
-					
-				</div>
-			</div>
-		</div>
-	</div> 
+        <div className="container" id="container">
+            <div className="Admin-log row">
+                <div className="col-md-2"></div>
+                <div className="Admin col-md-8">
+                    <div className="form-container log-in-container">
+                        <form >
+                            <h1>Admin Login</h1>
+                                
+                            <input type="text" placeholder="Username" name="username" id="username" value={this.state.username} onChange={this.changeHandler}required />
+                            
+                            <input type="text" placeholder="Password" name="password" id="password" value={this.state.password} onChange={this.changeHandler}required />
+                            
+                            <button type="submit" className='button' onClick={this.submitLogin}>Login</button>
+                        </form>
+                    </div>
+                    <div class="overlay-container">
+                        <div class="overlay">
+                            <div class="overlay-panel overlay-right">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-md-2"></div>
+            </div>
+        </div> 
         )
     }
 }

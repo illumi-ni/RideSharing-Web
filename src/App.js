@@ -10,7 +10,7 @@ import Header from "./Header";
 import Driverregister from "./Driverregister";
 import Home from "./Home";
 import Booking from "./booking";
-
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 
 

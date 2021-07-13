@@ -4,8 +4,8 @@
 
 .form-container h1 {
 	font-weight: bold;
-	
     margin-bottom: 25px;
+	
 }
 
 p {
@@ -40,7 +40,7 @@ button {
 }
 
 form {
-	background-color: rgb(228, 113, 78);
+	
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -58,25 +58,32 @@ input {
 	width: 100%;
 }
 
-.container {
+.Admin {
 	background-color: rgb(198, 235, 114);
 	border-radius: 10px;
   	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 	position: relative;
 	overflow: hidden;
-	width: 768px;
+	width: 100%;
 	max-width: 100%;
 	min-height: 480px;
-    margin-left: 300px;
-    margin-top: 80px;
-   
+    /* margin-left: 300px; */
+    /* margin-top: 80px;  */
+	float: center;
+	
+}
+
+.Admin-log {
+	/* margin-top: 80px;  */
+	padding-top: 80px;
 }
 
 .form-container {
 	position: absolute;
 	top: 0;
 	height: 100%;
-    background-color: rgb(198, 235, 114);
+	background-color: rgb(228, 113, 78);
+	
     
 }
 .form-container input{
@@ -86,7 +93,7 @@ input {
 .log-in-container {
 	left: 0;
 	width: 50%;
-	z-index: 2;
+	z-index: 1;
 }
 
 
@@ -127,6 +134,7 @@ input {
 	height: 100%;
 	width: 50%;
     background-image: url("Tesla.jpg");
+	background-repeat: no-repeat;
 }
 
 

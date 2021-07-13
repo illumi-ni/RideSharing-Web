@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './register.css';
 import bryte from "./bryte.jpg";
 import axios from 'axios';
-import { Link, Redirect } from 'react-router-dom';
+import {Redirect } from 'react-router-dom';
 
 class customer extends Component {
     constructor() {

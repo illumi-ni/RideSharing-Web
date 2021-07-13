@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './register.css';
 import carrent from "./carrent.jpg"
 import axios from 'axios'
-import { Link, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 class customerlogin extends Component {
     state = {

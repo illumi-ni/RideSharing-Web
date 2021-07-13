@@ -9,6 +9,7 @@ import './App.css';
 import Header from "./Header";
 import Driverregister from "./Driverregister";
 import Home from "./Home";
+import Booking from "./booking";
 
 
 
@@ -37,8 +38,9 @@ function App() {
           <Header/>
             <Customer/>
           </Route>
-          <Route path ="/">
-          <Header/>
+          <Route path ="/booking">
+          
+          <Booking/>
             <Home/>
           </Route>
       </Switch>

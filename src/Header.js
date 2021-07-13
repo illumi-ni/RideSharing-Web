@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Header.css';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 // import { SearchIcon } from "@material-ui/icons/Search"
 
 class Header extends Component{

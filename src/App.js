@@ -13,6 +13,8 @@ import Booking from "./booking";
 
 
 
+
+
 function App() {
   return (
     <Router>
@@ -23,7 +25,7 @@ function App() {
             <Register/>
           </Route>
           <Route path ="/adminlogin">
-          <Header/>
+          
             <Login/>
           </Route>
           <Route path ="/Driverregister">
@@ -41,8 +43,9 @@ function App() {
           <Route path ="/booking">
           
           <Booking/>
-            <Home/>
           </Route>
+          
+          <Home/>
       </Switch>
       </div>
     </Router>

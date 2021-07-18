@@ -3,6 +3,7 @@ import './register.css';
 // import car from './car.jpg'
 import axios from 'axios';
 import carrent from "./carrent.jpg"
+import { Link } from 'react-router-dom';
 
 class register extends Component {
     constructor() {
@@ -51,9 +52,11 @@ class register extends Component {
 				<h2>INFOMATION</h2>
 				<p class="text-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et molestie ac feugiat sed. Diam volutpat commodo.</p>
 				<p class="text-2"><span>Eu ultrices:</span> Vitae auctor eu augue ut. Malesuada nunc vel risus commodo viverra. Praesent elementum facilisis leo vel.</p>
-				<div class="form-left-last">
+                <Link to ="/customer">
+                <div class="form-left-last">
 					<input type="submit" name="account" class="account" value="Have An Account"/>
 				</div>
+                </Link>
                 </div>
 			</div>
 			<form class="form-detail" action="#" method="post" id="myform">

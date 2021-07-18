@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './register.css';
+import './CustomerLogin.css'
 import carrent from "./carrent.jpg"
 import axios from 'axios'
 import { Redirect } from 'react-router-dom';
@@ -32,24 +32,34 @@ class customerlogin extends Component {
 
         }
         return (
-            <div style={{ backgroundImage: `url(${carrent})`,backgroundRepeat: 'no-repeat' , width :'100%'  }}>
-            <div className="Register">
-                <div className='Register_container'>
-                    <h1>Customer Login</h1>
-                    <form>
-                        <h5> Please enter the OTP that we have send in your mobile number. </h5>
-                        
-                        <h5 for="password"><label className="regstyle">OTP</label>
-                            <input type="text" placeholder="OTP...." value={this.state.otp} 
-                            onChange={(event) => { this.setState({ otp: event.target.value }) }}
+            <div className="Customer">
+            <div className="CusLog">
+            <div className=" row">
+              <div className=" col-sm-4"></div>
+              <div className="  col-sm-4">
+                  <div className="CusForm">
+                  <form>
+                      <h1>Customer Login</h1>
+                      <h5 for="password"><label className="regstyle">OTP</label>
+                          <input type="text" placeholder="OTP...." value={this.state.otp}  
+                          onChange={(event) => { this.setState({ otp: event.target.value }) }}
                              name="otp" id="otp"required />
-                        </h5>
+                        </h5> 
+                      
                         <button type="submit" className='Login_btn' onClick={this.submitLogin}>Login</button>
-                    </form>
+                   </form>
+                  </div>
+              </div>
+              <div className=" col-sm-4"></div>
+            </div>
+          </div>
+        </div>
+   
+	
 
-                </div>
-            </div>
-            </div>
+        
+      
+           
         )
     }
 }

@@ -48,6 +48,10 @@ function App() {
           <Header/>
           <Booking/>
           </Route>
+          <Route path ="/">
+          <Header/>
+        
+          </Route>
           <Route path ="/test">
           
           <Test/>

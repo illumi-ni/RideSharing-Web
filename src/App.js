@@ -42,7 +42,7 @@ function App() {
             <Customer/>
           </Route>
           <Route path ="/booking">
-          
+          <Header/>
           <Booking/>
           </Route>
           <Route path ="/test">

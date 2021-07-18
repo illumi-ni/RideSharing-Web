@@ -32,7 +32,7 @@ class customerlogin extends Component {
 
         }
         return (
-            <div style={{ backgroundImage: `url(${carrent})`,backgroundRepeat: 'no-repeat'   }}>
+            <div style={{ backgroundImage: `url(${carrent})`,backgroundRepeat: 'no-repeat' , width :'100%'  }}>
             <div className="Register">
                 <div className='Register_container'>
                     <h1>Customer Login</h1>

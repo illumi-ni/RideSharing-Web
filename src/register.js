@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './register.css';
 // import car from './car.jpg'
 import axios from 'axios';
+import carrent from "./carrent.jpg"
 
 class register extends Component {
     constructor() {
@@ -40,78 +41,60 @@ class register extends Component {
 
     render() {
         return (
-            // <div style={{ backgroundImage: `url(${car})`, backgroundRepeat: 'no-repeat' }}>
 
-/* <div className="container" id="container">
 
-                <div className="Register row">
-                <div className="col-md-3"></div>
-                    <div className="Register_container col-md-8">
-
-                        <h1>Register</h1>
-                        <form>
-
-                            <h5 for="fullname"><label className="regstyle">Fullname</label>
-                                <input type="text" placeholder="Fullname...... " name="fullname"  value={this.state.fullname} onChange={(event) => { this.setState({ fullname: event.target.value }) }} required />
-                            </h5>
-                            <h5 for="email"><label className="regstyle">Email</label>
-                                <input type="text" placeholder="Email........" name="email" value={this.state.email} onChange={(event) => { this.setState({ email: event.target.value }) }} required />
-                            </h5>
-                            <h5 for="gender"><label className="regstyle">Gender</label>
-                                <input type="radio" value="Male" name="gender" checked={this.state.gender === "Male"}
+            <div class="page-content">
+		<div class="form-v4-content">
+        <div style={{ backgroundImage: `url(${carrent})`,backgroundRepeat: 'no-repeat' , width :'100%'  }}>
+			<div class="form-left">
+         
+				<h2>INFOMATION</h2>
+				<p class="text-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et molestie ac feugiat sed. Diam volutpat commodo.</p>
+				<p class="text-2"><span>Eu ultrices:</span> Vitae auctor eu augue ut. Malesuada nunc vel risus commodo viverra. Praesent elementum facilisis leo vel.</p>
+				<div class="form-left-last">
+					<input type="submit" name="account" class="account" value="Have An Account"/>
+				</div>
+                </div>
+			</div>
+			<form class="form-detail" action="#" method="post" id="myform">
+				<h2>REGISTER FORM</h2>
+			
+					<div class="form-row">
+						<label for="first_name">Fullname</label>
+                        <input type="text" placeholder="Fullname" name="name" value={this.state.fullname} onChange={(event) => { this.setState({ fullname: event.target.value }) }} />
+					</div>
+					
+				
+				<div class="form-row">
+					<label for="your_email">Your Email</label>
+                    <input type="text" placeholder="Email" name="email" value={this.state.email} onChange={(event) => { this.setState({ email: event.target.value }) }} />
+				</div>
+				
+					<div class="form-row ">
+						<label for="gender">Gender</label>
+                        <input type="radio" value="Male" name="gender" checked={this.state.gender === "Male"}
                                     onChange={this.onValueChange} /> Male
                                 <input type="radio" value="Female" name="gender" checked={this.state.gender === "Female"}
                                     onChange={this.onValueChange} /> Female
                                 <input type="radio" value="Other" name="gender" checked={this.state.gender === "Other"}
                                     onChange={this.onValueChange} /> Other
+					</div>
+			
+                <div class="form-row">
+					<label for="your_contact">Your Contact</label>
+                    <input type="text" placeholder="Contact" name="contact"  value={this.state.contact} onChange={(event) => { this.setState({ contact: event.target.value }) }}/>
+				</div>
+				
+				<div class="form-row-last">
+					<input type="submit" name="register" class="register" value="Register"onClick={this.sendUserData}/>
+				</div>
+			</form>
+		</div>
+	</div>
+    
 
-                            </h5>
-                            <h5 for="context"><label className="regstyle">Contact</label>
-                                <input type="text" placeholder="Contact......." name="contact"  value={this.state.contact} onChange={(event) => { this.setState({ contact: event.target.value }) }} required />
-                            </h5>
-                            <button type="submit" className='Register_btn' onClick={this.sendUserData}>Register</button>
-                        </form>
-                    </div>
-                </div>
-            </div> */
-
-            <div className="container" id="container">
-
-                <div className="Register row">
-                {/* <div style={{ backgroundImage: `url(${car})`, backgroundRepeat: 'no-repeat' , width:"100%"}}> */}
-                <div className="col-md-3"></div>
-                    <div className="Register_container col-md-6">
-
-                        <h1>Register</h1>
-                        <form>
-
-                            <h5 for="fullname"><label className="regstyle">Fullname</label>
-                                <input type="text" placeholder="Fullname...... " name="fullname"  value={this.state.fullname} onChange={(event) => { this.setState({ fullname: event.target.value }) }} required />
-                            </h5>
-                            <h5 for="email"><label className="regstyle">Email</label>
-                                <input type="text" placeholder="Email........" name="email" value={this.state.email} onChange={(event) => { this.setState({ email: event.target.value }) }} required />
-                            </h5>
-                            <div className="gender">
-                            <h5 for="gender"><label className="regstyle gender">Gender</label>
-                                <input type="radio" value="Male" name="gender" checked={this.state.gender === "Male"}
-                                    onChange={this.onValueChange} /> Male
-                                <input type="radio" value="Female" name="gender" checked={this.state.gender === "Female"}
-                                    onChange={this.onValueChange} /> Female
-                                <input type="radio" value="Other" name="gender" checked={this.state.gender === "Other"}
-                                    onChange={this.onValueChange} /> Other
-
-                            </h5>
-                            </div>
-                            <h5 for="context"><label className="regstyle">Contact</label>
-                                <input type="text" placeholder="Contact......." name="contact"  value={this.state.contact} onChange={(event) => { this.setState({ contact: event.target.value }) }} required />
-                            </h5>
-                            <button type="submit" className='Register_btn' onClick={this.sendUserData}>Register</button>
-                        </form>
-                    </div>
-                    <div className="col-md-3"></div>
-                    </div>
-                </div>
-            // </div>
+    
+           
         )
     }
 }

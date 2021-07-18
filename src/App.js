@@ -10,6 +10,7 @@ import Header from "./Header";
 import Driverregister from "./Driverregister";
 import Home from "./Home";
 import Booking from "./booking";
+import Test from "./test";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 
@@ -21,7 +22,7 @@ function App() {
       <div className="App">
         <Switch>
           <Route path ="/register">
-             <Header/>
+             
             <Register/>
           </Route>
           <Route path ="/adminlogin">
@@ -37,12 +38,16 @@ function App() {
             <CustomerLogin/>
           </Route>
           <Route path ="/customer">
-          <Header/>
+          
             <Customer/>
           </Route>
           <Route path ="/booking">
           
           <Booking/>
+          </Route>
+          <Route path ="/test">
+          
+          <Test/>
           </Route>
           
           <Home/>

@@ -13,7 +13,7 @@ class booking extends Component {
                     {/* <div style={{ backgroundImage: `url(${car})`, backgroundRepeat: 'no-repeat' }}></div>
                             {/* <h1>My First Bootstrap Page</h1>
                             <p>Resize this responsive page to see the effect!</p> */}
-                    <img src='./car.jpg' alt='car' className='img-fluid' style={{width:"100%"}}/>
+                    <img src='./hire.jpg' alt='car' className='img-fluid' style={{width:"100%"}}/>
                 </div>
                 
                 <div className=" jumbotron booking">
@@ -36,15 +36,15 @@ class booking extends Component {
                  </div>
                 <div className="Booking">
                 <div className="row">
-                    <div className=" col-sm-3"></div>
-                    <div className="Booking_container col-sm-6">
+                    <div className="  col-sm-3"></div>
+                    <div className="Booking_container  col-sm-6">
                     <form>
                         <h1>Booking Your Ride</h1>
-                        <h5>Complete your plans today by reserving a ride. Request a ride up to 30 days in advance</h5>
+                        <h4>Complete your plans today by reserving a ride. Request a ride up to 30 days in advance</h4>
                         
 
-                            <h5 for="fullname"><label className="regstyle">Fullname</label>
-                                <input type="text" placeholder="Fullname...... " name="fullname"  required />
+                            <h5 for="fullname"><label className="regstyle ">Fullname</label>
+                                <input type="text"  placeholder="Fullname...... " name="fullname"  required />
                             </h5>
                            
                             <h5 for="context"><label className="regstyle">Contact</label>
@@ -62,7 +62,7 @@ class booking extends Component {
                             <h5 for="context"><label className="regstyle">Time</label>
                                 <input type="time" placeholder="Time......." name="time"   required />
                             </h5>
-                            <button type="submit" className='Register_btn'>Book</button>
+                            <button type="submit" className='Book_btn'>Book</button>
                         </form>
                     </div>
 

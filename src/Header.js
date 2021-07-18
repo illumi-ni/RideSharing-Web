@@ -6,16 +6,15 @@ import './Header.css';
 class Header extends Component{
     render(){  
     return(
-<div className='header'>
+
+        <div className=" header " >
+            
         
-            <div className ="header_search">
-                    <input className="header_searchInput" type="text"/>
-                  
-                    </div>
-                    <div className="header_nav">
+
+                    <div className="header_nav ">
                     
                     
-                    <div className = 'header_option'>
+                    <div className = ' header_option'>
                         <span className='header_optionLineOne'>Hello</span>
                         <span className='header_optionLineTwo'>My Profile</span>
 
@@ -60,8 +59,13 @@ class Header extends Component{
 
                    
                 </div>
-            
+                <div className =" header_search">
+                    <input className="header_searchInput" type="text"/>
+                  
                     </div>
+            
+            </div>
+            
     )
                     }
                 }

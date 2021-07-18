@@ -65,6 +65,7 @@ class login extends Component {
             
 
         <div className="container" id="container">
+            
             <div className="Admin-log row">
                 <div className="col-md-2"></div>
                 <div className="Admin col-md-8">
@@ -89,7 +90,8 @@ class login extends Component {
                 </div>
                 <div className="col-md-2"></div>
             </div>
-        </div> 
+            </div>
+        
         )
     }
 }

@@ -2,7 +2,7 @@
     height: 70px;
     display: flex;
     align-items: center;
-    background-color: black;
+    background-color: rgb(150, 144, 144);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -35,18 +35,20 @@
 .header_option{
     display: flex;
     flex-direction: column;
-    margin-left: 10px;
-    margin-right: 10px;
-    color: white;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: Black;
 }
 .header_optionLineOne{
     font-size: 10px;
 }
 .header_optionLineTwo{
-    font-size: 13px;
-    font-weight: 800;
+    font-size: 15px;
+    font-weight: 500;
+    /* padding: 20px; */
+
 }
-.header_optionCart{
+/* .header_optionCart{
     display: flex;
     align-items: center;
     color: brown;
@@ -54,4 +56,4 @@
 .header_cartCount{
     margin-top: 10px;
     margin-right: 10px;
-}
+} */

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import havana from './havana.jpg'
 import './customer.css';
-import rent from "./rent.jpg"
+// import './CustomerLogin.css'
 import axios from 'axios'
 import { Redirect } from 'react-router-dom';
 
@@ -52,7 +53,8 @@ class customerlogin extends Component {
             // </div>
 
             <div className="container-fluid">
-            <div style={{ backgroundImage: `url(${rent})`,backgroundRepeat: 'no-repeat', width:'100%'  }} className="img-fluid">
+                <div className="jumbotron col-sm-12">
+            <div className="img-fluid" style={{ backgroundImage: `url(${havana})`,backgroundRepeat: 'no-repeat', width:'100%'  }} >
                 
             <div className="Customer">
                 <div className="CusLog">
@@ -79,6 +81,31 @@ class customerlogin extends Component {
             </div>
         </div>
         </div>
+        </div>
+
+        //     <div className="Customer">
+        //     <div className="CusLog">
+        //     <div className=" row">
+        //       <div className=" col-sm-4"></div>
+        //       <div className="  col-sm-4">
+        //           <div className="CusForm">
+        //           <form>
+        //               <h1>Customer Login</h1>
+        //               <h5 for="password"><label className="regstyle">OTP</label>
+        //                   <input type="text" placeholder="OTP...." value={this.state.otp}  
+        //                   onChange={(event) => { this.setState({ otp: event.target.value }) }}
+        //                      name="otp" id="otp"required />
+        //                 </h5> 
+                      
+        //                 <button type="submit" className='Login_btn' onClick={this.submitLogin}>Login</button>
+        //            </form>
+        //           </div>
+        //       </div>
+        //       <div className=" col-sm-4"></div>
+        //     </div>
+        //   </div>
+        // </div>
+
         )
     }
 }

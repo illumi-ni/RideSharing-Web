@@ -105,7 +105,10 @@ SendItems=(e)=>{
                             <h5 for="context"><label className="regstyle">Time</label>
                                 <input type="time" placeholder="Time......." name="time"  value={this.state.time} onChange={this.ChangeItems} required />
                             </h5>
-                            <button type="submit" className='Register_btn'onClick={this.SendItems}>Book</button>
+
+                            <button type="submit" className='Book_btn' onClick={this.SendItems}>Book</button>
+
+                       
 
                         </form>
                     </div>

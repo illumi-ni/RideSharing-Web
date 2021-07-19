@@ -34,7 +34,7 @@ function App() {
             <Driverregister/>
           </Route>
           <Route path ="/customerlogin">
-          <Header/>
+          
             <CustomerLogin/>
           </Route>
           <Route path ="/customer">

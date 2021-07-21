@@ -40,11 +40,33 @@
   
   .navbar li {
     position: relative;
-    margin: 20px;
   }
   
- 
+  .navbar a, .navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 10px 30px;
+    font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #565e49;
+    white-space: nowrap;
+    transition: 0.3s;
   
+  }
+  
+  .navbar a i, .navbar a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+  }
+  
+  .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+    color: #94c045;
+  }
+  
+
   @media (max-width: 1366px) {
     .navbar .dropdown .dropdown ul {
       left: -90%;

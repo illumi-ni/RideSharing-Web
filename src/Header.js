@@ -19,15 +19,28 @@ class Header extends Component{
 
                 <nav id="navbar" class="navbar">
                     <ul>
+                    <Link to ="/">
                     <li>Home</li>
+                    </Link>
+                    <Link to ="/about">
                     <li>About</li> 
+                    </Link>
+                    <Link to ="/service">
                     <li>Services</li>
-                    <li>Portfolio</li>
-                    <li>Booking</li>
+                    </Link>
+                   <Link to ="/portfolio">
+                   <li>Portfolio</li>
+                   </Link>
+                    <Link to = '/booking'>
+                    <li>Booking</li> 
+                    </Link>
+                    <Link to="/contact">
                     <li>Contact</li>
+                    </Link>
+                    
                    
                     </ul>
-                    <i class="bi bi-list mobile-nav-toggle"></i>
+                    {/* <i class="bi bi-list mobile-nav-toggle"></i> */}
                 </nav>
 
                 </div>

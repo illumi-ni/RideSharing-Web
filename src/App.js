@@ -9,6 +9,7 @@ import './App.css';
 import Header from "./Header";
 import Driverregister from "./Driverregister";
 import Home from "./Home";
+import Footer from "./Footer";
 import Booking from "./booking";
 import Test from "./test";
 
@@ -50,14 +51,15 @@ function App() {
           </Route>
           <Route path ="/">
           <Header/>
-        
+          <Home/>
+          <Footer/>
           </Route>
           <Route path ="/test">
           
           <Test/>
           </Route>
           
-          <Home/>
+        
       </Switch>
       </div>
     </Router>

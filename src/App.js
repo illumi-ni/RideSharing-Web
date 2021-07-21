@@ -25,30 +25,37 @@ function App() {
       <div className="App">
         <Switch>
           <Route path ="/register">
-        
             <Register/>
+            <Footer/>
           </Route>
           
           <Route path ="/adminlogin">
-          
             <Login/>
+            <Footer/>
           </Route>
+
           <Route path ="/Driverregister">
           <Header/>
             <Driverregister/>
+            <Footer/>
           </Route>
+
           <Route path ="/customerlogin">
-          
             <CustomerLogin/>
+            <Footer/>
           </Route>
+
           <Route path ="/customer">
-          
             <Customer/>
+            <Footer/>
           </Route>
+
           <Route path ="/booking">
           <Header/>
           <Booking/>
+          <Footer/>
           </Route>
+
           <Route path ="/">
           <Header/>
           <Home/>

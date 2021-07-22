@@ -11,6 +11,7 @@ import Driverregister from "./Driverregister";
 import Home from "./Home";
 import Footer from "./Footer";
 import Booking from "./booking";
+import Contact from "./Contact"
 import Test from "./test";
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
@@ -49,6 +50,11 @@ function App() {
             <Customer/>
             <Footer/>
           </Route>
+          <Route path= "/contact">
+            <Header/>
+            <Contact/>
+            <Footer/>
+          </Route>
 
           <Route path ="/booking">
           <Header/>
@@ -61,6 +67,10 @@ function App() {
           <Home/>
           <Footer/>
           </Route>
+
+
+         
+
           <Route path ="/test">
           
           <Test/>

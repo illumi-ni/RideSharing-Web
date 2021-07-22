@@ -62,9 +62,13 @@ function App() {
           <Route path ="/About">
 
           <Header/>
-
+          
           <About/>
-
+          <Footer/>
+          </Route>
+          
+          <Route path ="/home">
+          <Header/>
           <Home/>
           <Footer/>
 

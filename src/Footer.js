@@ -1,6 +1,7 @@
 import React from 'react'
 import './Footer.css'
 
+import { FaTwitter,FaFacebookSquare,FaInstagramSquare,FaGoogle,FaYoutubeSquare } from 'react-icons/fa';
 function Footer() {
     return (
     <footer id="footer">
@@ -18,11 +19,11 @@ function Footer() {
                 <strong>Email:</strong> ridesharing@email.com<br/>
               </p>
               <div class="social-links mt-3">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                <a href="#" class="twitter"><FaTwitter/></a>
+                <a href="#" class="facebook"><FaFacebookSquare/></a>
+                <a href="#" class="instagram"><FaInstagramSquare/></a>
+                <a href="#" class="google-plus"><FaGoogle/></a>
+                <a href="#" class="youtube"><FaYoutubeSquare/></a>
               </div>
             </div>
           </div>
@@ -79,4 +80,4 @@ function Footer() {
     )
 }
 
-export default Footer
+export default Footer;

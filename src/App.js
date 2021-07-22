@@ -11,14 +11,11 @@ import Driverregister from "./Driverregister";
 import Home from "./Home";
 import Footer from "./Footer";
 import Booking from "./booking";
+import Contact from "./Contact"
 import Test from "./test";
 import About from "./About";
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-
-
-
-
 
 function App() {
   return (
@@ -26,33 +23,45 @@ function App() {
       <div className="App">
         <Switch>
           <Route path ="/register">
-        
             <Register/>
+            <Footer/>
           </Route>
           
           <Route path ="/adminlogin">
-          
             <Login/>
+            <Footer/>
           </Route>
+
           <Route path ="/Driverregister">
           <Header/>
             <Driverregister/>
+            <Footer/>
           </Route>
+
           <Route path ="/customerlogin">
-          
             <CustomerLogin/>
+            <Footer/>
           </Route>
+
           <Route path ="/customer">
-          
             <Customer/>
+            <Footer/>
           </Route>
+          <Route path= "/contact">
+            <Header/>
+            <Contact/>
+            <Footer/>
+          </Route>
+
           <Route path ="/booking">
           <Header/>
           <Booking/>
+          <Footer/>
           </Route>
+
           <Route path ="/About">
+
           <Header/>
-         
 
           <About/>
 
@@ -60,6 +69,10 @@ function App() {
           <Footer/>
 
           </Route>
+
+
+         
+
           <Route path ="/test">
           
           <Test/>
@@ -70,7 +83,7 @@ function App() {
       </div>
     </Router>
    
-  );
+  )
 }
 
 export default App;

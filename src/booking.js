@@ -52,33 +52,22 @@ SendItems=(e)=>{
         return (
             // <div style={{ backgroundImage: `url(${car})`, backgroundRepeat: 'no-repeat' }}>
             <div className="container-fluid">
+
                 <div className =" make jumbotron text-center">
                     {/* <div style={{ backgroundImage: `url(${car})`, backgroundRepeat: 'no-repeat' }}></div>
                             {/* <h1>My First Bootstrap Page</h1>
                             <p>Resize this responsive page to see the effect!</p> */}
                            
                     {<img src='./hire.jpg' alt='car' className='img-fluid' style={{width:"100%"}}/> }
+
+                <div className ="jumbotron text-center">
+                   
+                <img src='./hire.jpg' alt='car' className='img-fluid' style={{width:"100%"}}/> 
+
                     
                 </div>
                 
-                <div className=" jumbotron booking">
-                    <div className="row">
-                        <h1>What Services we provide to our customers</h1>
-                        <div className=" col-sm-4">
-                            <h3 >Taxi Service </h3>
-                            <p >We provide taxi service where you can share you taxi with your friends, family .</p>
-                        </div>
-                        <div className=" col-sm-4">
-
-                            <h3>Office Pick-up </h3>
-                            <p>We provide office pick-up service where you can share you taxi with your co-workers </p>
-                        </div>
-                        <div className=" col-sm-4">
-                            <h3>Advance Services</h3>
-                            <p>we provide advance booking service for our customers for 30 days </p>
-                        </div>
-                    </div>
-                 </div>
+                
                 <div className="Booking">
                 <div className="row">
                     <div className="  col-sm-3"></div>
@@ -117,6 +106,7 @@ SendItems=(e)=>{
 
                     </div>
                  
+                </div>
                 </div>
             </div>
 

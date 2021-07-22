@@ -1,7 +1,12 @@
+.make{
+    background-image: url("carrent.jpg");
+}
+
 .booking{
     background-color: rgb(187, 179, 179);
     height:300px;
     width: 100%;
+   
 
 }
 .booking h1{

@@ -53,65 +53,12 @@ SendItems=(e)=>{
             // <div style={{ backgroundImage: `url(${car})`, backgroundRepeat: 'no-repeat' }}>
             <div className="container-fluid">
                 <div className ="jumbotron text-center">
-                    {/* <div style={{ backgroundImage: `url(${car})`, backgroundRepeat: 'no-repeat' }}></div>
-                            {/* <h1>My First Bootstrap Page</h1>
-                            <p>Resize this responsive page to see the effect!</p> */}
-                            <div className="Booking">
-                <div className="row">
-                    <div className="  col-sm-3"></div>
-                    <div className="Booking_container  col-sm-6">
-                    <form>
-                        <h1>Booking Your Ride</h1>
-                        <h4>Complete your plans today by reserving a ride. Request a ride up to 30 days in advance</h4>
-
-                            
-                                <input type="text" placeholder="Fullname...... " name="fullname"  value={this.state.fullname} onChange={this.ChangeItems}required />
-
-                           
-                                <input type="text" placeholder="Contact......." name="phone"   value={this.state.phone} onChange={this.ChangeItems}required />
-                            
-                                <input type="text" placeholder="destination......." name="from"  value={this.state.from} onChange={this.ChangeItems} required />
-                            
-                                <input type="text" placeholder="destination......." name="to"   value={this.state.to} onChange={this.ChangeItems}required />
-                            
-                                <input type="date" placeholder="Date......." name="dob"   value={this.state.dob} onChange={this.ChangeItems}required />
-                           
-                                <input type="time" placeholder="Time......." name="time"  value={this.state.time} onChange={this.ChangeItems} required />
-                            
-
-                            <button type="submit" className='Book_btn' onClick={this.SendItems}>Book</button>
-
-                       
-
-                        </form>
-                    </div>
-
-                    </div>
-                 
-                </div>
-                        
-                    {/* {<img src='./hire.jpg' alt='car' className='img-fluid' style={{width:"100%"}}/> } */}
+                   
+                <img src='./hire.jpg' alt='car' className='img-fluid' style={{width:"100%"}}/> 
                     
                 </div>
                 
-                <div className=" jumbotron booking">
-                    <div className="row">
-                        <h1>What Services we provide to our customers</h1>
-                        <div className=" col-sm-4">
-                            <h3 >Taxi Service </h3>
-                            <p >We provide taxi service where you can share you taxi with your friends, family .</p>
-                        </div>
-                        <div className=" col-sm-4">
-
-                            <h3>Office Pick-up </h3>
-                            <p>We provide office pick-up service where you can share you taxi with your co-workers </p>
-                        </div>
-                        <div className=" col-sm-4">
-                            <h3>Advance Services</h3>
-                            <p>we provide advance booking service for our customers for 30 days </p>
-                        </div>
-                    </div>
-                 </div>
+                
                 <div className="Booking">
                 <div className="row">
                     <div className="  col-sm-3"></div>

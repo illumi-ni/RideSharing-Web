@@ -60,25 +60,18 @@ function App() {
           </Route>
 
           <Route path ="/About">
-
           <Header/>
-          
           <About/>
           <Footer/>
           </Route>
           
-          <Route path ="/home">
+          <Route path ="/">
           <Header/>
           <Home/>
           <Footer/>
-
           </Route>
 
-
-         
-
           <Route path ="/test">
-          
           <Test/>
           </Route>
           

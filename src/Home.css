@@ -171,40 +171,40 @@
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
-.about{
+.about1{
   margin: 50px;
 }
-.about .content h1 {
+.about1 .content h1 {
   font-weight: 500;
-  font-size: 48px;
+  font-size: 40px;
   line-height: 60px;
   margin-bottom: 20px;
   margin-left: 60px;
   text-transform: uppercase;
 }
 
-.about .content h3 {
+.about1 .content h3 {
   font-weight: 500;
   line-height: 32px;
   font-size: 24px;
 }
-.about .content h4 {
+.about1 .content h4 {
   font-weight: 300;
   line-height: 32px;
   font-size: 20px;
   margin-left: 30px;
 }
-.about .content ul {
+.about1 .content ul {
   list-style: none;
   padding: 0;
 }
 
-.about .content ul li {
+.about1 .content ul li {
   padding: 10px 0 0 28px;
   position: relative;
 }
 
-.about .content ul i {
+.about1 .content ul i {
   left: 0;
   top: 7px;
   position: absolute;
@@ -212,7 +212,7 @@
   color: #d9232d;
 }
 
-.about .content p:last-child {
+.about1 .content p:last-child {
   margin-bottom: 0;
 }
 .videoCard{

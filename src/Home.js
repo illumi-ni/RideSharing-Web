@@ -81,7 +81,7 @@ function Home(props) {
             </section>
 
     <main id="main">
-            <section id="about" class="about">
+            <section id="about1" class="about1">
             <div class="container">
 
                 <div class="row content">

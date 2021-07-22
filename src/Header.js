@@ -5,108 +5,49 @@ import { Link } from 'react-router-dom';
 
 class Header extends Component{
     render(){  
- 
 
-       
-
-     const logout = ()=>{
-        localStorage.removeItem('token')
-        localStorage.removeItem('id')
-        window.location.href = '/'
-     
-    }
-
-   
-
-  
-        if (localStorage.getItem('token')){
-            
-            var menu = 
-                <div className="header_nav">
-                    <Link to ="/profile">
-                    <div className = 'header_option'>
-                        <span className='header_optionLineOne'>Hello {localStorage.getItem('username')}</span>
-                        <span className='header_optionLineTwo'>Welcome</span>
-
-                    </div>
-                    </Link>
-                    <Link to="/service">
-                    <div className = 'header_option'>
-                       
-                        <span className='header_optionLineTwo'> Service</span>
-                    </div>
-                    </Link>
-                    <Link to ="/about">
-                    <div className = 'header_option'>
-                       
-                        <span className='header_optionLineTwo'>About Us</span>
-                    </div>
-                    </Link>
-                    <Link to="/booking">
-                    <div className = 'header_option'>
-                       
-                        <span className='header_optionLineTwo'> Booking</span>
-                    </div>
-                    </Link>
-                    <Link to="/Contact">
-                    <div className = 'header_option'>
-                       
-                        <span className='header_optionLineTwo'> Contact</span>
-                    </div>
-                    </Link>
-
-                  
-                    <Link to='/logout'>
-                    <div className = 'header_option'>
-                        <span className='header_optionLineTwo'  onClick={logout}>Logout </span>
-                    </div>
-                    </Link>
-                </div>
-            
-                    
-                
-        }else {
-            // var menu= 
-            
-                    <div className="header_nav">
-                        <Link to ="/register">
-                    <div className = 'header_option'>
-                            <span className='header_optionLineOne'>Hello Customer</span>
-                            <span className='header_optionLineTwo'>Sign In</span>
-
-                        </div>
-                        </Link>
-                        <Link to="/service">
-                    <div className = 'header_option'>
-                       
-                        <span className='header_optionLineTwo'> Service</span>
-                    </div>
-                    </Link>
-                        <Link to ="/about">
-                        <div className = 'header_option'>
-                           
-                            <span className='header_optionLineTwo'>About Us</span>
-                        </div>
-                        </Link>
-                        </div>
-                
-            
-        }
-    
     return(
         <div className='header'>
-        <Link to ="/">
-        
-        </Link>
-            <div className ="header_search">
-                  
-                    </div>
-                    {menu}
-                    </div>
-       
-       
+             <header id="header" class="fixed-top d-flex align-items-center">
+             <div class="container d-flex align-items-center justify-content-between">
+
+            <div class="logo">
+                <h1>Ride Sharing</h1>
+            
+               
+            </div>
+
+                <nav id="navbar" class="navbar">
+                    <ul>
+                    <Link to ="/">
+                    <li>Home</li>
+                    </Link>
+                    <Link to ="/about">
+                    <li>About</li> 
+                    </Link>
+                    <Link to ="/service">
+                    <li>Services</li>
+                    </Link>
+                   <Link to ="/portfolio">
+                   <li>Portfolio</li>
+                   </Link>
+                    <Link to = '/booking'>
+                    <li>Booking</li> 
+                    </Link>
+                    <Link to="/contact">
+                    <li>Contact</li>
+                    </Link>
+                    
+                   
+                    </ul>
+                    {/* <i class="bi bi-list mobile-nav-toggle"></i> */}
+                </nav>
+
+                </div>
+            </header>
+       </div>
     )
     
-                    }
+ }
 }
 export default Header;

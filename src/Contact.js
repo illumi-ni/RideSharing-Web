@@ -4,8 +4,16 @@ import { FaLocationArrow,FaGoogleDrive,FaPhoneAlt } from 'react-icons/fa';
 
 function Contact() {
     return (
-        
+      <div>
+      <section id="hero1">
+      <div class="hero1-container" data-aos="fade-up">
+        <h1>Welcome to Contact Page</h1>
+        <h2></h2>
+       
+      </div>
+    </section>  
     <section id="contact" class="contact">
+         
       <div class="container">
    
      
@@ -73,7 +81,7 @@ function Contact() {
       </div>
     </section>
 
-        
+        </div>
     )
 }
 

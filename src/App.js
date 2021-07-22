@@ -11,6 +11,7 @@ import Driverregister from "./Driverregister";
 import Home from "./Home";
 import Booking from "./booking";
 import Test from "./test";
+import About from "./About";
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
@@ -48,9 +49,9 @@ function App() {
           <Header/>
           <Booking/>
           </Route>
-          <Route path ="/">
+          <Route path ="/About">
           <Header/>
-        
+          <About/>
           </Route>
           <Route path ="/test">
           

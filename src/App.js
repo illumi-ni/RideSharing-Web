@@ -23,6 +23,7 @@ function App() {
       <div className="App">
         <Switch>
           <Route path ="/register">
+            <Header/>
             <Register/>
             <Footer/>
           </Route>
@@ -39,11 +40,13 @@ function App() {
           </Route>
 
           <Route path ="/customerlogin">
+            <Header/>
             <CustomerLogin/>
             <Footer/>
           </Route>
 
           <Route path ="/customer">
+          <Header/>
             <Customer/>
             <Footer/>
           </Route>

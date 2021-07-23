@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Header.css';
 import { Link } from 'react-router-dom';
-// import { SearchIcon } from "@material-ui/icons/Search"
+import { FaToggleOn} from 'react-icons/fa';
 
 class Header extends Component{
     render(){  
@@ -37,10 +37,14 @@ class Header extends Component{
                     <Link to="/contact">
                     <li>Contact</li>
                     </Link>
+                    <Link to="/register">
+                    <li>Register</li>
+                    </Link>
+
                     
                    
                     </ul>
-                    {/* <i class="bi bi-list mobile-nav-toggle"></i> */}
+                    <i class="bi bi-list mobile-nav-toggle"><FaToggleOn/></i>
                 </nav>
 
                 </div>

@@ -1,9 +1,9 @@
 body {
-	margin:  0;
+	margin:  10px;
 }
 .page-content {
 	width: 100%;
-	margin:  0 auto;
+	margin:  10px;
 	
 	/* background: #75e2e9; */
 	display: flex;

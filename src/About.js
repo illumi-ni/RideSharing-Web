@@ -52,8 +52,98 @@ class About extends Component {
                         </div>
                         
                     </div>
-                 </div>
-                 </div>
+                 
+                 <div id="speakers">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Our Teams</h2>
+          <p>Here are our team members.</p>
+        </div>
+
+        <div class="row">
+        <div class="col-lg-4 col-md-6">
+           
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+              <img src="" alt="1" class="img-fluid"/>
+              <div class="details">
+                <h3>Ujwal Lamichhane</h3>
+                <p>Scrum Master/ Product Owner</p>
+               
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker" data-aos="fade-up" data-aos-delay="100">
+              <img src="" alt="2" class="img-fluid"/>
+              <div class="details">
+                <h3>Meezu Lawot </h3>
+                <p>Development Team</p>
+               
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+              <img src="Reshika.jpg" alt=" 3" class="img-fluid"/>
+              <div class="details">
+                <h3>Reshika Shrestha</h3>
+                <p>Development Team</p>
+               
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker" data-aos="fade-up" data-aos-delay="300">
+              <img src="" alt=" 4" class="img-fluid"/>
+              <div class="details">
+                <h3>Salina Shrestha</h3>
+                <p>Development Team</p>
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker" data-aos="fade-up" data-aos-delay="100">
+              <img src="Prativa.jpg" alt=" 5" class="img-fluid"/>
+              <div class="details">
+                <h3>Prativa Shrestha </h3>
+                <p>Developmant Team</p>
+               
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+              <img src="Rahul.jpg" alt="6" class="img-fluid"/>
+              <div class="details">
+                <h3>Rahul Roy</h3>
+                <p>Development Team</p>
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker" data-aos="fade-up" data-aos-delay="300">
+              <img src="" alt="7" class="img-fluid"/>
+              <div class="details">
+                <h3>Suprit Sharma</h3>
+                <p>Development Team</p>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+      </div>
+  
+                
         )
     }
 }

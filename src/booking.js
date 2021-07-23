@@ -60,12 +60,12 @@ SendItems=(e)=>{
                            
                     {<img src='./hire.jpg' alt='car' className='img-fluid' style={{width:"100%"}}/> }
 
-                <div className ="jumbotron text-center">
+                {/* <div className ="jumbotron text-center">
                    
                 <img src='./hire.jpg' alt='car' className='img-fluid' style={{width:"100%"}}/> 
 
                     
-                </div>
+                </div> */}
                 
                 
                 <div className="Booking">

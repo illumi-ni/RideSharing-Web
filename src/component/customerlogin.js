@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import havana from './havana.jpg'
-import './customer.css';
-// import './CustomerLogin.css'
+import havana from '../images/havana.jpg'
+import '../css/customer.css';
+
 import axios from 'axios'
 import { Redirect } from 'react-router-dom';
 
@@ -33,24 +33,7 @@ class customerlogin extends Component {
 
         }
         return (
-            // <div style={{ backgroundImage: `url(${carrent})`,backgroundRepeat: 'no-repeat'   }}>
-            // <div className="Register">
-            //     <div className='Register_container'>
-            //         <h1>Customer Login</h1>
-            //         <form>
-            //             <h5> Please enter the OTP that we have send in your mobile number. </h5>
-                        
-            //             <h5 for="password"><label className="regstyle">OTP</label>
-            //                 <input type="text" placeholder="OTP...." value={this.state.otp} 
-            //                 onChange={(event) => { this.setState({ otp: event.target.value }) }}
-            //                  name="otp" id="otp"required />
-            //             </h5>
-            //             <button type="submit" className='Login_btn' onClick={this.submitLogin}>Login</button>
-            //         </form>
-
-            //     </div>
-            // </div>
-            // </div>
+            
 
             <div className="container-fluid">
                 <div className="jumbotron col-sm-12">

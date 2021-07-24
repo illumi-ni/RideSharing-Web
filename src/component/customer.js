@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './customer.css';
-import log from "./log.jpg";
+import '../css/customer.css';
+import log from "../images/log.jpg";
 import axios from 'axios';
 import {Redirect } from 'react-router-dom';
 

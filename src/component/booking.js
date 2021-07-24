@@ -1,6 +1,6 @@
 // import { left } from '@popperjs/core';
 import React, { Component } from 'react';
-import './booking.css';
+import '../css/booking.css';
 // import car from './car.jpg'
 import axios from 'axios';
 
@@ -54,18 +54,10 @@ SendItems=(e)=>{
             <div className="container-fluid">
 
                 <div className =" make jumbotron text-center">
-                    {/* <div style={{ backgroundImage: `url(${car})`, backgroundRepeat: 'no-repeat' }}></div>
-                            {/* <h1>My First Bootstrap Page</h1>
-                            <p>Resize this responsive page to see the effect!</p> */}
+                  
                            
-                    {<img src='./hire.jpg' alt='car' className='img-fluid' style={{width:"100%"}}/> }
+                    <img src='./hire.jpg' alt='car' className='img-fluid' style={{width:"100%"}}/> 
 
-                {/* <div className ="jumbotron text-center">
-                   
-                <img src='./hire.jpg' alt='car' className='img-fluid' style={{width:"100%"}}/> 
-
-                    
-                </div> */}
                 
                 
                 <div className="Booking">

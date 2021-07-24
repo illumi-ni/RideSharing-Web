@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './Driverregister.css';
-import hire from './hire.jpg';
+import '../css/Driverregister.css';
+import hire from '../images/hire.jpg';
 import axios from 'axios';
 import Form from 'react-bootstrap/Form';
 

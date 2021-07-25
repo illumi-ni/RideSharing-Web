@@ -1,19 +1,19 @@
 import React from "react"
 import {BrowserRouter as Router, Switch, Route}
 from "react-router-dom";
-import Register from "./register"
-import Login from "./login";
-import CustomerLogin from "./customerlogin";
-import Customer from "./customer";
+import Register from "./component/register"
+import Login from "./component/login";
+import CustomerLogin from "./component/customerlogin";
+import Customer from "./component/customer";
 import './App.css';
-import Header from "./Header";
-import Driverregister from "./Driverregister";
-import Home from "./Home";
-import Footer from "./Footer";
-import Booking from "./booking";
-import Contact from "./Contact"
+import Header from "./component/Header";
+import Driverregister from "./component/Driverregister";
+import Home from "./component/Home";
+import Footer from "./component/Footer";
+import Booking from "./component/booking";
+import Contact from "./component/Contact"
 import Test from "./test";
-import About from "./About";
+import About from "./component/About";
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
@@ -23,6 +23,7 @@ function App() {
       <div className="App">
         <Switch>
           <Route path ="/register">
+            <Header/>
             <Register/>
             <Footer/>
           </Route>
@@ -39,11 +40,13 @@ function App() {
           </Route>
 
           <Route path ="/customerlogin">
+            <Header/>
             <CustomerLogin/>
             <Footer/>
           </Route>
 
           <Route path ="/customer">
+          <Header/>
             <Customer/>
             <Footer/>
           </Route>

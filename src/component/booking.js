@@ -1,7 +1,6 @@
 // import { left } from '@popperjs/core';
 import React, { Component } from 'react';
-import './booking.css';
-// import car from './car.jpg'
+import '../css/booking.css';
 import axios from 'axios';
 
 
@@ -50,28 +49,107 @@ SendItems=(e)=>{
 }
     render() {
         return (
-            // <div style={{ backgroundImage: `url(${car})`, backgroundRepeat: 'no-repeat' }}>
-            <div className="container-fluid">
+            <div>
+            <section id="hero2">
+            <div class="hero2-container" data-aos="fade-up">
+                <h1>Welcome to Booking Page</h1>
+                <h2></h2>
+            
+            </div>
+            </section> 
+        
+            <section id="booking" class="booking">
+		    <div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="booking-form">
+						<div class="form-header">
+							<h1>Make Advanced Booking</h1>
+						</div>
+						<form>
+                            <div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control" type="text" placeholder="Fullname..." />
+										<span class="form-label">Fullname</span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control" type="text" placeholder="Phone..."/>
+										<span class="form-label">Phone</span>
+									</div>
+								</div>
+							</div>
+                            <div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control" type="text" placeholder="From..."/>
+										<span class="form-label">From</span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control" type="text" placeholder="To..."/>
+										<span class="form-label">To</span>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control" type="date" placeholder="Date..."/>
+										<span class="form-label">Date</span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control" type="text" placeholder="Time..."required/>
+										<span class="form-label">Time</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control" type="text" placeholder="Distance..."/>
+										<span class="form-label">Distance</span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control" type="text" placeholder="Price"/>
+										<span class="form-label">Price</span>
+									</div>
+								</div>
+							</div>
+							<div class="form-btn">
+								<button class="submit-btn">Book Now</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+            {/* <div className="container-fluid">
 
                 <div className =" make jumbotron text-center">
-                    {/* <div style={{ backgroundImage: `url(${car})`, backgroundRepeat: 'no-repeat' }}></div>
-                            {/* <h1>My First Bootstrap Page</h1>
-                            <p>Resize this responsive page to see the effect!</p> */}
-                           
-                    {<img src='./hire.jpg' alt='car' className='img-fluid' style={{width:"100%"}}/> }
 
-                {/* <div className ="jumbotron text-center">
-                   
-                <img src='./hire.jpg' alt='car' className='img-fluid' style={{width:"100%"}}/> 
-
-                    
-                </div> */}
-                
-                
                 <div className="Booking">
                 <div className="row">
                     <div className="  col-sm-3"></div>
                     <div className="Booking_container  col-sm-6">
+                        
                     <form>
                         <h1>Booking Your Ride</h1>
                         <h4>Complete your plans today by reserving a ride. Request a ride up to 30 days in advance</h4>
@@ -107,7 +185,8 @@ SendItems=(e)=>{
                     </div>
                  
                 </div>
-                </div>
+                </div> */}
+            {/* </div> */}
             </div>
 
         )

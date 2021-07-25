@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import './register.css';
+import '../css/register.css';
 // import car from './car.jpg'
 import axios from 'axios';
-import carrent from "./carrent.jpg"
+import carrent from "../images/carrent.jpg"
 import { Link } from 'react-router-dom';
 
 class register extends Component {

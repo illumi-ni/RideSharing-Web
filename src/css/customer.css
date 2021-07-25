@@ -1,8 +1,7 @@
 .Customer{
     height: 100vh;;
     width: 100%;
-    
-
+    margin-top: 50px;
 }
 .CusForm{
     height: 400px;

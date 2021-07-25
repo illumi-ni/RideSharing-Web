@@ -1,9 +1,7 @@
 import { Link } from 'react-router-dom';
 import React, { useRef, useState } from 'react';
-
-
-import './Home.css'
-import video from './video.mp4'
+import '../css/Home.css'
+import video from '../video.mp4'
 
 function Home(props) {
     //  video to run

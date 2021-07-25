@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import havana from '../images/havana.jpg'
-import '../css/customer.css';
+import '../css/CustomerLogin.css';
 
 import axios from 'axios'
 import { Redirect } from 'react-router-dom';

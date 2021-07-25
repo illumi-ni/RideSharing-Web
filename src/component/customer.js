@@ -43,7 +43,7 @@ class customer extends Component {
         return (
             <div className="CustomerLogin">
                 
-                <img src='./log.jpg' alt='log' className='img-fluid'/>
+                {/* <img src='./log.jpg' alt='log' className='img-fluid'/> */}
       <div className="container-fluid">
       
           <div className="log">

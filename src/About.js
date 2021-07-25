@@ -112,7 +112,7 @@ class About extends Component {
               <img src="Prativa.jpg" alt=" 5" class="img-fluid"/>
               <div class="details">
                 <h3>Prativa Shrestha </h3>
-                <p>Developmant Team</p>
+                <p>Development Team</p>
                
               </div>
             </div>

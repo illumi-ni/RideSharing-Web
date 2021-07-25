@@ -41,11 +41,16 @@ class customer extends Component {
 
         }
         return (
-            
+            <div className="CustomerLogin">
+                
+                <img src='./log.jpg' alt='log' className='img-fluid'/>
       <div className="container-fluid">
-          <div style={{ backgroundImage: `url(${log})`,backgroundRepeat: 'no-repeat', width:'100%'  }} className="img-fluid">
-              
-          <div className="Customer">
+      
+          <div className="log">
+          {/* <div className="img-fluid" style={{ backgroundImage: `url(${log})`,backgroundRepeat: 'no-repeat', width:'100%'  }} > */}
+         
+          
+          {/* <img src='./havana.jpg' alt='havana' className='img-fluid'/>               */}
               <div className="CusLog">
               <div className=" row">
                 <div className=" col-sm-4"></div>
@@ -70,6 +75,21 @@ class customer extends Component {
       </div>
       </div>
      
+      
+//     <div id="fullBg" >
+
+//     <div className="container">
+//       <form className="form-signin">       
+//           <h1 className="form-signin-heading">Please Login</h1>
+//           <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
+//           <input type="password" class="form-control" name="password" placeholder="Password" required=""/>     
+          
+//           <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>   
+//         </form>
+//       <p class="text-center sign-up"><strong>Sign up</strong> for a new account</p>
+//     </div>
+// </div>
+    
       
         )
     }

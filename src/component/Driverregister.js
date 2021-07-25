@@ -117,6 +117,74 @@ class Driverregister extends Component{
             </div>
         </div>
         </div>
+
+        // <div className="CustomerLogin1">
+        //        <img src='./log.jpg' alt='log' className='img-fluid'/>
+        //     <div className="container-fluid">
+                
+        //     {/* <div className="img-fluid" style={{ backgroundImage: `url(${havana})`,backgroundRepeat: 'no-repeat', width:'100%'  }} > */}
+                
+        //     <div className="log">
+        //         <div className="CusLog">
+        //         <div className=" row">
+        //           <div className=" col-sm-4"></div>
+        //           <div className="  col-sm-4">
+        //               <div className="CusForm">
+        //               <h1>Customer Login</h1>
+        //               <h1>Driver Register</h1>
+        //       <form>
+                    
+        //          <h5 for ="fullname"><label className="regstyle">Fullname</label>
+        //            <input type="text" placeholder="Fullname...... " name="fullname" id="fullname"value={this.state.fullname} onChange={this.ChangeItems}required/>
+        //            </h5>
+        //              <h5 for="email"><label className="regstyle">Email</label>
+        //             <input type="text" placeholder="Email........" name="email" id="email" value={this.state.email} onChange={this.ChangeItems}required/>
+        //              </h5>
+        //              <h5 for="username"><label className="regstyle">Username</label>
+        //              <input type="text" placeholder="username........" name="username" id="username" value={this.state.username} onChange={this.ChangeItems}required/>
+        //              </h5>
+        //              <h5 for="context"><label className="regstyle">Contact</label>
+        //              <input type="text" placeholder="Contact......." name="phone" id="phone" value={this.state.phone} onChange={this.ChangeItems}required/>
+        //              </h5>
+        //              <h5 for="citizenship"><label className="regstyle">Citizenship</label>
+        //              <input type="text" placeholder="Citizenship........" name="citizenship" id="citizenship" value={this.state.citizenship} onChange={this.ChangeItems}required/>
+        //              </h5>
+
+        //              <div className="mb-3">
+        //                      <Form.File id="formcheck-api-regular">
+        //                      <p> <b><u>Licence</u></b></p>
+        //                     <input type ="file" name="licence"  onChange={this.fileHandler}/> 
+        //                     </Form.File>
+        //              </div>
+
+        //             <h5 for="dob"><label className="regstyle">DOB</label>
+        //          <input type="date" placeholder="DOB........" name="dob" id="dob" value={this.state.dob} onChange={this.ChangeItems}required/>
+        //              </h5>
+                    
+                     
+        //              <h5 for="vechileNo"><label className="regstyle">Vechicle Number</label>
+        //              <input type="text" placeholder="vechileNo......." name="vechileNo" id="vechileNo" value={this.state.vechileNo} onChange={this.ChangeItems}required/>
+        //              </h5>
+
+        //              <h5 for="model"><label className="regstyle"> Model</label>
+        //              <input type="text" placeholder="Model......." name="model" id="model" value={this.state.model} onChange={this.ChangeItems}required/>
+        //              </h5>
+                    
+                    
+        //              <button type="submit" className='drivRegister_btn'onClick={this.SendItems}>Register</button>
+                    
+                    
+
+        //          </form>
+        //               </div>
+        //           </div>
+        //           <div className=" col-sm-4"></div>
+        //         </div>
+        //       </div>
+        //     </div>
+        // </div>
+        // </div>
+         
         
     
     )

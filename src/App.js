@@ -48,7 +48,7 @@ function App() {
           <Route path ="/customer">
           <Header/>
             <Customer/>
-            <Footer/>
+            {/* <Footer/> */}
           </Route>
           <Route path= "/contact">
             <Header/>

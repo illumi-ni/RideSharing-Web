@@ -11,6 +11,7 @@ import Driverregister from "./component/Driverregister";
 import Home from "./component/Home";
 import Footer from "./component/Footer";
 import Booking from "./component/booking";
+import Services from "./component/Services";
 import Contact from "./component/Contact"
 import Test from "./test";
 import About from "./component/About";
@@ -55,6 +56,11 @@ function App() {
             <Contact/>
             <Footer/>
           </Route>
+          <Route path ="/service">
+          <Header/>
+          <Services/>
+          <Footer/>
+          </Route>
 
           <Route path ="/booking">
           <Header/>
@@ -67,6 +73,8 @@ function App() {
           <About/>
           <Footer/>
           </Route>
+
+         
           
           <Route path ="/">
           <Header/>

@@ -36,7 +36,7 @@ function App() {
           <Route path ="/Driverregister">
           <Header/>
             <Driverregister/>
-            <Footer/>
+            {/* <Footer/> */}
           </Route>
 
           <Route path ="/customerlogin">
@@ -48,7 +48,7 @@ function App() {
           <Route path ="/customer">
           <Header/>
             <Customer/>
-            <Footer/>
+            {/* <Footer/> */}
           </Route>
           <Route path= "/contact">
             <Header/>

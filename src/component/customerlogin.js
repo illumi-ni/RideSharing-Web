@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import havana from '../images/havana.jpg'
-import '../css/customer.css';
+import '../css/CustomerLogin.css';
 
 import axios from 'axios'
 import { Redirect } from 'react-router-dom';
@@ -33,13 +33,13 @@ class customerlogin extends Component {
 
         }
         return (
-            
-
+            <div className="CustomerLogin1">
+               <img src='./log.jpg' alt='log' className='img-fluid'/>
             <div className="container-fluid">
-                <div className="jumbotron col-sm-12">
-            <div className="img-fluid" style={{ backgroundImage: `url(${havana})`,backgroundRepeat: 'no-repeat', width:'100%'  }} >
                 
-            <div className="Customer">
+            {/* <div className="img-fluid" style={{ backgroundImage: `url(${havana})`,backgroundRepeat: 'no-repeat', width:'100%'  }} > */}
+                
+            <div className="log">
                 <div className="CusLog">
                 <div className=" row">
                   <div className=" col-sm-4"></div>
@@ -64,7 +64,7 @@ class customerlogin extends Component {
             </div>
         </div>
         </div>
-        </div>
+         
 
         //     <div className="Customer">
         //     <div className="CusLog">

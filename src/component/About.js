@@ -52,7 +52,7 @@ class About extends Component {
                         
                     </div>
                  
-                 <div id="speakers">
+                 {/* <div id="speakers">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h2>Our Teams</h2>
@@ -138,7 +138,8 @@ class About extends Component {
           </div>
         </div>
       </div>
-      </div>
+      </div> */}
+
       </div>
       </div>
   

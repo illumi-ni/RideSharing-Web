@@ -3,6 +3,14 @@ import React, { useRef, useState } from 'react';
 import '../css/Home.css'
 import video from '../video.mp4'
 
+import { Carousel } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import wallpaper1 from '../images/havana.jpg'
+import wallpaper2 from '../images/carrent.jpg'
+import wallpaper3 from '../images/bryte.jpg'
+
+import { FaOpencart, FaLinkedin, FaInstagram, FaCcVisa, FaAngellist, FaNewspaper, FaServicestack, FaTelegram, FaSignInAlt, FaBell, FaUsers, FaRocketchat, FaSignOutAlt, FaUserCircle, FaPlusCircle, FaRegEye, FaUpload, FaMedapps, FaTelegramPlane, FaUserCog, FaFacebook, FaRegSmile } from 'react-icons/fa';
+
 function Home(props) {
     //  video to run
     // useState and useRef
@@ -22,7 +30,46 @@ function Home(props) {
     return (
        <div>
 
-            <section id="hero">
+<div className='container-fluid' style = {{padding : '8px'}}>
+                <Carousel fade>
+                    <Carousel.Item style={{height:"650px"}}>
+                        <img
+                            className="d-block w-100"
+                            src={wallpaper1} 
+                            alt="First slide"
+                        />
+                        <Carousel.Caption>
+                        <h1 style={{  color:"black",marginBottom:"250px"}}>Welcome to Ride Sharing</h1>
+                            
+                        </Carousel.Caption> 
+                    </Carousel.Item>
+                    <Carousel.Item style={{height:"650px"}}>
+                        <img
+                            className="d-block w-100"
+                            src={wallpaper2} 
+                            alt="Second slide"
+                        />
+                        <Carousel.Caption>
+                        <h1 style={{ color:"black",marginBottom:"250px"}}>Welcome to Ride Sharing</h1>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item style={{height:"650px"}}>
+                        <img
+                            className="d-block w-100"
+                            src={wallpaper3} 
+                            alt="Third slide"
+                        />
+
+                        <Carousel.Caption>
+                        <h1 style={{ color:"black",marginBottom:"250px"}}>Welcome to Ride Sharing</h1>
+                        </Carousel.Caption>
+                        
+                    </Carousel.Item>
+                </Carousel>
+            </div>
+        )
+
+            {/* <section id="hero">
                 <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
                 <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
@@ -76,7 +123,7 @@ function Home(props) {
                
 
                 </div>
-            </section>
+            </section> */}
 
     <main id="main">
             <section id="about1" class="about1">

@@ -1,57 +1,63 @@
-import React, { Component } from 'react';
-import '../css/Header.css';
+import { Component } from "react";
 import { Link } from 'react-router-dom';
-import { FaToggleOn} from 'react-icons/fa';
 
-class Header extends Component{
-    render(){  
+class Header extends Component {
+    render() {
 
-    return(
-        <div className='header'>
-             <header id="header" class="fixed-top d-flex align-items-center">
-             <div class="container d-flex align-items-center justify-content-between">
+        if (localStorage.getItem('token')) {
+            var menu =
+                <ul className="navbar-nav ml-auto">
+                    <li className="nav-item active">
+                        <Link className="nav-link" to="/">Home</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/aboutUs">About Us</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/bookings">Bookings</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/contactUs">Contact Us</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/profile">Profile</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/logout">Log out</Link>
+                    </li>
+                </ul>
+        } else {
+            var menu =
 
-            <div class="logo">
-                <h1>Ride Sharing</h1>
-            
-               
-            </div>
+                <ul className="navbar-nav ms-auto" >
+                    <li className="nav-item">
+                        <Link className="nav-link custom-font" to="/aboutUs">About Us</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/register">Register</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/login">Login</Link>
+                    </li>
+                </ul>
+        }
 
-                <nav id="navbar" class="navbar">
-                    <ul>
-                    <Link to ="/">
-                    <li>Home</li>
-                    </Link>
-                    <Link to ="/about">
-                    <li>About</li> 
-                    </Link>
-                    <Link to ="/service">
-                    <li>Services</li>
-                    </Link>
-                   <Link to ="/portfolio">
-                   <li>Portfolio</li>
-                   </Link>
-                    <Link to = '/booking'>
-                    <li>Booking</li> 
-                    </Link>
-                    <Link to="/contact">
-                    <li>Contact</li>
-                    </Link>
-                    <Link to="/register">
-                    <li>Register</li>
-                    </Link>
-
-                    
-                   
-                    </ul>
-                    <i class="bi bi-list mobile-nav-toggle"><FaToggleOn/></i>
-                </nav>
-
+        return (
+           
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <div className="container">
+                    <Link className="navbar-brand" to="#">Carrentals</Link>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span></button>
+                    <div className="navbar-collapse collapse " id="navbarResponsive">
+                        {menu}
+                    </div>
                 </div>
-            </header>
-       </div>
-    )
-    
- }
+            </nav>
+
+        )
+
+    }
 }
+
 export default Header;

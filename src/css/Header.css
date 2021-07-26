@@ -26,7 +26,7 @@
   /**
   * Desktop Navigation 
   */
-  .navbar {
+  /* .navbar {
     padding: 0;
   }
   
@@ -40,23 +40,9 @@
   
   .navbar li {
     position: relative;
-  }
+  } */
   
-  .navbar a, .navbar a:focus {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 0 10px 30px;
-    font-family: "Raleway", sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-    color: #565e49;
-    white-space: nowrap;
-    transition: 0.3s;
-  
-  }
-  
-  .navbar a i, .navbar a:focus i {
+  /* .navbar a i, .navbar a:focus i {
     font-size: 12px;
     line-height: 0;
     margin-left: 5px;
@@ -74,12 +60,12 @@
     .navbar .dropdown .dropdown:hover > ul {
       left: -100%;
     }
-  }
+  } */
   
   /**
   * Mobile Navigation 
-  */
-  .mobile-nav-toggle {
+ 
+  /* .mobile-nav-toggle {
     color: #3c4133;
     font-size: 28px;
     cursor: pointer;
@@ -90,18 +76,18 @@
   
   .mobile-nav-toggle.bi-x {
     color: #fff;
-  }
+  } */
   
-  @media (max-width: 991px) {
+  /* @media (max-width: 991px) {
     .mobile-nav-toggle {
       display: block;
     }
     .navbar ul {
       display: none;
     }
-  }
+  } */
   
-  .navbar-mobile {
+  /* .navbar-mobile {
     position: fixed;
     overflow: hidden;
     top: 0;
@@ -177,4 +163,8 @@
   .navbar-mobile .dropdown > .dropdown-active {
     display: block;
   }
-  
+    */
+
+  .custom-font{
+  font-family:'Trebuchet MS';
+}

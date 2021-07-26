@@ -14,14 +14,22 @@ import Booking from "./component/booking";
 import Contact from "./component/Contact"
 import Test from "./test";
 import About from "./component/About";
+// import AdminHeader from "./component/AdminHeader";
+import 'jquery';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
 
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Switch>
+
+        {/* <Route path ="/adminheader">
+          <AdminHeader/>
+          </Route> */}
+
           <Route path ="/register">
             <Header/>
             <Register/>
@@ -48,7 +56,7 @@ function App() {
           <Route path ="/customer">
           <Header/>
             <Customer/>
-            {/* <Footer/> */}
+            <Footer/>
           </Route>
           <Route path= "/contact">
             <Header/>

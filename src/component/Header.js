@@ -19,7 +19,7 @@ class Header extends Component {
                         <li >Welcome {localStorage.getItem('email')} </li>
                     </Link>
 
-                    <Link  to="/aboutUs">
+                    <Link  to="/about">
                         <li >About Us </li>
                     </Link>
                     <Link  to="/service">

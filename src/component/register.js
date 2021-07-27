@@ -4,17 +4,17 @@ import '../css/register.css';
 import axios from 'axios';
 import carrent from "../images/carrent.jpg"
 import { Link } from 'react-router-dom';
-import { Redirect } from 'react-router-dom';
+
 
 class register extends Component {
     constructor() {
         super();
         this.state = {
             fullname: "",
-            contact: "",
             email: "",
-            gender: "",
-            chkregister: false
+            contact: "",
+            gender: ""
+            
         };
         this.onValueChange = this.onValueChange.bind(this);
     }
@@ -28,16 +28,14 @@ class register extends Component {
         e.preventDefault()
         const data = {
             fullname: this.state.fullname,
-            contact: this.state.contact,
             email: this.state.email,
+            contact: this.state.contact,
             gender: this.state.gender
         }
         axios.post("http://localhost:90/customer/insert", data)
             .then(response => {
                 console.log(response)
-                this.setState({
-                    chkregister : true
-                })
+                
             })
             .catch(error => {
                 console.log(console.error())
@@ -45,11 +43,7 @@ class register extends Component {
     }
 
     render() {
-        if(this.state.chkregister === true){
-            //redirect to dashboard
-            return <Redirect to ='/customer' />
-
-        }
+      
         return (
 
 

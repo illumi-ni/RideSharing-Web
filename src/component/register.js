@@ -4,6 +4,7 @@ import '../css/register.css';
 import axios from 'axios';
 import carrent from "../images/carrent.jpg"
 import { Link } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 class register extends Component {
     constructor() {
@@ -34,6 +35,9 @@ class register extends Component {
         axios.post("http://localhost:90/customer/insert", data)
             .then(response => {
                 console.log(response)
+                this.setState({
+                    chkregister : true
+                })
             })
             .catch(error => {
                 console.log(console.error())
@@ -41,6 +45,11 @@ class register extends Component {
     }
 
     render() {
+        if(this.state.chkregister === true){
+            //redirect to dashboard
+            return <Redirect to ='/customer' />
+
+        }
         return (
 
 
@@ -89,7 +98,7 @@ class register extends Component {
 				</div>
 				
 				<div class="form-row-last">
-					<input type="submit" name="register" class="register" value="Register"onClick={this.sendUserData}/>
+					<input type="submit" name="register" class="register" value="Register" onClick={this.sendUserData}/>
 				</div>
 			</form>
 		</div>

@@ -166,7 +166,7 @@ function Home(props) {
 
             </div>
             </section>
-            <section id="cta" class="cta">
+      <section id="cta" class="cta">
       <div class="container" data-aos="fade-in">
 
         <div class="text-center">
@@ -185,14 +185,14 @@ function Home(props) {
       <div class="container">
 
         <div class="section-title pt-5" data-aos="fade-up">
-          <h2>Our Services</h2>
+          <h2 style={{fontSize:"40px",marginBottom:"20px"}}>Our Services</h2>
         </div>
 
         <div class="row">
           <div class="col-md-6">
             <div class="icon-box" data-aos="fade-up">
               <div class="icon"><i class="bi bi-briefcase"></i></div>
-              <h4 class="title"><a href="">Taxi Services</a></h4>
+              <h4 class="title"><a href="" style={{fontSize:"25px",textDecoration:"none"}}>Taxi Services</a></h4>
               <p class="description">Taxi service is an important Transportation Option that meets a variety of needs,
                including Basic Mobility in emergencies, 
                general transportation for non-drivers, and mobility for Tourists and visitors.</p>
@@ -201,7 +201,7 @@ function Home(props) {
           <div class="col-md-6">
             <div class="icon-box" data-aos="fade-up">
               <div class="icon"><i class="bi bi-book" ></i></div>
-              <h4 class="title"><a href="">Advance Booking</a></h4>
+              <h4 class="title"><a href="" style={{fontSize:"25px",textDecoration:"none"}}>Advance Booking</a></h4>
               <p class="description">An advance booking is a booking made before you arrive at a hotel, restaurant, or other place.</p>
             </div>
           </div>
@@ -209,7 +209,7 @@ function Home(props) {
           <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="icon-box">
               <div class="icon"><i class="bi bi-card-checklist"></i></div>
-              <h4 class="title"><a href="">Office pick and drop</a></h4>
+              <h4 class="title"><a href="" style={{fontSize:"25px",textDecoration:"none"}}>Office pick and drop</a></h4>
               <p class="description">Ride Sharing provide office pick and drop services at affordable rates. 
               We always ensure that the customers who avail our services are always happy and satisfied. </p>
             </div>
@@ -217,7 +217,7 @@ function Home(props) {
           <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="icon-box">
               <div class="icon"><i class="bi bi-binoculars" ></i></div>
-              <h4 class="title"><a href="">Ride share</a></h4>
+              <h4 class="title"><a href="" style={{fontSize:"25px",textDecoration:"none"}}>Ride share</a></h4>
               <p class="description">sharing of car journeys so that more than one person travels in a car, 
               and prevents the need for others to have to drive to a location themselves.</p>
             </div>

@@ -239,12 +239,14 @@
 
 .cta h3 {
   color: #fff;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 700;
+  margin-bottom: 15px;
 }
 
 .cta p {
   color: #fff;
+  font-size: 20px;
 }
 
 .cta .cta-btn {
@@ -312,8 +314,9 @@
 }
 
 .services .description {
-  font-size: 14px;
+  font-size: 20px;
   margin-left: 40px;
   line-height: 24px;
   margin-bottom: 0;
+  font-weight: 400;
 }

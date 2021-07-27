@@ -34,6 +34,7 @@ class login extends Component {
         })
     }
     render() {
+       
         return (
             // <div style={{ backgroundImage: `url(${background})`,backgroundRepeat: 'no-repeat'   }}>
             //  <div class="container" id="container">

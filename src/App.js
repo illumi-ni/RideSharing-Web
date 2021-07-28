@@ -15,6 +15,8 @@ import Services from "./component/Services";
 import Contact from "./component/Contact"
 import Test from "./test";
 import About from "./component/About";
+import Admindetail from "./component/Admindetail";
+import Admindriverdetail from "./component/Admindriverdetail";
 // import AdminHeader from "./component/AdminHeader";
 import 'jquery';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -39,6 +41,17 @@ function App() {
           
           <Route path ="/adminlogin">
             <Login/>
+            
+            <Footer/>
+          </Route>
+
+          <Route path ="/admindetail">
+            <Admindetail/>
+            <Footer/>
+          </Route>
+
+          <Route path ="/admindriverdetail">
+            <Admindriverdetail/>
             <Footer/>
           </Route>
 

@@ -40,7 +40,7 @@ class Admindetail extends Component {
                                 <div className="table-wrapper">
                                     <h1>Customer's Detail</h1>
 
-                                    <table className="table table-striped table-hover">
+                                    <table className="table table-striped table-hover" style={{position:"relative", marginBottom: "30px"}}>
                                         <thead>
                                             <tr>
                                                 <th>Customer's Name</th>
@@ -50,10 +50,10 @@ class Admindetail extends Component {
                                             </tr>
 
                                             <tr>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
+                                                <td>asdfghj</td>
+                                                <td>asdfgh</td>
+                                                <td>sdfgh</td>
+                                                <td>asdfghk</td>
 
                                             </tr>
                                             <tr>

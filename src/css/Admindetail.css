@@ -104,8 +104,8 @@
     margin-top: 200px;
 }
 
-.tab-wrapper{
-    margin-bottom: 30px;
+.custom-tbl{
+    margin-bottom: 30px !important;
 }
 .list-group-item :hover{
   color:black;
@@ -115,7 +115,8 @@
   }
 
 .customerdetailtable{
-    height: 100px;
+    height: 100%;
+    margin-bottom: 30px;
 }
 /*table*/
 

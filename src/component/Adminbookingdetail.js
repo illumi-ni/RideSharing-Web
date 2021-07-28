@@ -3,9 +3,8 @@ import '../css/Admindetail.css';
 import { Link } from 'react-router-dom';
 // import { FaLocationArrow,FaGoogleDrive,FaPhoneAlt } from 'react-icons/fa';
 
-class Admindetail extends Component {
+class Adminbookingdetail extends Component {
     render() {
-
         return (
             <div className="container-fluid">
 
@@ -38,41 +37,28 @@ class Admindetail extends Component {
                         <div className="container-xl">
                             <div className="table-responsive">
                                 <div className="table-wrapper">
-                                    <h1>Customer's Detail</h1>
+                                    <h1>Booking Detail</h1>
 
                                     <table className="table table-striped table-hover">
                                         <thead>
                                             <tr>
-                                                <th>Customer's Name</th>
-                                                <th>Email ID</th>
-                                                <th>Gender</th>
-                                                <th>Phone Number</th>
-                                            </tr>
-
-                                            <tr>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
+                                                <th>Fullname</th>
+                                                <th>Phone </th>
+                                                <th>From</th>
+                                                <th>To</th>
+                                                <th>Date</th>
+                                                <th>Time</th>
+                                                <th>Distance</th>
+                                                <th>Price</th>
+                                                
 
                                             </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-
-                                            </tr>
-
 
                                         </thead>
+
+                                        <tbody>
+                                            
+                                        </tbody>
 
                                     </table>
                                 </div>
@@ -87,4 +73,4 @@ class Admindetail extends Component {
 }
 
 
-export default Admindetail
+export default Adminbookingdetail

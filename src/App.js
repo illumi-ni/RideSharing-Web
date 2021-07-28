@@ -17,6 +17,7 @@ import Test from "./test";
 import About from "./component/About";
 import Admindetail from "./component/Admindetail";
 import Admindriverdetail from "./component/Admindriverdetail";
+import Adminbookingdetail from "./component/Adminbookingdetail";
 // import AdminHeader from "./component/AdminHeader";
 import 'jquery';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -52,6 +53,11 @@ function App() {
 
           <Route path ="/admindriverdetail">
             <Admindriverdetail/>
+            <Footer/>
+          </Route>
+
+          <Route path ="/adminbookingdetail">
+            <Adminbookingdetail/>
             <Footer/>
           </Route>
 

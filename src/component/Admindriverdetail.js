@@ -24,7 +24,7 @@ class Admindriverdetail extends Component {
                             <Link to="/Admindetail">
                                 <li> Customer </li>
                             </Link>
-                            <Link to="/">
+                            <Link to="/Adminbookingdetail">
                                 <li> Booking </li>
                             </Link>
                         </ul>

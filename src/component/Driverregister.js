@@ -12,7 +12,7 @@ class Driverregister extends Component{
             username:"",
             phone:"",
             citizenship:"",
-            licence:"",
+            license:"",
             dob:"",
             vechileNo:"",
             model:"",

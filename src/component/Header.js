@@ -5,8 +5,7 @@ import '../css/Header.css';
 class Header extends Component {
     render() {
         const logout = ()=>{
-            localStorage.removeItem('token')
-            localStorage.removeItem('id')
+            localStorage.clear();
             window.location.href = '/'
          
         }
@@ -16,7 +15,7 @@ class Header extends Component {
                 <ul >
                     
                     <Link  to="/">
-                        <li >Welcome {localStorage.getItem('email')} </li>
+                        <li >Welcome {localStorage.getItem('fullname')} </li>
                     </Link>
 
                     <Link  to="/about">
@@ -52,6 +51,10 @@ class Header extends Component {
                     </Link>
                     <Link to ="/customer">
                     <li>Login</li> 
+                    </Link>
+
+                    <Link to ="/adminlogin">
+                    <li>Admin Login</li> 
                     </Link>
                     
                 </ul>

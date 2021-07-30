@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../css/login.css';
 import axios from "axios"
+import { Redirect } from 'react-router-dom';
 
 
 
@@ -34,6 +35,10 @@ class login extends Component {
         })
     }
     render() {
+        if(this.state.chklogin === true){
+            //redirect to dashboard
+            return <Redirect to ='/Driverregister' />
+        }
        
         return (
             // <div style={{ backgroundImage: `url(${background})`,backgroundRepeat: 'no-repeat'   }}>

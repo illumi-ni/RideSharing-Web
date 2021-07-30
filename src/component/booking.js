@@ -27,23 +27,12 @@ ChangeItem=(e)=>{
 SendItems=(e)=>{
     //preventDefault== By default refresh hunxa so, blank nahoss vannah refresh nahoss vannah
     e.preventDefault();
-    const data = new FormData();
-    data.append('fullname',this.state.fullname)
-    data.append('phone',this.state.phone)
-    data.append('from',this.state.from)
-    data.append('to',this.state.to)
-    data.append('date',this.state.date)
-    data.append('time',this.state.time)
-    data.append('distance',this.state.distance)
-    data.append('price',this.state.price)
-   
 
-    console.log(data)
-
-    axios.post("http://localhost:90/customer/booking",data)
+    axios.post("http://localhost:90/customer/booking",this.state)
     .then((response)=>{
         console.log(response)
-        window.location.reload(true);
+		alert(response.data.message)
+		window.location.reload(true);
     })
     .catch((error)=>{
         console.log(error.response)

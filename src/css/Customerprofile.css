@@ -69,3 +69,40 @@
       height: 120vh;
     }
   }
+
+  .customerdetail{
+    position: relative;
+    margin-top: 200px;
+    margin-bottom: 30px;
+    text-decoration: none;
+
+  }
+ .customerdetail ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    margin-left: 40px;
+  }
+  
+  .customerdetail li {
+    position: relative;
+    margin-left: 50px;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 0;
+    align-items: center;
+    color: black;
+  }
+
+.form1{
+    margin-top: 30px;
+}
+.form2{
+    margin-top: 20px;
+}
+.form-group{
+    margin-top: 10px;
+}

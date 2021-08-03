@@ -57,7 +57,7 @@ class Admindriverdetail extends Component {
                         <div className="container-xl">
                             <div className="table-responsive">
                                 <div className="table-wrapper">
-                                    <h1>Driver's Detail</h1>
+                                    <h1 >Driver's Detail</h1>
 
                                     <table className="table table-striped table-hover">
                                         <thead>

@@ -65,8 +65,9 @@ class Admindetail extends Component {
                                             <tr>
                                                 <th>Customer's Name</th>
                                                 <th>Email ID</th>
-                                                <th>Gender</th>
+                                                
                                                 <th>Phone Number</th>
+                                                <th>Gender</th>
                                             </tr>
                                         {    
                                             this.state.details.map((consumer)=>{

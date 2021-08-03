@@ -8,9 +8,9 @@ class Customerprofile extends Component{
         return(
             <div>
 
-                    <section id="hero1">
-            <div class="hero1-container" data-aos="fade-up">
-                <h1>Welcome to Contact Page</h1>
+                    <section id="hero5">
+            <div class="hero5-container" data-aos="fade-up">
+                <h1>Welcome to Profile Page</h1>
                 <h2></h2>
             
             </div>

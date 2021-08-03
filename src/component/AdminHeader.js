@@ -19,7 +19,7 @@ function AdminHeader() {
             <div className ="Adminheader_right">
                 <div className="Adminheader_info">
                     <Avatar/>
-                    <h4>Reshika</h4>
+                    <h4>Admin</h4>
                 </div>
                 <IconButton>
                 <AddIcon/>

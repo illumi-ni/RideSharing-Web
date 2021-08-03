@@ -14,7 +14,7 @@ class Header extends Component {
             var menu =
                 <ul >
                     
-                    <Link  to="/">
+                    <Link  to="/customerprofile">
                         <li >Welcome {localStorage.getItem('fullname')} </li>
                     </Link>
 

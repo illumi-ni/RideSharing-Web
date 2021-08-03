@@ -18,6 +18,8 @@ import About from "./component/About";
 import Admindetail from "./component/Admindetail";
 import Admindriverdetail from "./component/Admindriverdetail";
 import Adminbookingdetail from "./component/Adminbookingdetail";
+import Customerprofile from "./component/Customerprofile";
+
 // import AdminHeader from "./component/AdminHeader";
 import 'jquery';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -58,6 +60,12 @@ function App() {
 
           <Route path ="/adminbookingdetail">
             <Adminbookingdetail/>
+            <Footer/>
+          </Route>
+
+          <Route path ="/customerprofile">
+            <Header></Header>
+            <Customerprofile/>
             <Footer/>
           </Route>
 

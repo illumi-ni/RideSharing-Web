@@ -15,6 +15,7 @@ import Services from "./component/Services";
 import Contact from "./component/Contact"
 import Test from "./test";
 import About from "./component/About";
+import AdminHeader  from "./component/AdminHeader";
 import Admindetail from "./component/Admindetail";
 import Admindriverdetail from "./component/Admindriverdetail";
 import Adminbookingdetail from "./component/Adminbookingdetail";
@@ -41,30 +42,40 @@ function App() {
           </Route>
           
           <Route path ="/adminlogin">
+            <AdminHeader/>
             <Login/>
-            
             <Footer/>
           </Route>
 
+          <Route path ="/admindashboard">
+          <AdminHeader/>
+         
+            <Footer/>
+          </Route>
+
+
           <Route path ="/admindetail">
+          <AdminHeader/>
             <Admindetail/>
             <Footer/>
           </Route>
 
           <Route path ="/admindriverdetail">
+          <AdminHeader/>
             <Admindriverdetail/>
             <Footer/>
           </Route>
 
           <Route path ="/adminbookingdetail">
+          <AdminHeader/>
             <Adminbookingdetail/>
             <Footer/>
           </Route>
 
           <Route path ="/Driverregister">
-          <Header/>
+          <AdminHeader/>
             <Driverregister/>
-            {/* <Footer/> */}
+            <Footer/>
           </Route>
 
           <Route path ="/customerlogin">

@@ -1,9 +1,29 @@
 import React, { Component } from 'react';
 import '../css/Admindetail.css';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 // import { FaLocationArrow,FaGoogleDrive,FaPhoneAlt } from 'react-icons/fa';
 
 class Admindriverdetail extends Component {
+    state={
+       
+        details:[]
+    }
+ 
+    //to get data automatically from database without any click event
+    componentDidMount(){
+        axios.get("http://localhost:90/driver/all")
+        .then((response)=>{
+            console.log(response)
+                this.setState({
+                    details:response.data.data
+                })
+
+        })
+        .catch((err)=>{
+            console.log(err.response)
+        })
+    }
     render() {
         return (
             <div className="container-fluid">
@@ -53,6 +73,25 @@ class Admindriverdetail extends Component {
                                                 <th>Model</th>
 
                                             </tr>
+                                            {    
+                                            this.state.details.map((driver)=>{
+                                            return(
+
+                                            <tr>
+                                                <td>{driver.fullname}</td>
+                                                <td>{driver.email}</td>
+                                                <td>{driver.username}</td>
+                                                <td>{driver.phone}</td>
+                                                <td>{driver.citizenship}</td>
+                                                <td>{driver.licence}</td>
+                                                <td>{driver.dob}</td>
+                                                <td>{driver.vechileNo}</td>
+                                                <td>{driver.model}</td>
+
+                                            </tr>
+                                            )
+                                            })
+                                        }
 
                                         </thead>
 

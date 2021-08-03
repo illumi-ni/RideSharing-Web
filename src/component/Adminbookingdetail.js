@@ -1,9 +1,29 @@
 import React, { Component } from 'react';
 import '../css/Admindetail.css';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 // import { FaLocationArrow,FaGoogleDrive,FaPhoneAlt } from 'react-icons/fa';
 
 class Adminbookingdetail extends Component {
+    state={
+       
+        details:[]
+    }
+ 
+    //to get data automatically from database without any click event
+    componentDidMount(){
+        axios.get("http://localhost:90/booking/all")
+        .then((response)=>{
+            console.log(response)
+                this.setState({
+                    details:response.data.data
+                })
+
+        })
+        .catch((err)=>{
+            console.log(err.response)
+        })
+    }
     render() {
         return (
             <div className="container-fluid">
@@ -50,9 +70,25 @@ class Adminbookingdetail extends Component {
                                                 <th>Time</th>
                                                 <th>Distance</th>
                                                 <th>Price</th>
-                                                
-
                                             </tr>
+
+                                            {    
+                                            this.state.details.map((booking)=>{
+                                            return(
+
+                                            <tr>
+                                                <td>{booking.fullname}</td>
+                                                <td>{booking.phone}</td>
+                                                <td>{booking.from}</td>
+                                                <td>{booking.to}</td>
+                                                <td>{booking.date}</td>
+                                                <td>{booking.time}</td>
+                                                <td>{booking.distance}</td>
+                                                <td>{booking.price}</td>
+                                            </tr>
+                                            )
+                                            })
+                                        }
 
                                         </thead>
 

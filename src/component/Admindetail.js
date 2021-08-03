@@ -1,9 +1,29 @@
 import React, { Component } from 'react';
 import '../css/Admindetail.css';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 // import { FaLocationArrow,FaGoogleDrive,FaPhoneAlt } from 'react-icons/fa';
 
 class Admindetail extends Component {
+    state={
+       
+        details:[]
+    }
+ 
+    //to get data automatically from database without any click event
+    componentDidMount(){
+        axios.get("http://localhost:90/customer/all")
+        .then((response)=>{
+            console.log(response)
+                this.setState({
+                    details:response.data.data
+                })
+
+        })
+        .catch((err)=>{
+            console.log(err.response)
+        })
+    }
     render() {
 
         return (
@@ -48,28 +68,21 @@ class Admindetail extends Component {
                                                 <th>Gender</th>
                                                 <th>Phone Number</th>
                                             </tr>
+                                        {    
+                                            this.state.details.map((consumer)=>{
+                                            return(
 
                                             <tr>
-                                                <td>asdfghj</td>
-                                                <td>asdfgh</td>
-                                                <td>sdfgh</td>
-                                                <td>asdfghk</td>
+                                                <td>{consumer.fullname}</td>
+                                                <td>{consumer.email}</td>
+                                                <td>{consumer.contact}</td>
+                                                <td>{consumer.gender}</td>
 
                                             </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-
-                                            </tr>
+                                            )
+                                            })
+                                        }
+                                            
 
 
                                         </thead>

@@ -78,7 +78,8 @@
   .customerdetail{
     position: relative;
     margin-top: 200px;
-    margin-bottom: 30px
+    margin-bottom: 30px;
+    text-decoration: none;
 
   }
  .customerdetail ul {
@@ -86,13 +87,15 @@
     padding: 0;
     display: flex;
     list-style: none;
+    text-decoration: none;
+    margin-left: 40px;
   }
   
   .customerdetail li {
     position: relative;
-    margin-left: 70px;
+    margin-left: 50px;
     justify-content: center;
-    text-decoration: underline;
+    text-decoration: none;
     font-size: 20px;
     line-height: 0;
     align-items: center;

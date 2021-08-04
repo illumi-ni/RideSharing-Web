@@ -25,7 +25,7 @@ class Customerprofile extends Component{
                             <Link to="/Customerprofile">
                                 <li> Profile </li>
                             </Link>
-                            <Link to="/">
+                            <Link to="/Upcomingride">
                                 <li> UpcomingRide </li>
                             </Link>
                             <Link to="/">

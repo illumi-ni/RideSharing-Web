@@ -106,3 +106,28 @@
 .form-group{
     margin-top: 10px;
 }
+
+.update{
+  background-color: lightgrey;
+  width: 100%;
+  border: 2px solid black;
+  padding: 60px;
+  margin: 20px;
+  }
+
+  
+  .buttoncan{
+    background-color: green;
+    color: white;
+    float: right;
+    text-align: center;
+    margin: 5px;
+    
+  }
+  .buttonup{
+    background-color: green;
+    color: white;
+    float: right;
+    text-align: center;
+    margin: 5px;
+  }

@@ -38,20 +38,20 @@ class UpcomingRide extends Component{
                 </section>
                 </div>
                 <div className="row">
-                    <div className="col-md-2"></div>
-                    <div className="col-md-8">
+                    <div className="col-md-1"></div>
+                    <div className="col-md-10">
                 <div className="update">
                 <button className="buttoncan"> Cancle</button>
                 <Link to="/BookingUpdate"> <button className="buttonup">Update</button></Link>
                     
                     </div>
                     </div>
-                    <div className="col-md-2"></div>
+                    <div className="col-md-1"></div>
                 </div>
                 </div>
         )
 
     }
-}
+}  
 
 export default UpcomingRide

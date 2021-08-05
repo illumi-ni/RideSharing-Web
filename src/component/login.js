@@ -41,35 +41,9 @@ class login extends Component {
         }
        
         return (
-            // <div style={{ backgroundImage: `url(${background})`,backgroundRepeat: 'no-repeat'   }}>
-            //  <div class="container" id="container">
-            // <div class="form-container log-in-container">
-            //     <form>
-            //         <h1>Login</h1>
-                    
-            //             <h5 for="email"><label className="regstyle">Username</label>
-            //                 <input type="text" placeholder="Username" name="username" id="username" value={this.state.username} onChange={this.changeHandler}required />
-            //             </h5>
-            //             <h5 for="password"><label className="regstyle">Password</label>
-            //                 <input type="text" placeholder="Password" name="password" id="password" value={this.state.password} onChange={this.changeHandler}required />
-            //             </h5>
-            //             <button type="submit" className='Login_btn' onClick={this.submitLogin}>Login</button>
-            //         </form>
+         
 
-            //     </div>
-            //     <div class="overlay-container log-in-container">
-            //         <div class="overlay">
-            //             <div class="overlay-panel overlay-right">
-            //                 <h1>HTML CSS Login Form</h1>
-            //                 <p>This login form is created using pure HTML and CSS. For social icons, FontAwesome is used.</p>
-            //             </div>
-            //         </div>
-            //     </div>
-            // </div> 
-            // </div>
-            
-
-        <div className="container" id="container">
+        <div className="container-fluid" id="container">
             
             <div className="Admin-log row">
                 <div className="col-md-2"></div>

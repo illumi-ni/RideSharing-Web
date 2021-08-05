@@ -41,54 +41,69 @@ class customer extends Component {
 
         }
         return (
-            <div className="CustomerLogin">
+    //         <div className="container-fluid">
+    //         <div className="CustomerLogin">
                 
-                {/* <img src='./log.jpg' alt='log' className='img-fluid'/> */}
-      <div className="container-fluid">
-      
-          <div className="log">
-          {/* <div className="img-fluid" style={{ backgroundImage: `url(${log})`,backgroundRepeat: 'no-repeat', width:'100%'  }} > */}
-         
-          
-          {/* <img src='./havana.jpg' alt='havana' className='img-fluid'/>               */}
-              <div className="CusLog">
-              <div className=" row">
-                <div className=" col-sm-4"></div>
-                <div className="  col-sm-4">
-                    <div className="CusForm">
-                    <form>
-                        <h1>Please Enter your email to login</h1>
-                    <h5 for="email"><label className="regstyle">Email</label>
-                           <input type="text" placeholder="Enter your email......" 
-                             value={this.state.email} onChange={(event) => { this.setState({ email: event.target.value }) }}
-                              name="username" id="username" required />
-                         </h5>
-                        
-                         <button type="submit" className='cusLogin_btn' onClick={this.sendEmail}>Next</button>
-                     </form>
-                    </div>
-                </div>
-                <div className=" col-sm-4"></div>
-              </div>
-            </div>
-          </div>
-      </div>
-      </div>
+                
      
       
-//     <div id="fullBg" >
+    //       <div className="log">
+                     
+    //           <div className="CusLog">
+    //           <form  className=" row">
+    //             <div className=" col-md-4"></div>
+    //             <div className="  col-md-4">
+    //                 <div className="CusForm">
+    //                 <form>
+    //                     <h1>Please Enter your email to login</h1>
+    //                 <h5 for="email"><label className="regstyle">Email</label>
+    //                        <input type="text" placeholder="Enter your email......" 
+    //                          value={this.state.email} onChange={(event) => { this.setState({ email: event.target.value }) }}
+    //                           name="username" id="username" required />
+    //                      </h5>
+                        
+    //                      <button type="submit" className='cusLogin_btn' onClick={this.sendEmail}>Next</button>
+    //                  </form>
+    //                 </div>
+    //             </div>
+    //             <div className=" col-md-4"></div>
+                
+    //           </form>
+    //           </div>
+    //       </div>
+    //   </div>
+    //   </div>
+     
+    <div className="Container-fluid">
+        <section id="Customer">
+           
+           <div className=" row ">
+               <div className="cus">
+               <div className="col-md-4"></div>
+                  
 
-//     <div className="container">
-//       <form className="form-signin">       
-//           <h1 className="form-signin-heading">Please Login</h1>
-//           <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
-//           <input type="password" class="form-control" name="password" placeholder="Password" required=""/>     
-          
-//           <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>   
-//         </form>
-//       <p class="text-center sign-up"><strong>Sign up</strong> for a new account</p>
-//     </div>
-// </div>
+              
+               <form className="cusemail">
+               <div className="cusform col-md-4">
+                        <h1>Customer Login </h1>
+                        <h2>Please Enter your email to login</h2>
+                        
+                        <div class="form-group">
+                            <label for="email"> Email</label>
+                            <input type="text" placeholder="Enter your email......" 
+                              value={this.state.email} onChange={(event) => { this.setState({ email: event.target.value }) }}
+                            name="username" id="username" required />
+                        </div>
+                        <button type="submit" className='cusLogin_btn' onClick={this.sendEmail}>Next</button>
+                        </div>     
+                </form> 
+                <div className="col-md-4"></div> 
+                
+           </div> 
+           </div>
+        </section>
+    </div>
+      
     
       
         )

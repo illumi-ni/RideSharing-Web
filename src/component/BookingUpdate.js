@@ -9,10 +9,11 @@ class BookingUpdate extends Component{
             
             <div className="container-fluid">
                  <section id="bookingupdate">
+                     <div className="row">
                      <div className="col-md-3">
                          </div>
                 
-                    <form className="updatebook">
+                    <form className="updatebook ">
                         <h1>Booking Update</h1>
 
                                 <div className="form2 col-md-6">
@@ -44,7 +45,7 @@ class BookingUpdate extends Component{
                         <div class="form-group">
                         
                         <label for="distance">Distance</label>
-                            <input type="distance" class="form-control" id="distance" />
+                            <input type="distance" class="form-control" id="distance" placeholder="Distance..." />
                         </div>
                         <div class="form-group">
                             <label for="gender">Price</label>
@@ -54,6 +55,7 @@ class BookingUpdate extends Component{
                         <div className="col-md-3">
                          </div>
                         </form>
+                        </div>
                  </section>
                 </div>
               

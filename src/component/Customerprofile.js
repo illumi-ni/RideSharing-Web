@@ -81,13 +81,7 @@ class Customerprofile extends Component{
                             <label for="gender">Date of Birth</label>
                             <input type="dateofbirth" class="form-control" id="dateofbirth" placeholder="Enter Date of Birth"/>
                         </div> 
-                        </div>
-                                        
-                                
-                                    
-                                        
-                                        
-                                    
+                        </div>          
                                     <hr className="my-4"></hr>
                                     <p>Let’s hit the road together</p>
                                     

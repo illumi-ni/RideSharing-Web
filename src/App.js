@@ -21,24 +21,15 @@ import Admindriverdetail from "./component/Admindriverdetail";
 import Adminbookingdetail from "./component/Adminbookingdetail";
 import Customerprofile from "./component/Customerprofile";
 import UpcomingRide from "./component/Upcomingride";
-
-// import AdminHeader from "./component/AdminHeader";
 import 'jquery';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
 import BookingUpdate from "./component/BookingUpdate";
-
-
-
 function App() {
   return (
     <Router>
       <div className="App">
         <Switch>
-
-        {/* <Route path ="/adminheader">
-          <AdminHeader/>
-          </Route> */}
 
           <Route path ="/register">
             <Header/>
@@ -54,7 +45,6 @@ function App() {
 
           <Route path ="/admindashboard">
           <AdminHeader/>
-         
             <Footer/>
           </Route>
 

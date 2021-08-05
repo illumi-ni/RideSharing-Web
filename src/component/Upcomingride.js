@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import '../css/Customerprofile.css';
 import { Link } from 'react-router-dom';
 import profile from "../images/profile.jpg"
+import Delete from "@material-ui/icons/Delete"
+import Update from "@material-ui/icons/Update"
 
 class UpcomingRide extends Component{
     render(){
@@ -41,8 +43,8 @@ class UpcomingRide extends Component{
                     <div className="col-md-1"></div>
                     <div className="col-md-10">
                 <div className="update">
-                <button className="buttoncan"> Cancle</button>
-                <Link to="/BookingUpdate"> <button className="buttonup">Update</button></Link>
+                <button className="buttoncan"><Delete/> </button>
+                <Link to="/BookingUpdate"> <button className="buttonup"><Update/></button></Link>
                     
                     </div>
                     </div>

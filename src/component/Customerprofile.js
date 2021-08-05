@@ -2,8 +2,64 @@ import React, { Component } from 'react';
 import '../css/Customerprofile.css';
 import { Link } from 'react-router-dom';
 import profile from "../images/profile.jpg"
+import axios from 'axios'
 
 class Customerprofile extends Component{
+    state={
+        fullname: "",
+        email:"",
+        phone:"",
+        gender:"",
+        id:""
+    }
+
+    componentDidMount() {
+        const id = localStorage.getItem('_id')
+ 
+        axios.get('http://localhost:90/consumer/single/'+id)
+        .then((response)=>{
+                this.setState({
+                    id:response.data.ConsumerData._id,
+                    fullname: response.data.CustomerData.fullname,
+                    email: response.data.CustomerData.email,
+                    phone: response.data.CustomerData.phone,
+                    gender: response.data.CustomerData.gender,
+                
+                })
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
+    }
+ 
+    changeHandler = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    }
+ 
+    // fileHandler = (e) => {
+    //     this.setState({
+    //         ProductImage: e.target.files[0]
+    //     })
+    // }
+    sendUserData = (e) => {
+        e.preventDefault()
+        const data = {
+            id :this.state._id,
+            fullname: this.state.fullname,
+            email: this.state.email,
+            phone: this.state.address,
+            gender: this.state.gender,
+        }
+        axios.get("http://localhost:90/consumer/single/:id", data)
+            .then(response => {
+                console.log(response)
+            })
+            .catch(error => {
+                console.log(console.error())
+            })
+    }
     render(){
         return(
             <div>
@@ -63,24 +119,20 @@ class Customerprofile extends Component{
                                 <div className="form2">
                         <div class="form-group">
                             <label for="Fullname">Full Name</label>
-                            <input type="Fullname" class="form-control" id="FullName" placeholder="Enter fullName"/>
+                            <input type="Fullname" class="form-control" id="FullName" placeholder="Enter fullName" value={this.state.fullname}onChange={this.changeHandler}/>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter Email"/>
+                            <input type="email" class="form-control" id="email" placeholder="Enter Email"value={this.state.email}onChange={this.changeHandler}/>
                         </div>
                         <div class="form-group">
                             <label for="Phone">Phone No</label>
-                            <input type="Phone" class="form-control" id="Phone" placeholder="Enter Phone No"/>
+                            <input type="Phone" class="form-control" id="phone" placeholder="Enter Phone No"value={this.state.phone}onChange={this.changeHandler}/>
                         </div>
                         <div class="form-group">
                             <label for="gender">Gender</label>
-                            <input type="gender" class="form-control" id="gender" placeholder="Enter Gender"/>
+                            <input type="gender" class="form-control" id="gender" placeholder="Enter Gender"value={this.state.gender}onChange={this.changeHandler}/>
                         </div>
-                        <div class="form-group">
-                            <label for="gender">Date of Birth</label>
-                            <input type="dateofbirth" class="form-control" id="dateofbirth" placeholder="Enter Date of Birth"/>
-                        </div> 
                         </div>
                                         
                                 

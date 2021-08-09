@@ -39,7 +39,7 @@ class BookingUpdate extends Component{
                             <input type="date" class="form-control" id="date" />
                         </div>
                         <div class="form-group">
-                            <label for="gender">Time</label>
+                            <label for="time">Time</label>
                             <input type="time" class="form-control" id="time" placeholder="time"/>
                         </div>
                         <div class="form-group">
@@ -51,9 +51,11 @@ class BookingUpdate extends Component{
                             <label for="gender">Price</label>
                             <input type="price" class="form-control" id="price" placeholder="Price"/>
                         </div>
+                        <button>Update</button>
                         </div>
                         <div className="col-md-3">
                          </div>
+                         
                         </form>
                         </div>
                  </section>

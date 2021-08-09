@@ -21,10 +21,12 @@ import Admindriverdetail from "./component/Admindriverdetail";
 import Adminbookingdetail from "./component/Adminbookingdetail";
 import Customerprofile from "./component/Customerprofile";
 import UpcomingRide from "./component/Upcomingride";
+import DriverUpdate from "./component/DriverUpdate";
 import 'jquery';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
 import BookingUpdate from "./component/BookingUpdate";
+import History from "./component/History";
 function App() {
   return (
     <Router>
@@ -73,6 +75,12 @@ function App() {
             <Footer/>
           </Route>
 
+          <Route path ="/History">
+            <Header></Header>
+            <History/>
+            <Footer/>
+          </Route>
+
           <Route path ="/Upcomingride">
             <Header></Header>
             <UpcomingRide/>
@@ -82,6 +90,12 @@ function App() {
           <Route path ="/bookingupdate">
             <Header></Header>
             <BookingUpdate/>
+            <Footer/>
+          </Route>
+
+          <Route path ="/driverupdate">
+            <Header></Header>
+            <DriverUpdate/>
             <Footer/>
           </Route>
 

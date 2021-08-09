@@ -3,9 +3,9 @@ import '../css/Customerprofile.css';
 import { Link } from 'react-router-dom';
 import profile from "../images/profile.jpg"
 import Delete from "@material-ui/icons/Delete"
-import Update from "@material-ui/icons/Update"
 
-class UpcomingRide extends Component{
+
+class History extends Component{
     render(){
         return(
             <div>
@@ -40,25 +40,43 @@ class UpcomingRide extends Component{
                 </section>
                 </div>
                 <div className="row">
-                <h1>Upcoming Ride</h1>
+                    <h1>History</h1>
                     <div className="col-md-1"></div>
                     <div className="col-md-10">
-                        
                 <div className="update">
                 <h4>Date:</h4>
                         <h4>From:</h4>
                         <h4>To:</h4>
+                <Link  to="/about">
+                        <li >Request again </li>
+                    </Link>
                 <button className="buttoncan"><Delete/> </button>
-                <Link to="/BookingUpdate"> <button className="buttonup"><Update/></button></Link>
-                    
+               
+                    </div>
+                    </div>
+                    <div className="row">
+                    <div className="col-md-1"></div>
+                </div>
+
+                <div className="col-md-1"></div>
+                    <div className="col-md-10">
+                <div className="update">
+                <h4>Date:</h4>
+                        <h4>From:</h4>
+                        <h4>To:</h4>
+                <Link  to="/about">
+                        <li >Request again </li>
+                    </Link>
+                <button className="buttoncan"><Delete/> </button>
+               
                     </div>
                     </div>
                     <div className="col-md-1"></div>
-                </div>
+                    </div>
                 </div>
         )
 
     }
 }  
 
-export default UpcomingRide
+export default History

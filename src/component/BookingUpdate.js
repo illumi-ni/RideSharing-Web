@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import '../css/BookingUpdate.css';
-// import { Link } from 'react-router-dom';
-// import profile from "../images/profile.jpg"
+
 
 class BookingUpdate extends Component{
     render(){
@@ -18,7 +17,7 @@ class BookingUpdate extends Component{
 
                                 <div className="form2 col-md-6">
                         <div class="form-group">
-                            <label for="Fullname">Full Name</label>
+                            <label>Full name</label>
                             <input type="Fullname" class="form-control" id="FullName" placeholder="Enter fullName"/>
                         </div>
                         <div class="form-group">

@@ -8,6 +8,8 @@
 }
 .form-group label{
     float: left;
-    margin: 10px;
+    margin: 5px;
+    color: black;
+    text-decoration: none;
 }
 

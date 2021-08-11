@@ -40,7 +40,7 @@ class History extends Component{
                 </section>
                 </div>
                 <div className="row">
-                    <h1>History</h1>
+               
                     <div className="col-md-1"></div>
                     <div className="col-md-10">
                 <div className="update">

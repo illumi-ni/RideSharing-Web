@@ -40,7 +40,7 @@ class UpcomingRide extends Component{
                 </section>
                 </div>
                 <div className="row">
-                <h1>Upcoming Ride</h1>
+              
                     <div className="col-md-1"></div>
                     <div className="col-md-10">
                         

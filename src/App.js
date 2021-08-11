@@ -27,6 +27,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
 import BookingUpdate from "./component/BookingUpdate";
 import History from "./component/History";
+import Demo from "./component/demo";
 function App() {
   return (
     <Router>
@@ -74,6 +75,14 @@ function App() {
             <Customerprofile/>
             <Footer/>
           </Route>
+
+          <Route path ="/demo">
+            <Header></Header>
+            <Demo/>
+            <Footer/>
+          </Route>
+          
+
 
           <Route path ="/History">
             <Header></Header>

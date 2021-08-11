@@ -50,7 +50,7 @@ class BookingUpdate extends Component{
                             <label for="gender">Price</label>
                             <input type="price" class="form-control" id="price" placeholder="Price"/>
                         </div>
-                        <button>Update</button>
+                        <button style={{background:"black"}}>Update</button>
                         </div>
                         <div className="col-md-3">
                          </div>

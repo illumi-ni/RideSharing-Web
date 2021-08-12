@@ -33,68 +33,46 @@ class customerlogin extends Component {
 
         }
         return (
-        //     <div className="CustomerLogin1">
-        //        <img src='./log.jpg' alt='log' className='img-fluid'/>
-        //     <div className="container-fluid">
-                
-        //     {/* <div className="img-fluid" style={{ backgroundImage: `url(${havana})`,backgroundRepeat: 'no-repeat', width:'100%'  }} > */}
-                
-        //     <div className="log">
-        //         <div className="CusLog">
-        //         <div className=" row">
-        //           <div className=" col-sm-4"></div>
-        //           <div className="  col-sm-4">
-        //               <div className="CusForm">
-        //               <h1>Customer Login</h1>
-        //             <form>
-        //                  <h5> Please enter the OTP that we have send in your mobile number. </h5>
-                        
-        //              <h5 for="password"><label className="regstyle">OTP</label>
-        //                      <input type="text" placeholder="OTP...." value={this.state.otp} 
-        //                      onChange={(event) => { this.setState({ otp: event.target.value }) }}
-        //                       name="otp" id="otp"required />
-        //                  </h5>
-        //                  <button type="submit" className='cusLogin_btn' onClick={this.submitLogin}>Login</button>
-        //              </form>
-        //               </div>
-        //           </div>
-        //           <div className=" col-sm-4"></div>
-        //         </div>
-        //       </div>
-        //     </div>
-        // </div>
-        // </div>
-        
-         
-    <div className="Container-fluid">
-    <section id="Customer">
-       
-       <div className=" row ">
-           <div className="cus">
-           <div className="col-md-4"></div>
-              
+            <div class="container-fluid">
+            <div class="row no-gutter">
+            {/* <!-- The image half --> */}
+            <div className="col-md-1"></div>
+            <div class="col-md-5 d-none d-md-flex bg-image"></div>
 
-          
-           <form className="cusotp">
-           <div className="cusotpform col-md-4">
-                    <h1>Customer Login </h1>
-                    <h2>Please Enter your OTP</h2>
-                    
-                    <div class="group">
-                        <label for="email"> OTP</label>
-                        <input type="text" placeholder="OTP...." value={this.state.otp} 
-                             onChange={(event) => { this.setState({ otp: event.target.value }) }}
-                               name="otp" id="otp"required />
+
+            {/* <!-- The content half --> */}
+            <div class="col-md-5 bg-light">
+            <div class="login d-flex align-items-center py-5">
+
+                {/* <!-- Demo content--> */}
+                <div class="container">
+                    <div class="row">
+                        <div class="all col-lg-10 col-xl-7 ">
+                            <h3 class="display-4">Customer Login!</h3>
+                            <p class="text-muted mb-4">Please enter your OTP to login.</p>
+                            <form className="demoform">
+                            <div class="group">
+                                    {/* <label for="email"> OTP</label> */}
+                                    <input type="text" placeholder="OTP...." value={this.state.otp} 
+                                        onChange={(event) => { this.setState({ otp: event.target.value }) }}
+                                            name="otp" id="otp"required  class="form-control rounded-pill border-0 shadow-sm px-4 text-primary"/>
+                                </div>
+                                <button type="submit" className='btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm' onClick={this.sendEmail}>Log In</button>
+                            
+                                <div> <p>" When you go on a road trip the road trip itself becomes part of the story."</p></div>
+                            
+                            </form>
+                        </div>
                     </div>
-                    <button type="submit" className='cusLogin_btn' onClick={this.sendEmail}>Log In</button>
-                    </div>     
-            </form> 
-            <div className="col-md-4"></div> 
-            
-       </div> 
-       </div>
-    </section>
-</div>
+                </div>
+                
+
+            </div>
+            </div>
+            <div className="col-md-1"></div>
+
+            </div>
+            </div>
        
         )
     }

@@ -41,68 +41,53 @@ class customer extends Component {
 
         }
         return (
-    //         <div className="container-fluid">
-    //         <div className="CustomerLogin">
-                
-                
+   
      
-      
-    //       <div className="log">
-                     
-    //           <div className="CusLog">
-    //           <form  className=" row">
-    //             <div className=" col-md-4"></div>
-    //             <div className="  col-md-4">
-    //                 <div className="CusForm">
-    //                 <form>
-    //                     <h1>Please Enter your email to login</h1>
-    //                 <h5 for="email"><label className="regstyle">Email</label>
-    //                        <input type="text" placeholder="Enter your email......" 
-    //                          value={this.state.email} onChange={(event) => { this.setState({ email: event.target.value }) }}
-    //                           name="username" id="username" required />
-    //                      </h5>
-                        
-    //                      <button type="submit" className='cusLogin_btn' onClick={this.sendEmail}>Next</button>
-    //                  </form>
-    //                 </div>
-    //             </div>
-    //             <div className=" col-md-4"></div>
-                
-    //           </form>
-    //           </div>
-    //       </div>
-    //   </div>
-    //   </div>
-     
-    <div className="Container-fluid">
-        <section id="Customer">
-           
-           <div className=" row ">
-               <div className="cus">
-               <div className="col-md-4"></div>
-                  
+    
 
-              
-               <form className="cusemail">
-               <div className="cusform col-md-4">
-                        <h1>Customer Login </h1>
-                        <h2>Please Enter your email to login</h2>
-                        
+
+        <div class="container-fluid">
+        <div class="row no-gutter">
+        {/* img */}
+        <div className="col-md-1"></div>
+        <div class="col-md-5 d-none d-md-flex bg-image"></div>
+
+
+        
+        <div class="col-md-5 bg-light">
+        <div class="login d-flex align-items-center py-5">
+
+            {/* form */}
+            <div class="container">
+                <div class="row">
+                    <div class="all col-lg-10 col-xl-7 ">
+                        <h3 class="display-4">Customer Login!</h3>
+                        <p class="text-muted mb-4">Please enter your email to login.</p>
+                        <form className="demoform">
                         <div class="form-group">
-                            <label for="email"> Email</label>
-                            <input type="text" placeholder="Enter your email......" 
-                              value={this.state.email} onChange={(event) => { this.setState({ email: event.target.value }) }}
-                            name="username" id="username" required />
-                        </div>
-                        <button type="submit" className='cusLogin_btn' onClick={this.sendEmail}>Next</button>
-                        </div>     
-                </form> 
-                <div className="col-md-4"></div> 
-                
-           </div> 
-           </div>
-        </section>
-    </div>
+                  
+                                <input type="text" placeholder="Enter your email......" 
+                                value={this.state.email} onChange={(event) => { this.setState({ email: event.target.value }) }}
+                                name="username" id="username" required class="form-control rounded-pill border-0 shadow-sm px-4 text-primary"/>
+                            </div>
+                            <button type="submit" className="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm" onClick={this.sendEmail}>Next</button>
+                            
+                            
+                            <div class="text-center d-flex justify-content-between mt-4"><p>Don't have an account??? <a href="/register" class="font-italic text-muted"> 
+                                    <u>Register</u></a></p></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+        </div>
+        <div className="col-md-1"></div>
+
+        </div>
+        </div>
+
       
     
       

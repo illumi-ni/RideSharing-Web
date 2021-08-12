@@ -4,7 +4,27 @@
 }
 
 .bg-image {
-  /* background-image: url('https://res.cloudinary.com/mhmd/image/upload/v1555917661/art-colorful-contemporary-2047905_dxtao7.jpg'); */
+  background-image: url("../images/img.jpg");
   background-size: cover;
   background-position: center center;
+}
+.all{
+  width: 100%;
+  padding: 0%;
+  align-items: center;
+}
+.demoform{
+  height: fit-content;
+  padding: 0%;
+  align-items: center;
+}
+.demoform form-group{
+  align-items: center;
+  padding: 0%;
+}
+.all p{
+  text-align: center;
+}
+.all h3{
+  text-align: center;
 }

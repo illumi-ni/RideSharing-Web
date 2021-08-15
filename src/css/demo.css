@@ -1,30 +1,18 @@
-.login,
-.image {
-  min-height: 100vh;
-}
-
-.bg-image {
-  background-image: url("../images/img.jpg");
-  background-size: cover;
-  background-position: center center;
-}
-.all{
-  width: 100%;
-  padding: 0%;
-  align-items: center;
-}
-.demoform{
+/* .imgpart{
+  background-image: url("../images/night.jpg");
   height: fit-content;
-  padding: 0%;
-  align-items: center;
 }
-.demoform form-group{
-  align-items: center;
-  padding: 0%;
+.drivreg{
+  margin-top: 100px;
+} */
+/* .bookingupdate{
+  background-image:("../images/a.jpg");
+} */
+.test{
+  background-image:url("../images/cars.jpg");
+  margin: 0px;
 }
-.all p{
-  text-align: center;
-}
-.all h3{
-  text-align: center;
+.form2{
+  background-color: white;
+
 }

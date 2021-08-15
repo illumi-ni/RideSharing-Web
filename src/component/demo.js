@@ -1,58 +1,69 @@
 import React, { Component } from 'react';
 import '../css/demo.css';
+import hire from '../images/hire.jpg';
 
 class demo extends Component {
     render() {
-        return (
-            <div class="container-fluid">
-    <div class="row no-gutter">
-        {/* <!-- The image half --> */}
-        <div className="col-md-1"></div>
-        <div class="col-md-5 d-none d-md-flex bg-image"></div>
+         return (
+            // <div class="container">
+            //     <div className="demo">
+            //          <div className="row">
+            //                 <div className="col-md-2"></div>
+            //                 <div className="col-md-6">
+            //                     <form>
+            //                     <input type="text" name="title" id="title" placeholder="Title" required />
+            //                     <input type="text" name="title" id="title" placeholder="Title" required />
+            //                     <input type="text" name="title" id="title" placeholder="Title" required />
+            //                     <input type="text" name="title" id="title" placeholder="Title" required />
+            //                     </form>
+            //                 </div>
+            //             </div>     
+            //      </div>
+            // </div>
+            
+<div className="test">
 
-
-        {/* <!-- The content half --> */}
-        <div class="col-md-5 bg-light">
-            <div class="login d-flex align-items-center py-5">
-
-                {/* <!-- Demo content--> */}
-                <div class="container">
-                    <div class="row">
-                        <div class="all col-lg-10 col-xl-7 ">
-                            <h3 class="display-4">Customer Login!</h3>
-                            <p class="text-muted mb-4">Please enter your email to login.</p>
-                            <form className="demoform">
-                                <div class="form-group mb-4">
-                                <input type="text" placeholder="Enter your email......" 
-                            
-                            name="username" id="username" required   class="form-control rounded-pill border-0 shadow-sm px-4 text-primary"/>
-                                </div>
-                                 {/* <div class="form-group mb-3">
-                                    <input id="inputPassword" type="password" placeholder="Password" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary"/>
-                                </div>  */}
-                                <div class="custom-control custom-checkbox mb-3">
-                                    <input id="customCheck1" type="checkbox" checked class="custom-control-input"/>
-                                    <label for="customCheck1" class="custom-control-label">Remember password</label>
-                                </div>
-                                <button type="submit" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm">Sign in</button>
-                                <div class="text-center d-flex justify-content-between mt-4"><p>Don't have an account??? <a href="/register" class="font-italic text-muted"> 
-                                        <u>Register</u></a></p></div>
-                            </form>
-                        </div>
+            <div className="container-fluid">
+            <section id="bookingupdate">
+            
+                <div className="row">
+                <div className="col-md-4">
                     </div>
-                </div>
-                
+           
+               <form className="updatebook ">
+                   <h1>Driver Register Update</h1>
 
-            </div>
-        </div>
-        <div className="col-md-1"></div>
-
-    </div>
-</div>
-
-        
-  
-                
+                           <div className="form2 col-md-4">
+                   <div class="form-group">
+                       <label for="Fullname">Full Name</label>
+                       <input type="Fullname" class="form-control" id="FullName" placeholder="Enter fullName"/>
+                   </div>
+                   <div class="form-group">
+                       <label for="Username">User Name</label>
+                       <input type="Fullname" class="form-control" id="FullName" placeholder="Enter username"/>
+                   </div>
+                   <div class="form-group">
+                       <label for="Email">Email </label>
+                       <input type="Email" class="form-control" id="Email" placeholder="Enter your email"/>
+                   </div>
+                   <div class="form-group">
+                       <label for="Phone">Phone No</label>
+                       <input type="Phone" class="form-control" id="Phone" placeholder="Enter Phone No"/>
+                   </div>
+                   <div class="form-group">
+                       <label for="vechicle">Vechile num</label>
+                       <input type="vechile" class="form-control" id="vechile" placeholder="vechile.."/>
+                   </div>
+                   <div class="form-group">
+                       <label for="model">Model</label>
+                       <input type="model" class="form-control" id="model" placeholder="model"/>
+                   </div>
+                  </div>
+                   </form>
+                   </div>
+            </section>
+           </div>
+           </div>
         )
     }
 }

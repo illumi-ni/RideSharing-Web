@@ -63,9 +63,9 @@ class Driverregister extends Component{
     render(){  
     return(
         
-<div className="Driver">
-{/* <img src='./log.jpg' alt='log' className='img-fluid'/> */}
-<div style={{ backgroundImage: `url(${hire})`,backgroundRepeat: 'no-repeat'   }}></div>
+/* <div className="Driver">
+{/* <img src='./log.jpg' alt='log' className='img-fluid'/> */
+/* <div style={{ backgroundImage: `url(${hire})`,backgroundRepeat: 'no-repeat'   }}></div>
 <div className="container-fluid">
 <div class="wrapper">
        <div id="particles-js"></div>
@@ -162,6 +162,79 @@ class Driverregister extends Component{
 							</div>
         </div>
         </div>
+        </div>
+    </div> */ 
+
+    <div className="test">
+
+        <div className="container-fluid">
+            <section id="bookingupdate">
+            
+                <div className="row">
+                <div className="col-md-4">
+                    </div>
+           
+               <form className="updatebook ">
+                  
+
+                           <div className="form2 col-md-4">
+                           <h1>Driver Register </h1>
+                           <div class="form-group">
+                            <h5 for ="fullname">
+                                 <input type="text" placeholder="Fullname...... " name="fullname" id="fullname"value={this.state.fullname} onChange={this.ChangeItems}required/>
+                            </h5>
+                            </div>
+                           <div class="form-group">
+                         <h5 for="email">
+                            <input type="text" placeholder="Email........" name="email" id="email" value={this.state.email} onChange={this.ChangeItems}required/>
+                                </h5>
+							</div>
+                           
+                            <div class="form-group">
+                                    <h5 for="username">
+                     <input type="text" placeholder="Username........" name="username" id="username" value={this.state.username} onChange={this.ChangeItems}required/>
+                     </h5>
+									</div>
+                                    <div class="form-group">
+                                    <h5 for="context">
+                     <input type="text" placeholder="Contact......." name="phone" id="phone" value={this.state.phone} onChange={this.ChangeItems}required/>
+                    </h5>
+									</div>
+                                    <div class="form-group">
+                                    <h5 for="citizenship">
+                     <input type="text" placeholder="Citizenship........" name="citizenship" id="citizenship" value={this.state.citizenship} onChange={this.ChangeItems}required/>
+                     </h5>
+									</div>
+                                    <div class="form-group">
+                                    <Form.File id="formcheck-api-regular">
+                             <p> <b><u>Licence</u></b></p>
+                             <input type ="file" name="licence"  onChange={this.fileHandler}/> 
+                             </Form.File>
+									</div>
+                                    <div class="form-group">
+                                    <h5 for="dob">
+                     <input type="date" placeholder="DOB........" name="dob" id="dob" value={this.state.dob} onChange={this.ChangeItems}required/>
+                     </h5>
+									</div>
+                                    <div class="form-group">
+									<h5 for="vechileNo">
+                    <input type="text" placeholder="vechileNo......." name="vechileNo" id="vechileNo" value={this.state.vechileNo} onChange={this.ChangeItems}required/>
+                     </h5>
+									</div>
+                                    <div class="form-group">
+                                    <h5 for="model">
+                     <input type="text" placeholder="Model......." name="model" id="model" value={this.state.model} onChange={this.ChangeItems}required/>
+                     </h5>
+									</div>
+
+                                    <div class="form-btn">
+                            <button type="submit" className='drivRegister_btn'onClick={this.SendItems}>Register</button>
+							</div>
+                            </div>
+                  
+                   </form>
+                </div>
+            </section>
         </div>
     </div>
 

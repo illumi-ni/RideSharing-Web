@@ -61,7 +61,7 @@ SendItems=(e)=>{
                             <div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<input class="form-control" type="text" placeholder="Fullname..." name="fullname"  value={this.state.fullname} onChange={this.ChangeItem}/>
+										<input class="form-control" type="text" placeholder={localStorage.getItem('fullname')} name="fullname"  value={this.state.fullname} onChange={this.ChangeItem}required/>
 										<span class="form-label">Fullname</span>
 									</div>
 								</div>

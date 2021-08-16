@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import havana from '../images/havana.jpg'
 import '../css/customer.css';
-
 import axios from 'axios'
 import { Redirect } from 'react-router-dom';
 
@@ -33,31 +32,30 @@ class customerlogin extends Component {
 
         }
         return (
-            <div class="container-fluid">
-            <div class="row no-gutter">
-            {/* <!-- The image half --> */}
+            <div className="container-fluid">
+            <div className="row no-gutter">
+    
             <div className="col-md-1"></div>
-            <div class="col-md-5 d-none d-md-flex bg-image"></div>
+            <div className="col-md-5 d-none d-md-flex bg-image"></div>
 
 
-            {/* <!-- The content half --> */}
-            <div class="col-md-5 bg-light">
-            <div class="login d-flex align-items-center py-5">
+            <div className="col-md-5 bg-light">
+            <div className="login d-flex align-items-center py-5">
 
                 {/* <!-- Demo content--> */}
-                <div class="container">
-                    <div class="row">
-                        <div class="all col-lg-10 col-xl-7 ">
-                            <h3 class="display-4">Customer Login!</h3>
-                            <p class="text-muted mb-4">Please enter your OTP to login.</p>
+                <div className="container">
+                    <div className="row">
+                        <div className="all col-lg-10 col-xl-7 ">
+                            <h3 className="display-4">Customer Login!</h3>
+                            <p className="text-muted mb-4">Please enter your OTP to login.</p>
                             <form className="demoform">
-                            <div class="group">
+                            <div className="group">
                                     {/* <label for="email"> OTP</label> */}
-                                    <input type="text" placeholder="OTP...." value={this.state.otp} 
+                                    <input type="text" placeholder="OTP...." name="otp" id="otp" value={this.state.otp} 
                                         onChange={(event) => { this.setState({ otp: event.target.value }) }}
-                                            name="otp" id="otp"required  class="form-control rounded-pill border-0 shadow-sm px-4 text-primary"/>
+                                            required  className="form-control rounded-pill border-0 shadow-sm px-4 text-primary"/>
                                 </div>
-                                <button type="submit" className='btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm' onClick={this.sendEmail}>Log In</button>
+                                <button type="submit" className='btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm' onClick={this.submitLogin}>Log In</button>
                             
                                 <div> <p>" When you go on a road trip the road trip itself becomes part of the story."</p></div>
                             
@@ -77,4 +75,4 @@ class customerlogin extends Component {
         )
     }
 }
-export default customerlogin
+export default customerlogin;

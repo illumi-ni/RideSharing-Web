@@ -6,8 +6,8 @@ import axios from 'axios';
 
 class booking extends Component {
     state = {
-        fullname : "",
-        phone:"",
+        fullname : localStorage.getItem('fullname'),
+		phone:localStorage.getItem('phone'),
         from:"",
         to:"",
         date:"",
@@ -23,7 +23,13 @@ ChangeItem=(e)=>{
     })
 }
 //img handler
-
+calculatePrice() {
+	const price_per_km = this.state.price;
+	const count = 40;
+	const total_price = parseInt(price_per_km * count);
+	// console.log(total_price)
+	return total_price
+}
 SendItems=(e)=>{
     //preventDefault== By default refresh hunxa so, blank nahoss vannah refresh nahoss vannah
     e.preventDefault();
@@ -58,7 +64,7 @@ SendItems=(e)=>{
 							<h1>Make Advanced Booking</h1>
 						</div>
 						<form>
-                            <div class="row">
+                            {/* <div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
 										<input class="form-control" type="text" placeholder={localStorage.getItem('fullname')} name="fullname"  value={this.state.fullname} onChange={this.ChangeItem}required/>
@@ -71,18 +77,97 @@ SendItems=(e)=>{
 										<span class="form-label">Phone</span>
 									</div>
 								</div>
-							</div>
+							</div> */}
                             <div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<input class="form-control" type="text" placeholder="From..." name="from"  value={this.state.from} onChange={this.ChangeItem} required/>
-										<span class="form-label">From</span>
+										<span class="form-label" >Pick Up</span>
+									<select name="from" class="form-control"type="from" placeholder="from..."value={this.state.from} onChange={this.ChangeItem}>
+                                        <option  disabled="" selected="">Dillibazar</option>
+                                        <option >Pashupatinath</option>
+                                        <option >Boudha</option>
+                                        <option >Swayambhunath</option>
+                                        <option >Thamel</option>
+                                        <option >Kapan</option>
+                                        <option >Patan</option>
+                                        <option >Lokanthali</option>
+                                        <option >Putalisadak</option>
+                                        <option >Suryabhinayak</option>
+                                        <option >Kupandole</option>
+										<option >Samakhushi</option>
+                                        <option >Tokha</option>
+                                        <option >Koteshwor</option>
+                                        <option >Jadibuti</option>
+                                        <option >New Baneshwor</option>
+                                        <option >Mid-Baneshwor</option>
+										<option>Sadobato</option>
+										<option >Maitighar</option>
+                                        <option >Tripureshwor</option>
+                                        <option >Sundhara</option>
+                                        <option >Maitidevi</option>
+                                        <option >Mid-Baneshwor</option>
+										<option>Sinamangal</option>
+										<option >Gausala</option>
+                                        <option >Chabahil</option>
+                                        <option >Tinkune</option>
+                                        <option >Kausaltar</option>
+										<option>Gatthaghar</option>
+										<option >Thimi</option>
+										<option>Balkumari</option>
+										<option >Gwarko</option>
+                                        <option >Ekantakuna</option>
+                                        <option >Jamel</option>
+                                        <option >Dhobighat</option>
+										<option>Jawalakhel</option>
+										<option >Lagankhel</option>
+										<option>Pulchowk</option>
+                                    </select>
 									</div>
-								</div>
+									</div>
+							
 								<div class="col-md-6">
-									<div class="form-group">
-										<input class="form-control" type="text" placeholder="To..." name="to"  value={this.state.to} onChange={this.ChangeItem} required/>
-										<span class="form-label">To</span>
+								<div class="form-group">
+										<span class="form-label">Drop Up</span>
+									<select name="to" class="form-control" type="to" placeholder="to..." value={this.state.to} onChange={this.ChangeItem}>
+                                        <option  disabled="" selected="">Lokanthali</option>
+                                        <option >Pashupatinath</option>
+                                        <option >Boudha</option>
+                                        <option >Swayambhunath</option>
+                                        <option >Thamel</option>
+                                        <option >Kapan</option>
+                                        <option >Patan</option>
+                                        <option >Dillibazar</option>
+                                        <option >Putalisadak</option>
+                                        <option >Suryabhinayak</option>
+                                        <option >Kupandole</option>
+										<option >Samakhushi</option>
+                                        <option >Tokha</option>
+                                        <option >Koteshwor</option>
+                                        <option >Jadibuti</option>
+                                        <option >New Baneshwor</option>
+                                        <option >Mid-Baneshwor</option>
+										<option>Sadobato</option>
+										<option >Maitighar</option>
+                                        <option >Tripureshwor</option>
+                                        <option >Sundhara</option>
+                                        <option >Maitidevi</option>
+                                        <option >Mid-Baneshwor</option>
+										<option>Sinamangal</option>
+										<option >Gausala</option>
+                                        <option >Chabahil</option>
+                                        <option >Tinkune</option>
+                                        <option >Kausaltar</option>
+										<option>Gatthaghar</option>
+										<option >Thimi</option>
+										<option>Balkumari</option>
+										<option >Gwarko</option>
+                                        <option >Ekantakuna</option>
+                                        <option >Jamel</option>
+                                        <option >Dhobighat</option>
+										<option>Jawalakhel</option>
+										<option >Lagankhel</option>
+										<option>Pulchowk</option>
+                                    </select>
 									</div>
 								</div>
 							</div>

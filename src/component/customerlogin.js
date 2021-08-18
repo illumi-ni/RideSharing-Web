@@ -17,6 +17,7 @@ class customerlogin extends Component {
             console.log(response);
             localStorage.setItem('token',response.data.token)
             localStorage.setItem('fullname',response.data.customerData.fullname)
+            alert(response.data.message)
             this.setState({
                 chklogin : true
             })

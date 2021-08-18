@@ -16,6 +16,8 @@ class Driverregister extends Component{
             dob:"",
             vechileNo:"",
             model:"",
+            brand:"",
+            photo:""
         }
         
     ChangeItems=(e)=>{
@@ -27,7 +29,8 @@ class Driverregister extends Component{
     
     fileHandler = (e)=>{
         this.setState({
-            licence : e.target.files[0]
+            [e.target.name]: e.target.files[0],
+            [e.target.name]: e.target.files[0]
         })
     }
     
@@ -44,12 +47,12 @@ class Driverregister extends Component{
         data.append('dob',this.state.dob)
         data.append('vechileNo',this.state.vechileNo)
         data.append('model',this.state.model)
+        data.append('brand', this.state.brand)
+        data.append('photo', this.state.photo)
     
         console.log(data)
     
-        axios.post("http://localhost:90/admin/register",data)
-    
-        
+        axios.post("http://localhost:90/admin/register",data, this.state.config)
         .then((response)=>{
             console.log(response)
             alert(response.data.message)
@@ -62,80 +65,99 @@ class Driverregister extends Component{
     
     render(){  
     return(
-    <div className="test">
-
-        <div className="container-fluid">
-            <section id="bookingupdate">
-            
-                <div className="row">
-                <div className="col-md-4">
-                    </div>
-           
-               <form className="updatebook ">
-                  
-
-                           <div className="form2 col-md-4">
-                           <h1>Driver Register </h1>
-                           <div class="form-group">
-                            <h5 for ="fullname">
-                                 <input type="text" placeholder="Fullname...... " name="fullname" id="fullname"value={this.state.fullname} onChange={this.ChangeItems}required/>
-                            </h5>
-                            </div>
-                           <div class="form-group">
-                         <h5 for="email">
-                            <input type="text" placeholder="Email........" name="email" id="email" value={this.state.email} onChange={this.ChangeItems}required/>
-                                </h5>
-							</div>
-                           
-                            <div class="form-group">
-                                    <h5 for="username">
-                     <input type="text" placeholder="Username........" name="username" id="username" value={this.state.username} onChange={this.ChangeItems}required/>
-                     </h5>
-									</div>
-                                    <div class="form-group">
-                                    <h5 for="context">
-                     <input type="text" placeholder="Contact......." name="phone" id="phone" value={this.state.phone} onChange={this.ChangeItems}required/>
-                    </h5>
-									</div>
-                                    <div class="form-group">
-                                    <h5 for="citizenship">
-                     <input type="text" placeholder="Citizenship........" name="citizenship" id="citizenship" value={this.state.citizenship} onChange={this.ChangeItems}required/>
-                     </h5>
-									</div>
-                                    <div class="form-group">
-                                    <Form.File id="formcheck-api-regular">
-                             <p> <b><u>Licence</u></b></p>
-                             <input type ="file" name="licence"  onChange={this.fileHandler}/> 
-                             </Form.File>
-									</div>
-                                    <div class="form-group">
-                                    <h5 for="dob">
-                     <input type="date" placeholder="DOB........" name="dob" id="dob" value={this.state.dob} onChange={this.ChangeItems}required/>
-                     </h5>
-									</div>
-                                    <div class="form-group">
-									<h5 for="vechileNo">
-                    <input type="text" placeholder="vechileNo......." name="vechileNo" id="vechileNo" value={this.state.vechileNo} onChange={this.ChangeItems}required/>
-                     </h5>
-									</div>
-                                    <div class="form-group">
-                                    <h5 for="model">
-                     <input type="text" placeholder="Model......." name="model" id="model" value={this.state.model} onChange={this.ChangeItems}required/>
-                     </h5>
-									</div>
-
-                                    <div class="form-btn">
-                            <button type="submit" className='drivRegister_btn'onClick={this.SendItems}>Register</button>
-							</div>
-                            </div>
-                  
-                   </form>
-                </div>
-            </section>
-        </div>
-    </div>
-
+        <div>
+        <section id="herod">
+        <div class="herod-container" data-aos="fade-up">
         
+        </div>
+        </section> 
+
+        <section id="driver" class="driver">
+        <div className="container">
+
+     
+        <div className="row booking-form-row">
+            <div className="col-md-2"></div>
+
+            <div className="col-md-8">
+            <div className="card-body booking-form">
+                        <form action="" method="post">
+                            <h4 className="modal-title" style={{color:"white"}}>Driver Details</h4>
+                            <div className="row">
+                                <div className="col-sm-6 form-group">
+                                <input class="form-control" type="text" placeholder="fullname..." name="fullname"  value={this.state.fullname} onChange={this.ChangeItems} required/>
+                                </div>
+                                <div className="col-sm-6 form-group">
+                                    <input type="text" name="username" className="form-control" placeholder="username"  value={this.state.username} onChange={this.ChangeItems} />
+                                </div>
+                            </div>
+
+                            <div className="row">
+                                <div className="col-sm-6 form-group">
+                                    <input type="text" name="email" className="form-control" placeholder="email" required="required" value={this.state.email} onChange={this.ChangeItems} />
+                                </div>
+                                <div className="col-sm-6 form-group">
+                                    <input type="text" name="password" className="form-control" placeholder="password" required="required" value={this.state.password} onChange={this.ChangeItems} />
+                                </div>
+                            </div>
+
+                            <div className="row ">
+                                <div className="col-sm-6 form-group">
+                                    <input type="text" name="phone" className="form-control" placeholder="phone" required="required" value={this.state.phone} onChange={this.ChangeItems} />
+                                </div>
+                                <div className="col-sm-6 form-group">
+                                    <input type="text" name="citizenship" className="form-control" placeholder="citizenship" required="required" value={this.state.citizenship} onChange={this.ChangeItems} />
+                                </div>
+                                
+                            </div>
+
+
+                           
+                            <div className="row">
+                                <div className="col-sm-6 form-group">
+                                    <label style={{color:"white"}}>Driver Photo</label>
+                                    <input type="file" name="photo" className="form-control" required="required" onChange={this.fileHandler} />
+                                </div>
+                                <div className="col-sm-6 form-group">
+                                    <label style={{color:"white"}}>License Photo</label>
+                                    <input type="file" name="licence" className="form-control" required="required" onChange={this.fileHandler} />
+                                    
+                                </div>
+                            </div>
+                            <div className="row ">
+                                <div className="col-sm-6 form-group">
+                                    <input type="text" name="dob" className="form-control" placeholder="dob" required="required" value={this.state.dob} onChange={this.ChangeItems} />
+                                </div>
+                                <div className="col-sm-6 form-group">
+                                <input class="form-control" type="text" placeholder="vechileNo..." name="fullname"  value={this.state.vechileNo} onChange={this.ChangeItems} required/>
+                                </div>
+                            </div>
+                            <div className="row ">
+                                <div className="col-sm-6 form-group">
+                                    <input type="text" name="model" className="form-control" placeholder="model" required="required" value={this.state.model} onChange={this.ChangeItems} />
+                                </div>
+                                <div className="col-sm-6 form-group">
+                                    <input type="text" name="brand" className="form-control" placeholder="brand" required="required" value={this.state.brand} onChange={this.ChangeItems} />
+                                </div>
+                            </div>
+
+                            <input type="submit" className="btn btn-primary btn-block btn-lg" value="Add" onClick={this.SendItems} />
+                        </form>
+                    </div>
+                </div>
+            </div>
+      </div>
+      </section>
+
+</div>
+
+
+
+
+
+
+
+
     
     )
     }

@@ -4,6 +4,7 @@ import '../css/register.css';
 import axios from 'axios';
 import carrent from "../images/carrent.jpg"
 import { Link } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 
 class register extends Component {
@@ -13,7 +14,8 @@ class register extends Component {
             fullname: "",
             email: "",
             contact: "",
-            gender: ""
+            gender: "",
+            chklogin : false
             
         };
         this.onValueChange = this.onValueChange.bind(this);
@@ -35,6 +37,12 @@ class register extends Component {
         axios.post("http://localhost:90/customer/insert", data)
             .then(response => {
                 console.log(response)
+                alert(response.data.message)
+                window.location.reload(true);
+
+                this.setState({
+                    chklogin : true
+                })
                 
             })
             .catch(error => {
@@ -43,6 +51,10 @@ class register extends Component {
     }
 
     render() {
+        if(this.state.chklogin === true){
+            //redirect to dashboard
+            return <Redirect to ='/customer' />
+        }
       
         return (
 

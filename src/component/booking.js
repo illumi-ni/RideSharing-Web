@@ -13,7 +13,7 @@ class booking extends Component {
         date:"",
         time:"",
         distance:"",
-        price:"0"
+        price:"1"
       
     }
     
@@ -26,7 +26,7 @@ ChangeItem=(e)=>{
 
 //img handler
 calculatePrice() {
-	const price_per_km = this.state.price;
+	const price_per_km = this.state.distance;
 	const count = 40;
 	const total_price = parseInt(price_per_km * count);
 	// console.log(total_price)

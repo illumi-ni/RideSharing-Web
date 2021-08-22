@@ -13,10 +13,10 @@ class Customerprofile extends Component {
         phone: "",
         gender: "",
         photo: "",
-        id: "",
-        config: {
-            headers: { 'authorization': `Bearer ${localStorage.getItem('token')}` }
-        }
+        id: ""
+        // config: {
+        //     headers: { 'authorization': `Bearer ${localStorage.getItem('token')}` }
+        // }
     }
 
     fileHandler = (e) => {
@@ -33,42 +33,48 @@ class Customerprofile extends Component {
     }
 
     componentDidMount() {
-        console.log(this.state.id)
+        const email = localStorage.getItem('email')
 
-        axios.get("http://localhost:90/customer/single", this.state.config)
-            .then((response) => {
-                console.log(response)
+        axios.get('http://localhost:90/consumer/single/'+email)
+        .then((response)=>{
                 this.setState({
-                    id: response.data.CustomerData._id,
+                    id:response.data.ConsumerData._id,
                     fullname: response.data.CustomerData.fullname,
                     email: response.data.CustomerData.email,
-                    gender: response.data.CustomerData.gender,
                     phone: response.data.CustomerData.phone,
-                    photo: response.data.CustomerData.photo,
-
-
+                    gender: response.data.CustomerData.gender,
+                    photo:response.data.CustomerData.photo
 
                 })
-                // console.log(data)
-            })
-            .catch((err) => {
-                console.log(err.response)
-            })
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
     }
+    // updateUserData = (e) => {
+    //     e.preventDefault()
+    //     const data = new FormData()
+    //     data.append('id', this.state.id)
+    //     data.append('fullname', this.state.fullname)
+    //     data.append('phone', this.state.phone)
+    //     data.append('email', this.state.email)
+    //     data.append('photo', this.state.photo)
+    //     data.append('gender', this.state.gender)
 
-    updateUserData = (e) => {
-        e.preventDefault()
-        const data = new FormData()
-        data.append('id', this.state.id)
-        data.append('fullname', this.state.fullname)
-        data.append('phone', this.state.phone)
-        data.append('email', this.state.email)
-        data.append('photo', this.state.photo)
-        data.append('gender', this.state.gender)
+    //     console.log(data)
 
-        console.log(data)
+    //     axios.put("http://localhost:90/customer/update", data, this.state.config)
+    //         .then((response) => {
+    //             console.log(response)
+    //         })
+    //         .catch((err) => {
+    //             console.log(err.response)
+    //         })
+    // }
 
-        axios.put("http://localhost:90/customer/update", data, this.state.config)
+    updateData = (e) => {
+        e.preventDefault();
+        axios.put('http://localhost:90/consumer_update', this.state)
             .then((response) => {
                 console.log(response)
             })

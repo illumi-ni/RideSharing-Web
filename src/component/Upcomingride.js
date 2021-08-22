@@ -13,7 +13,6 @@ import axios from "axios"
 class UpcomingRide extends Component{
     state={
         fullname: "",
-        phone: "",
         from: "",
         to: "",
         date: "",
@@ -32,7 +31,6 @@ class UpcomingRide extends Component{
                 this.setState({
                     id:response.data.BookingData._id,
                     fullname: response.data.BookingData.fullname,
-                    phone: response.data.BookingData.phone,
                     from: response.data.BookingData.from,
                     to: response.data.BookingData.to,
                     date: response.data.BookingData.date,
@@ -47,8 +45,7 @@ class UpcomingRide extends Component{
             })
         
     }
-
-  
+    
         DeleteRide=(fullname)=>{
             axios.delete("http://localhost:90/delete/booking/"+ fullname)
             .then((response)=>{
@@ -102,6 +99,7 @@ class UpcomingRide extends Component{
 
                                 <h5><From/> {this.state.from}</h5>
                                 <h5><To/>  {this.state.to}</h5>
+                                <h5>Price:{this.state.price}</h5>
                         <button className="buttoncan"><Delete/> </button>
                         <Link to="/BookingUpdate"> <button className="buttonup"><Update/></button></Link>
                             </div>

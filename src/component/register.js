@@ -72,6 +72,11 @@ class register extends Component {
 					<input type="submit" name="account" class="account" value="Have An Account"/>
 				</div>
                 </Link>
+                <Link to ="/adminregister">
+                <div class="form-left-last">
+					<input type="submit" name="account" class="account" value="Register for Admin"/>
+				</div>
+                </Link>
                 </div>
 			</div>
 			<form class="form-detail" action="#" method="post" id="myform">

@@ -1,19 +1,19 @@
 // import { left } from '@popperjs/core';
-import React, { Component } from 'react';
+import React, { useState, Component } from 'react';
 import '../css/booking.css';
 import axios from 'axios';
-
+import DatePicker from "react-datepicker"
+import $ from 'jquery'; 
 
 class booking extends Component {
     state = {
-        fullname : "",
-        phone:"",
+        fullname : localStorage.getItem('fullname'),
         from:"",
         to:"",
         date:"",
         time:"",
         distance:"",
-        price:""
+        price:"1"
       
     }
     
@@ -22,13 +22,43 @@ ChangeItem=(e)=>{
         [e.target.name]:e.target.value
     })
 }
+
+
 //img handler
+calculatePrice() {
+	const price_per_km = this.state.distance;
+	const count = 40;
+	const total_price = parseInt(price_per_km * count);
+	// console.log(total_price)
+	return total_price
+}
+
+// disable past dates
+
+	
+   
+
 
 SendItems=(e)=>{
     //preventDefault== By default refresh hunxa so, blank nahoss vannah refresh nahoss vannah
     e.preventDefault();
+	var price1=0;
+	 price1 = this.calculatePrice()
+        this.state.price = price1
+        console.log(this.state.price)
 
-    axios.post("http://localhost:90/customer/booking",this.state)
+		const data = {
+            fullname: this.state.fullname,
+            from: this.state.from,
+            to: this.state.to,
+            date: this.state.date,
+            time: this.state.time,
+            distance: this.state.distance,
+            price: this.state.price
+         
+        }
+
+    axios.post("http://localhost:90/customer/booking",data, this.state.config)
     .then((response)=>{
         console.log(response)
 		alert(response.data.message)
@@ -39,8 +69,12 @@ SendItems=(e)=>{
     })
 }
     render() {
+		
+
         return (
+			
             <div>
+				
             <section id="hero2">
             <div class="hero2-container" data-aos="fade-up">
                 <h1>Welcome to Booking Page</h1>
@@ -58,60 +92,144 @@ SendItems=(e)=>{
 							<h1>Make Advanced Booking</h1>
 						</div>
 						<form>
+                            
                             <div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<input class="form-control" type="text" placeholder="Fullname..." name="fullname"  value={this.state.fullname} onChange={this.ChangeItem}/>
-										<span class="form-label">Fullname</span>
+										<label style={{color:"white"}}>Pick Up</label>
+									<select name="from" class="form-control"type="select" placeholder="from..." id="from" value={this.state.from} onChange={this.ChangeItem}>
+                                        <option  disabled="" selected="">Dillibazar</option>
+                                        <option >Pashupatinath</option>
+                                        <option >Boudha</option>
+                                        <option >Swayambhunath</option>
+                                        <option >Thamel</option>
+                                        <option >Kapan</option>
+                                        <option >Patan</option>
+                                        <option >Lokanthali</option>
+                                        <option >Putalisadak</option>
+                                        <option >Suryabhinayak</option>
+                                        <option >Kupandole</option>
+										<option >Samakhushi</option>
+                                        <option >Tokha</option>
+                                        <option >Koteshwor</option>
+                                        <option >Jadibuti</option>
+                                        <option >New Baneshwor</option>
+                                        <option >Mid-Baneshwor</option>
+										<option>Sadobato</option>
+										<option >Maitighar</option>
+                                        <option >Tripureshwor</option>
+                                        <option >Sundhara</option>
+                                        <option >Maitidevi</option>
+                                        <option >Mid-Baneshwor</option>
+										<option>Sinamangal</option>
+										<option >Gausala</option>
+                                        <option >Chabahil</option>
+                                        <option >Tinkune</option>
+                                        <option >Kausaltar</option>
+										<option>Gatthaghar</option>
+										<option >Thimi</option>
+										<option>Balkumari</option>
+										<option >Gwarko</option>
+                                        <option >Ekantakuna</option>
+                                        <option >Jamel</option>
+                                        <option >Dhobighat</option>
+										<option>Jawalakhel</option>
+										<option >Lagankhel</option>
+										<option>Pulchowk</option>
+                                    </select>
 									</div>
-								</div>
+									</div>
+							
 								<div class="col-md-6">
-									<div class="form-group">
-										<input class="form-control" type="text" placeholder="Phone..." name="phone"   value={this.state.phone} onChange={this.ChangeItem}required />
-										<span class="form-label">Phone</span>
+								<div class="form-group">
+										<label style={{color:"white"}}>Drop Up</label>
+									<select name="to" class="form-control" type="select" placeholder="to..." id="to" value={this.state.to} onChange={this.ChangeItem}>
+                                        <option  disabled="" selected="">Lokanthali</option>
+                                        <option >Pashupatinath</option>
+                                        <option >Boudha</option>
+                                        <option >Swayambhunath</option>
+                                        <option >Thamel</option>
+                                        <option >Kapan</option>
+                                        <option >Patan</option>
+                                        <option >Dillibazar</option>
+                                        <option >Putalisadak</option>
+                                        <option >Suryabhinayak</option>
+                                        <option >Kupandole</option>
+										<option >Samakhushi</option>
+                                        <option >Tokha</option>
+                                        <option >Koteshwor</option>
+                                        <option >Jadibuti</option>
+                                        <option >New Baneshwor</option>
+                                        <option >Mid-Baneshwor</option>
+										<option>Sadobato</option>
+										<option >Maitighar</option>
+                                        <option >Tripureshwor</option>
+                                        <option >Sundhara</option>
+                                        <option >Maitidevi</option>
+                                        <option >Mid-Baneshwor</option>
+										<option>Sinamangal</option>
+										<option >Gausala</option>
+                                        <option >Chabahil</option>
+                                        <option >Tinkune</option>
+                                        <option >Kausaltar</option>
+										<option>Gatthaghar</option>
+										<option >Thimi</option>
+										<option>Balkumari</option>
+										<option >Gwarko</option>
+                                        <option >Ekantakuna</option>
+                                        <option >Jamel</option>
+                                        <option >Dhobighat</option>
+										<option>Jawalakhel</option>
+										<option >Lagankhel</option>
+										<option>Pulchowk</option>
+                                    </select>
 									</div>
 								</div>
 							</div>
-                            <div class="row">
-								<div class="col-md-6">
-									<div class="form-group">
-										<input class="form-control" type="text" placeholder="From..." name="from"  value={this.state.from} onChange={this.ChangeItem} required/>
-										<span class="form-label">From</span>
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-group">
-										<input class="form-control" type="text" placeholder="To..." name="to"  value={this.state.to} onChange={this.ChangeItem} required/>
-										<span class="form-label">To</span>
-									</div>
-								</div>
-							</div>
+
+						
+
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
+									<label style={{color:"white"}} >Date</label>
 										<input class="form-control" type="date" placeholder="Date..." name="date"  value={this.state.date} onChange={this.ChangeItem} required/>
-										<span class="form-label">Date</span>
+										
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<input class="form-control" type="text" placeholder="Time..." name="time"  value={this.state.time} onChange={this.ChangeItem} required/>
-										<span class="form-label">Time</span>
+									<label style={{color:"white"}}>PickUp Time</label> 
+									
+							<input class="form-control"type="time" id="time" name="time" min="09:00" max="18:00" value={this.state.time} onChange={this.ChangeItem} required/>
+									{/* <input class="form-control" type="time"  min="09:00" max="18:00" value={this.state.time} onChange={this.ChangeItem} required/> */}
+                                    {/* <select name="pickUpTime" className="form-control" id="select" value={this.state.time} onChange={this.ChangeItem}>
+                                        <option  disabled="" selected="">6:00 AM</option>
+                                        <option >7:00 AM</option>
+                                        <option >8:00 AM</option>
+                                        <option >9:00 AM</option>
+                                        <option >10:00 AM</option>
+                                        <option >11:00 AM</option>
+                                        <option >12:00 AM</option>
+                                    </select> */}
 									</div>
-								</div>
+									</div>
+								
 							</div>
 							
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
+									<label style={{color:"white"}}>Distance</label>
 										<input class="form-control" type="text" placeholder="Distance..." name="distance" value={this.state.distance} onChange={this.ChangeItem} required/>
-										<span class="form-label">Distance</span>
+										
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
+									<label style={{color:"white"}}>Price</label>
 										<input class="form-control" type="text" placeholder="Price" name="price" value={this.state.price} onChange={this.ChangeItem} required/>
-										<span class="form-label">Price</span>
+										
 									</div>
 								</div>
 							</div>

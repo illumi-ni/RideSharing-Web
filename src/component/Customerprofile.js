@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import ReactRoundedImage from "react-rounded-image";
 import Update from "@material-ui/icons/Update";
-
 import {  } from 'react-icons/fa';
 
 class Customerprofile extends Component {
@@ -14,17 +13,17 @@ class Customerprofile extends Component {
         phone: "",
         gender: "",
         photo: "",
-        id: "",
-        config: {
-            headers: { 'authorization': `Bearer ${localStorage.getItem('token')}` }
-        }
+        id: ""
+        // config: {
+        //     headers: { 'authorization': `Bearer ${localStorage.getItem('token')}` }
+        // }
     }
 
-    // fileHandler = (e) => {
-    //     this.setState({
-    //         photo: e.target.files[0]
-    //     })
-    // }
+    fileHandler = (e) => {
+        this.setState({
+            photo: e.target.files[0]
+        })
+    }
 
     changeHandler = (e) => {
         //type gareko value store gardai jancha     
@@ -34,30 +33,55 @@ class Customerprofile extends Component {
     }
 
     componentDidMount() {
-        console.log(this.state.id)
+        const email = localStorage.getItem('email')
 
-        axios.get("http://localhost:90/customer/single", this.state.config)
-            .then((response) => {
-                console.log(response)
+        axios.get('http://localhost:90/consumer/single/'+email)
+        .then((response)=>{
                 this.setState({
-                    id: response.data.customerData._id,
-                    fullname: response.data.customerData.fullname,
-                    email: response.data.customerData.email,
-                    gender: response.data.customerData.gender,
-                    phone: response.data.customerData.contact,
-                    // photo: response.data.data.photo,
-
-
+                    id:response.data.ConsumerData._id,
+                    fullname: response.data.CustomerData.fullname,
+                    email: response.data.CustomerData.email,
+                    phone: response.data.CustomerData.phone,
+                    gender: response.data.CustomerData.gender,
+                    photo:response.data.CustomerData.photo
 
                 })
-                // console.log(data)
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
+    }
+    // updateUserData = (e) => {
+    //     e.preventDefault()
+    //     const data = new FormData()
+    //     data.append('id', this.state.id)
+    //     data.append('fullname', this.state.fullname)
+    //     data.append('phone', this.state.phone)
+    //     data.append('email', this.state.email)
+    //     data.append('photo', this.state.photo)
+    //     data.append('gender', this.state.gender)
+
+    //     console.log(data)
+
+    //     axios.put("http://localhost:90/customer/update", data, this.state.config)
+    //         .then((response) => {
+    //             console.log(response)
+    //         })
+    //         .catch((err) => {
+    //             console.log(err.response)
+    //         })
+    // }
+
+    updateData = (e) => {
+        e.preventDefault();
+        axios.put('http://localhost:90/consumer_update', this.state)
+            .then((response) => {
+                console.log(response)
             })
             .catch((err) => {
                 console.log(err.response)
             })
     }
-
-   
     render() {
         return (
             <div>
@@ -95,11 +119,10 @@ class Customerprofile extends Component {
                     <div className="row m-l-0 m-r-0">
                         <div className="col-sm-4 bg-c-lite-green user-profile">
                             <div className="card-block text-center text-white">
-                            <div className="text-center">
-                                                         <img src={"http://localhost:90/" + this.state.photo} style={{width:"150px",height:"150px", background:"white", borderRadius:"50%"}}/>
-                                                          <button ><Update/></button>
-                                 
-                                           </div>            
+                            <p className="text-center" style={{ float: "right" }}>
+                                    <ReactRoundedImage image={"http://localhost:90/" + this.state.photo} />
+
+                                    <input type="file" name="photo" className="form-control" onChange={this.fileHandler} style={{ marginTop: "10px" }} /></p>
                                 <h6 className="f-w-600" >{localStorage.getItem('fullname')}</h6>
                                 
                             </div>
@@ -124,6 +147,8 @@ class Customerprofile extends Component {
                                         <p className="m-b-10 f-w-600">Gender</p>
                                         <input type="gender" className="form-control" name="gender" placeholder="Enter Gender" value={this.state.gender} onChange={this.changeHandler} />
                                     </div>
+
+                                    <button className="btn btn-primary btn-block" onClick={this.updateUserData} style={{marginTop:"20px"}}>Update</button>
                                 </div>
                                 
                             </div>

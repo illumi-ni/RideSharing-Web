@@ -4,8 +4,59 @@ import { Link } from 'react-router-dom';
 import profile from "../images/profile.jpg"
 import Delete from "@material-ui/icons/Delete"
 import Update from "@material-ui/icons/Update"
+import Date from "@material-ui/icons/DateRange"
+import Time from "@material-ui/icons/Timer"
+import From from "@material-ui/icons/TimeToLeave"
+import To from"@material-ui/icons/TimelapseRounded"
+import axios from "axios"
 
 class UpcomingRide extends Component{
+    state={
+        fullname: "",
+        from: "",
+        to: "",
+        date: "",
+        time:"",
+        distance:"",
+        price:"",
+        id:""
+    }
+    //page load huni bitikai load huni function
+    componentDidMount(){
+        const fullname = localStorage.getItem('fullname')
+    
+            axios.get('http://localhost:90/booking/single/'+fullname)
+            .then((response)=>{
+              
+                this.setState({
+                    id:response.data.BookingData._id,
+                    fullname: response.data.BookingData.fullname,
+                    from: response.data.BookingData.from,
+                    to: response.data.BookingData.to,
+                    date: response.data.BookingData.date,
+                    time: response.data.BookingData.time,
+                    distance: response.data.BookingData.distance,
+                    price: response.data.BookingData.price,
+                    
+                })
+            })
+            .catch((err)=>{
+                console.log(err)
+            })
+        
+    }
+    
+        DeleteRide=(fullname)=>{
+            axios.delete("http://localhost:90/delete/booking/"+ fullname)
+            .then((response)=>{
+                alert(response.data.message)
+                window.location.reload(true);
+            })
+            .catch((error)=>{
+                console.log(error.response)
+            })
+            }
+    
     render(){
         return(
             <div>
@@ -39,22 +90,26 @@ class UpcomingRide extends Component{
                 </div>
                 </section>
                 </div>
+
                 <div className="row">
-              
-                    <div className="col-md-1"></div>
-                    <div className="col-md-10">
-                        
-                <div className="update">
-                <h4>Date:</h4>
-                        <h4>From:</h4>
-                        <h4>To:</h4>
-                <button className="buttoncan"><Delete/> </button>
-                <Link to="/BookingUpdate"> <button className="buttonup"><Update/></button></Link>
-                    
+             
+                        <div className="update">
+                        <h6><Date/>{this.state.date} <Time/>{this.state.time}</h6>
+                            <h4> {this.state.fullname}</h4>
+
+                                <h5><From/> {this.state.from}</h5>
+                                <h5><To/>  {this.state.to}</h5>
+                                <h5>Price:{this.state.price}</h5>
+                        <button className="buttoncan"><Delete/> </button>
+                        <Link to="/BookingUpdate"> <button className="buttonup"><Update/></button></Link>
+                            </div>
+                          
+                                
+                                 
+                                   
+                
                     </div>
-                    </div>
-                    <div className="col-md-1"></div>
-                </div>
+                
                 </div>
         )
 

@@ -22,6 +22,7 @@ import Adminbookingdetail from "./component/Adminbookingdetail";
 import Customerprofile from "./component/Customerprofile";
 import UpcomingRide from "./component/Upcomingride";
 import DriverUpdate from "./component/DriverUpdate";
+import AdminRegister from "./component/AdminRegister";
 import 'jquery';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
@@ -43,6 +44,11 @@ function App() {
           <Route path ="/adminlogin">
             <AdminHeader/>
             <Login/>
+            <Footer/>
+          </Route>
+          <Route path ="/adminregister">
+            <Header/>
+            <AdminRegister/>
             <Footer/>
           </Route>
 

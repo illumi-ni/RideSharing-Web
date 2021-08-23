@@ -47,9 +47,7 @@ class History extends Component{
                 <h4>Date:</h4>
                         <h4>From:</h4>
                         <h4>To:</h4>
-                <Link  to="/about">
-                        <li >Request again </li>
-                    </Link>
+              
                 <button className="buttoncan"><Delete/> </button>
                
                     </div>
@@ -64,9 +62,7 @@ class History extends Component{
                 <h4>Date:</h4>
                         <h4>From:</h4>
                         <h4>To:</h4>
-                <Link  to="/about">
-                        <li >Request again </li>
-                    </Link>
+                
                 <button className="buttoncan"><Delete/> </button>
                
                     </div>

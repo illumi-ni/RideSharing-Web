@@ -129,7 +129,7 @@ class Driverregister extends Component{
                                     <input type="text" name="dob" className="form-control" placeholder="dob" required="required" value={this.state.dob} onChange={this.ChangeItems} />
                                 </div>
                                 <div className="col-sm-6 form-group">
-                                <input class="form-control" type="text" placeholder="vechileNo..." name="fullname"  value={this.state.vechileNo} onChange={this.ChangeItems} required/>
+                                <input class="form-control" type="text" placeholder="vechileNo..." name="vechileNo"  value={this.state.vechileNo} onChange={this.ChangeItems} required/>
                                 </div>
                             </div>
                             <div className="row ">

@@ -37,7 +37,7 @@ class login extends Component {
     render() {
         if(this.state.chklogin === true){
             //redirect to dashboard
-            return <Redirect to ='/Driverregister' />
+            return <Redirect to ='/AdminDashboard' />
         }
        
         return (

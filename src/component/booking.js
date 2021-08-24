@@ -2,8 +2,8 @@
 import React, { useState, Component } from 'react';
 import '../css/booking.css';
 import axios from 'axios';
-import DatePicker from "react-datepicker"
-import $ from 'jquery'; 
+// import DatePicker from "react-datepicker"
+// import $ from 'jquery'; 
 
 class booking extends Component {
     state = {

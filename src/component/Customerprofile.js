@@ -10,7 +10,7 @@ class Customerprofile extends Component {
     state = {
         fullname: "",
         email: "",
-        phone: "",
+        contact: "",
         gender: "",
         photo: "",
         id: ""
@@ -34,14 +34,17 @@ class Customerprofile extends Component {
 
     componentDidMount() {
         const email = localStorage.getItem('email')
+        console.log(email)
 
-        axios.get('http://localhost:90/consumer/single/'+email)
+        axios.get('http://localhost:90/customer/single/'+email)
         .then((response)=>{
+
+            console.log(response.data)
                 this.setState({
-                    id:response.data.ConsumerData._id,
+                    id:response.data.CustomerData._id,
                     fullname: response.data.CustomerData.fullname,
                     email: response.data.CustomerData.email,
-                    phone: response.data.CustomerData.phone,
+                    contact: response.data.CustomerData.contact,
                     gender: response.data.CustomerData.gender,
                     photo:response.data.CustomerData.photo
 
@@ -56,7 +59,7 @@ class Customerprofile extends Component {
     //     const data = new FormData()
     //     data.append('id', this.state.id)
     //     data.append('fullname', this.state.fullname)
-    //     data.append('phone', this.state.phone)
+    //     data.append('contact', this.state.contact)
     //     data.append('email', this.state.email)
     //     data.append('photo', this.state.photo)
     //     data.append('gender', this.state.gender)
@@ -99,12 +102,11 @@ class Customerprofile extends Component {
                                      <Link to="/Customerprofile">
                                          <li> Profile </li>
                                      </Link>
+                                     
                                      <Link to="/Upcomingride">
                                          <li> UpcomingRide </li>
                                      </Link>
-                                     <Link to="/History">
-                                     <li> History </li>
-                                     </Link>
+                                    
                                  </ul>
                             </div>
                             </div>
@@ -141,14 +143,14 @@ class Customerprofile extends Component {
                                     </div>
                                     <div className="col-sm-12">
                                         <p className="m-b-10 f-w-600">Phone</p>
-                                        <input type="Phone" className="form-control" name="phone" placeholder="Enter Phone No" value={this.state.phone} onChange={this.changeHandler} />
+                                        <input type="Phone" className="form-control" name="contact" placeholder="Enter Phone No" value={this.state.contact} onChange={this.changeHandler} />
                                     </div>
                                     <div className="col-sm-12">
                                         <p className="m-b-10 f-w-600">Gender</p>
                                         <input type="gender" className="form-control" name="gender" placeholder="Enter Gender" value={this.state.gender} onChange={this.changeHandler} />
                                     </div>
 
-                                    <button className="btn btn-primary btn-block" onClick={this.updateUserData} style={{marginTop:"20px"}}>Update</button>
+                                    <button className="btn btn-primary btn-block" onClick={this.updateData} style={{marginTop:"20px"}}>Update</button>
                                 </div>
                                 
                             </div>

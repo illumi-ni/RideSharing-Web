@@ -5,9 +5,15 @@ import { Avatar, IconButton } from '@material-ui/core';
 import AddIcon from "@material-ui/icons/Add"
 import ForumIcon from "@material-ui/icons/Forum"
 import NotificationActiveIcon from "@material-ui/icons/NotificationsActive"
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import { Link } from 'react-router-dom';
 
 function AdminHeader() {
+    const logout = ()=>{
+        localStorage.clear();
+        window.location.href = '/'
+     
+    }
     return (
         <div className="Adminheader">
             <div className ="Adminheader_left">
@@ -26,16 +32,16 @@ function AdminHeader() {
                 </IconButton>
 
                 <IconButton>
-                <ForumIcon/>
-                </IconButton>
-
-                <IconButton>
                 <NotificationActiveIcon/>
                 </IconButton>
 
                 <IconButton>
                 <ExpandMoreIcon/>
                 </IconButton>
+                
+                    
+             
+                {/* <h4 onClick={logout}>Logout</h4> */}
                 
             </div>
         </div>

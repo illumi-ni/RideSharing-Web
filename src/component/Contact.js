@@ -1,8 +1,46 @@
-import React from 'react';
+import React, { useState, Component } from 'react';
 import '../css/Contact.css';
 import { FaLocationArrow,FaGoogleDrive,FaPhoneAlt } from 'react-icons/fa';
+import axios from 'axios';
 
-function Contact() {
+class Contact extends Component{
+      state = {
+        fullname : localStorage.getItem('fullname'),
+        email:localStorage.getItem('email'),
+        subject:"",
+        message:"",
+    }
+    ChangeItem=(e)=>{
+      this.setState({
+          [e.target.name]:e.target.value
+      })
+    }
+
+
+    SendItems=(e)=>{
+      //preventDefault== By default refresh hunxa so, blank nahoss vannah refresh nahoss vannah
+      e.preventDefault();
+      const data = {
+              fullname: this.state.fullname,
+              email: this.state.email,
+              subject: this.state.subject,
+              message: this.state.message,
+              
+           
+          }
+  
+      axios.post("http://localhost:90/customer/contact",data, this.state.config)
+      .then((response)=>{
+          console.log(response)
+      alert(response.data.message)
+      window.location.reload(true);
+      })
+      .catch((error)=>{
+          console.log(error.response)
+      })
+  }
+
+  render() {
     return (
       <div>
       <section id="hero1">
@@ -50,20 +88,18 @@ function Contact() {
 
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
             <h2>Feel free to ask anything</h2>
-              <div class="row">
+            
              
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required/>
+                <div class="col-md-6 form-group mt-3">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" value={ localStorage.getItem('fullname')} onChange={this.ChangeItem}/>
                 </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required/>
-                </div>
+                
+             
+              <div class="col-md-6 form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" value={this.state.subject} onChange={this.ChangeItem} required/>
               </div>
               <div class="col-md-6 form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required/>
-              </div>
-              <div class="col-md-6 form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" value={this.state.message} onChange={this.ChangeItem} required></textarea>
               </div>
               
               <div class="my-3">
@@ -71,7 +107,7 @@ function Contact() {
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="submit"  onClick={this.SendItems}>Send Message</button></div>
             </form>
 
           </div>
@@ -84,5 +120,6 @@ function Contact() {
         </div>
     )
 }
+}
 
-export default Contact
+export default Contact;

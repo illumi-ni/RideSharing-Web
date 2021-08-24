@@ -74,8 +74,29 @@ class AdminDashboard extends Component{
                 </div>
               </div>
             </div>
-            
-              </div>
+            <section id="Details">
+                    <div className="customerdetailtable">
+                        <div className="container-xl">
+                            <div className="table-responsive">
+                                <div className="table-wrapper">
+                                    <table className="table table-striped table-hover" style={{position:"relative", marginBottom: "30px"}}>
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Email ID</th>
+                                                
+                                                <th>Subject</th>
+                                                <th>Message</th>
+                                            </tr>
+                                        </thead>
+
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+             </div>
              </div>
            
           

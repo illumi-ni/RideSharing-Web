@@ -109,11 +109,9 @@ function App() {
             <Footer/>
           </Route>
 
-          <Route path ="/bookingupdate">
-            <Header></Header>
-            <BookingUpdate/>
-            <Footer/>
-          </Route>
+          <Route path ="/BookingUpdate/:id"
+         
+          component={BookingUpdate}/>
 
           <Route path ="/driverupdate">
             <Header></Header>

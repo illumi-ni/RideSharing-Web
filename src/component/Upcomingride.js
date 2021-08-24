@@ -12,50 +12,34 @@ import axios from "axios"
 
 class UpcomingRide extends Component{
     state={
-        fullname: "",
-        from: "",
-        to: "",
-        date: "",
-        time:"",
-        distance:"",
-        price:"",
-        id:""
+       
+        details:[]
     }
-    //page load huni bitikai load huni function
+ 
+    //to get data automatically from database without any click event
     componentDidMount(){
-        const fullname = localStorage.getItem('fullname')
-    
-            axios.get('http://localhost:90/booking/single/'+fullname)
-            .then((response)=>{
-              
+        axios.get("http://localhost:90/booking/all")
+        .then((response)=>{
+            console.log(response)
                 this.setState({
-                    id:response.data.BookingData._id,
-                    fullname: response.data.BookingData.fullname,
-                    from: response.data.BookingData.from,
-                    to: response.data.BookingData.to,
-                    date: response.data.BookingData.date,
-                    time: response.data.BookingData.time,
-                    distance: response.data.BookingData.distance,
-                    price: response.data.BookingData.price,
-                    
+                    details:response.data.data
                 })
-            })
-            .catch((err)=>{
-                console.log(err)
-            })
-        
+
+        })
+        .catch((err)=>{
+            console.log(err.response)
+        })
     }
-    
-        DeleteRide=(fullname)=>{
-            axios.delete("http://localhost:90/delete/booking/"+ fullname)
-            .then((response)=>{
-                alert(response.data.message)
-                window.location.reload(true);
-            })
-            .catch((error)=>{
-                console.log(error.response)
-            })
-            }
+    DeleteBooking=(BookingId)=>{
+        axios.delete("http://localhost:90/delete/booking/"+ BookingId)
+        .then((response)=>{
+            alert(response.data.message)
+            window.location.reload(true);
+        })
+        .catch((error)=>{
+            console.log(error.response)
+        })
+        }
     
     render(){
         return(
@@ -81,9 +65,7 @@ class UpcomingRide extends Component{
                             <Link to="/Upcomingride">
                                 <li> UpcomingRide </li>
                             </Link>
-                            <Link to="/History">
-                                <li> History </li>
-                            </Link>
+                           
                         </ul>
                     </div>
                     <div className="col-md-4 "></div>
@@ -92,17 +74,22 @@ class UpcomingRide extends Component{
                 </div>
 
                 <div className="row">
-             
+                {    
+                 this.state.details.map((booking)=>{
+                                            return(
                         <div className="update">
-                        <h6><Date/>{this.state.date} <Time/>{this.state.time}</h6>
-                            <h4> {this.state.fullname}</h4>
+                        <h6><Date/>{booking.date}<Time/>{booking.time}</h6>
+                            <h4> </h4>
 
-                                <h5><From/> {this.state.from}</h5>
-                                <h5><To/>  {this.state.to}</h5>
-                                <h5>Price:{this.state.price}</h5>
-                        <button className="buttoncan"><Delete/> </button>
-                        <Link to="/BookingUpdate"> <button className="buttonup"><Update/></button></Link>
+                                <h5><From/>{booking.from}</h5>
+                                <h5><To/> {booking.to}</h5>
+                                <h5>Price:{booking.price}</h5>
+                        <button className="buttoncan" onClick={this.DeleteBooking.bind(this,booking._id)}><Delete/> </button>
+                        <Link to={"/BookingUpdate/"+ booking._id}> <button className="buttonup"><Update/></button></Link>
                             </div>
+                                 )
+                                })
+                            }
                           
                                 
                                  

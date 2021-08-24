@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../css/Admindetail.css';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import Delete from "@material-ui/icons/Delete"
 // import { FaLocationArrow,FaGoogleDrive,FaPhoneAlt } from 'react-icons/fa';
 
 class Admindriverdetail extends Component {
@@ -24,6 +25,18 @@ class Admindriverdetail extends Component {
             console.log(err.response)
         })
     }
+    deleteDriver = (id) => {
+        axios.delete("http://localhost:90/delete/driver/" + id)
+            .then((response) => {
+                console.log(response)
+                this.componentDidMount()
+            })
+            .catch((err) => {
+                console.log(err.response)
+            }
+            )
+    }
+
     render() {
         return (
             <div className="container-fluid">
@@ -71,6 +84,7 @@ class Admindriverdetail extends Component {
                                                 <th>D.O.B</th>
                                                 <th>Vechicle number</th>
                                                 <th>Model</th>
+                                                <th>CustomerProfile</th>
 
                                             </tr>
                                             {    
@@ -87,7 +101,10 @@ class Admindriverdetail extends Component {
                                                 <td>{driver.dob}</td>
                                                 <td>{driver.vechileNo}</td>
                                                 <td>{driver.model}</td>
-
+                                                <td>{driver.photo}</td>
+                                                <td>
+                                                    <button className="cancel" title="Cancel" data-toggle="tooltip" onClick={this.deleteDriver.bind(this, driver._id)} style={{color:"black"}}><Delete/></button>
+                                                </td>
                                             </tr>
                                             )
                                             })

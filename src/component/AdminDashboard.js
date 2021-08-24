@@ -1,8 +1,40 @@
 import React, { Component } from 'react';
 import '../css/AdminDashboard.css';
+import axios from 'axios';
+import Delete from "@material-ui/icons/Delete"
 
 
 class AdminDashboard extends Component{
+  state={
+       
+    details:[]
+}
+
+//to get data automatically from database without any click event
+componentDidMount(){
+    axios.get("http://localhost:90/contact/all")
+    .then((response)=>{
+        console.log(response)
+            this.setState({
+                details:response.data.data
+            })
+
+    })
+    .catch((err)=>{
+        console.log(err.response)
+    })
+}
+deleteAdmin = (id) => {
+    axios.delete("http://localhost:90/delete/contact/" + id)
+        .then((response) => {
+            console.log(response)
+            this.componentDidMount()
+        })
+        .catch((err) => {
+            console.log(err.response)
+        }
+        )
+}
     render(){
         return(
            <div className="container-fluid">
@@ -87,7 +119,24 @@ class AdminDashboard extends Component{
                                                 
                                                 <th>Subject</th>
                                                 <th>Message</th>
+                                                <th></th>
                                             </tr>
+                                            {    
+                                            this.state.details.map((admin)=>{
+                                            return(
+                                            <tr>
+                                              <td>{admin.fullname}</td>
+                                              <td>{admin.email}</td>
+                                              <td>{admin.subject}</td>
+                                              <td>{admin.message}</td>
+                                              <td>
+                                                    <button className="cancel" title="Cancel" data-toggle="tooltip" onClick={this.deleteAdmin.bind(this, admin._id)} style={{color:"black"}}><Delete/></button>
+                                                </td>
+                                            </tr>
+                                            )
+                                            })
+                                        }
+                                            
                                         </thead>
 
                                     </table>

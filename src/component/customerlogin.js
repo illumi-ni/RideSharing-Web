@@ -31,7 +31,7 @@ class customerlogin extends Component {
     render() {
         if(this.state.chklogin === true){
             //redirect to dashboard
-            return <Redirect to ='/' />
+            return <Redirect to ='/Upcomingride' />
 
         }
         return (

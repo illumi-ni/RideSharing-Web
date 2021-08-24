@@ -29,6 +29,7 @@ import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
 import BookingUpdate from "./component/BookingUpdate";
 import History from "./component/History";
 import Demo from "./component/demo";
+import AdminDashboard from "./component/AdminDashboard";
 function App() {
   return (
     <Router>
@@ -49,6 +50,12 @@ function App() {
           <Route path ="/adminregister">
             <Header/>
             <AdminRegister/>
+            <Footer/>
+          </Route>
+
+          <Route path ="/AdminDashboard">
+            <AdminHeader/>
+            <AdminDashboard/>
             <Footer/>
           </Route>
 

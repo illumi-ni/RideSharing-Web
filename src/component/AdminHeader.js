@@ -1,5 +1,6 @@
 import React from 'react';
 import '../css/Admindetail.css';
+import { Link } from 'react-router-dom';
 import SearchIcon from "@material-ui/icons/Search";
 import { Avatar, IconButton } from '@material-ui/core';
 import AddIcon from "@material-ui/icons/Add"
@@ -17,7 +18,11 @@ function AdminHeader() {
     return (
         <div className="Adminheader">
             <div className ="Adminheader_left">
-           <h2>Ride Sharing</h2>
+            <Link to="/AdminDashboard">
+                    <div className="logo" >
+                        <h2 >Ride Sharing</h2>
+                    </div>
+                    </Link>
            
             </div>
            
@@ -25,10 +30,16 @@ function AdminHeader() {
             <div className ="Adminheader_right">
                 <div className="Adminheader_info">
                     <Avatar/>
-                    <h4>Admin</h4>
+                    
+                    <Link to="/AdminDashboard">
+                        <h4>Admin</h4> 
+                    </Link>
                 </div>
                 <IconButton>
-                <AddIcon/>
+                <Link to="/Driverregister">
+                <AddIcon/>       
+                 </Link>
+                
                 </IconButton>
 
                 <IconButton>
@@ -36,7 +47,11 @@ function AdminHeader() {
                 </IconButton>
 
                 <IconButton>
-                <ExpandMoreIcon/>
+                <Link to="/Admindetail">
+                <ExpandMoreIcon/>      
+                 </Link>
+                
+                
                 </IconButton>
                 
                     

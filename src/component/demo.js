@@ -5,65 +5,46 @@ import hire from '../images/hire.jpg';
 class demo extends Component {
     render() {
          return (
-            // <div class="container">
-            //     <div className="demo">
-            //          <div className="row">
-            //                 <div className="col-md-2"></div>
-            //                 <div className="col-md-6">
-            //                     <form>
-            //                     <input type="text" name="title" id="title" placeholder="Title" required />
-            //                     <input type="text" name="title" id="title" placeholder="Title" required />
-            //                     <input type="text" name="title" id="title" placeholder="Title" required />
-            //                     <input type="text" name="title" id="title" placeholder="Title" required />
-            //                     </form>
-            //                 </div>
-            //             </div>     
-            //      </div>
-            // </div>
-            
-<div className="test">
+          
+        <div class="container-fluid">
+        <div class="row no-gutter">
+        {/* img */}
+        <div className="col-md-1"></div>
+        <div class="col-md-5 d-none d-md-flex bg-image"></div>
+         <div class="col-md-5 bg-light">
+        <div class="login d-flex align-items-center py-5">
 
-            <div className="container-fluid">
-            <section id="bookingupdate">
-            
-                <div className="row">
-                <div className="col-md-4">
+            {/* form */}
+            <div class="container">
+                <div class="row">
+                    <div class="all col-lg-10 col-xl-7 ">
+                        <h3 class="display-4">Customer Login!</h3>
+                        <p class="text-muted mb-4">Please enter your email to login.</p>
+                        <form className="demoform">
+                        <div class="form-group">
+                  
+                                <input type="text" placeholder="Enter your email......" 
+                                
+                                name="username" id="username" required class="form-control rounded-pill border-0 shadow-sm px-4 text-primary"/>
+                            </div>
+                            <button type="submit" className="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm" >Next</button>
+                            
+                            
+                            <div class="text-center d-flex justify-content-between mt-4"><p>Don't have an account??? <a href="/register" class="font-italic text-muted"> 
+                                    <u>Register</u></a></p></div>
+                        </form>
                     </div>
-           
-               <form className="updatebook ">
-                   <h1>Driver Register Update</h1>
+                </div>
+            </div>
+            
 
-                           <div className="form2 col-md-4">
-                   <div class="form-group">
-                       <label for="Fullname">Full Name</label>
-                       <input type="Fullname" class="form-control" id="FullName" placeholder="Enter fullName"/>
-                   </div>
-                   <div class="form-group">
-                       <label for="Username">User Name</label>
-                       <input type="Fullname" class="form-control" id="FullName" placeholder="Enter username"/>
-                   </div>
-                   <div class="form-group">
-                       <label for="Email">Email </label>
-                       <input type="Email" class="form-control" id="Email" placeholder="Enter your email"/>
-                   </div>
-                   <div class="form-group">
-                       <label for="Phone">Phone No</label>
-                       <input type="Phone" class="form-control" id="Phone" placeholder="Enter Phone No"/>
-                   </div>
-                   <div class="form-group">
-                       <label for="vechicle">Vechile num</label>
-                       <input type="vechile" class="form-control" id="vechile" placeholder="vechile.."/>
-                   </div>
-                   <div class="form-group">
-                       <label for="model">Model</label>
-                       <input type="model" class="form-control" id="model" placeholder="model"/>
-                   </div>
-                  </div>
-                   </form>
-                   </div>
-            </section>
-           </div>
-           </div>
+        </div>
+        </div>
+        <div className="col-md-1"></div>
+
+        </div>
+        </div>
+
         )
     }
 }

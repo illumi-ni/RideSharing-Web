@@ -208,16 +208,7 @@ SendItems=(e)=>{
 								
 							</div>
 							
-							<div class="row">
-								<div class="col-md-6" style={{marginRight:"150px"}}>
-									<div class="form-group">
-									<label style={{color:"white"}}>Distance</label>
-										<input class="form-control" type="text" placeholder="Distance..." name="distance" value={this.state.distance} onChange={this.ChangeItem} required/>
-										
-									</div>
-								</div>
-								
-							</div>
+							
 							<div class="form-btn">
 								<button class="submit-btn" onClick={this.SendItems}>Book Now</button>
 							</div>

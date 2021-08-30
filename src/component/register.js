@@ -36,6 +36,7 @@ class register extends Component {
         }
         axios.post("http://localhost:90/customer/insert", data)
             .then(response => {
+                localStorage.setItem('contact', response.data.customerData.contact)
                 console.log(response)
                 alert(response.data.message)
                 window.location.reload(true);

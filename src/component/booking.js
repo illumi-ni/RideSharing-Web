@@ -8,11 +8,12 @@ import axios from 'axios';
 class booking extends Component {
     state = {
         fullname : localStorage.getItem('fullname'),
+        contact:localStorage.getItem('contact'),
         from:"",
         to:"",
         date:"",
         time:"",
-        distance:"",
+        distance:"1",
         price:"1"
       
     }
@@ -49,6 +50,7 @@ SendItems=(e)=>{
 
 		const data = {
             fullname: this.state.fullname,
+            contact:this.state.contact,
             from: this.state.from,
             to: this.state.to,
             date: this.state.date,

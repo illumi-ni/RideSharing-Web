@@ -12,7 +12,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 function AdminHeader() {
     const logout = ()=>{
         localStorage.clear();
-        window.location.href = '/'
+        window.location.href = '/adminlogin'
      
     }
     return (
@@ -51,18 +51,8 @@ function AdminHeader() {
                 <ExpandMoreIcon/>      
                  </Link>
                 </IconButton>
-            <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-            </div>
-            </div>
-                
-                    
              
-                {/* <h4 onClick={logout}>Logout</h4> */}
+                <h4 onClick={logout}>Logout</h4>
                 
             </div>
         </div>

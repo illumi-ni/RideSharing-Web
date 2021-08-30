@@ -18,6 +18,7 @@ class customerlogin extends Component {
             localStorage.setItem('token',response.data.token)
             localStorage.setItem('email',response.data.customerData.email)
             localStorage.setItem('fullname',response.data.customerData.fullname)
+            localStorage.setItem('contact', response.data.customerData.contact)
             
             alert("Successful")
             this.setState({

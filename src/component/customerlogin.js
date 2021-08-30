@@ -19,7 +19,7 @@ class customerlogin extends Component {
             localStorage.setItem('email',response.data.customerData.email)
             localStorage.setItem('fullname',response.data.customerData.fullname)
             
-            alert(response.data.message)
+            alert("Successful")
             this.setState({
                 chklogin : true
             })
@@ -31,7 +31,7 @@ class customerlogin extends Component {
     render() {
         if(this.state.chklogin === true){
             //redirect to dashboard
-            return <Redirect to ='/' />
+            return <Redirect to ='/Upcomingride' />
 
         }
         return (

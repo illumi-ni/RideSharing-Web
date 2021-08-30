@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../css/BookingUpdate.css';
 import axios from "axios";
+import { Redirect } from 'react-router-dom';
 
 class BookingUpdate extends Component{
     state={
@@ -11,7 +12,9 @@ class BookingUpdate extends Component{
         time:"",
         distance:"",
         price:"",
-        id : this.props.match.params.id
+        id : this.props.match.params.id,
+
+        chklogin : false
     }
     changeHandler = (e) => {
         this.setState({
@@ -45,6 +48,9 @@ class BookingUpdate extends Component{
         axios.put('http://localhost:90/update/booking', this.state)
             .then((response) => {
                 console.log(response)
+                this.setState({
+                    chklogin : true
+                })
             })
             .catch((err) => {
                 console.log(err.response)
@@ -52,6 +58,11 @@ class BookingUpdate extends Component{
     }
 
     render(){
+        if(this.state.chklogin === true){
+            //redirect to dashboard
+            return <Redirect to ='/' />
+
+        }
         return(
             
             <div className="container-fluid">

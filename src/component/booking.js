@@ -202,37 +202,13 @@ SendItems=(e)=>{
 									<label style={{color:"white"}}>PickUp Time</label> 
 									
 							<input class="form-control"type="time" id="time" name="time" min="09:00" max="18:00" value={this.state.time} onChange={this.ChangeItem} required/>
-									{/* <input class="form-control" type="time"  min="09:00" max="18:00" value={this.state.time} onChange={this.ChangeItem} required/> */}
-                                    {/* <select name="pickUpTime" className="form-control" id="select" value={this.state.time} onChange={this.ChangeItem}>
-                                        <option  disabled="" selected="">6:00 AM</option>
-                                        <option >7:00 AM</option>
-                                        <option >8:00 AM</option>
-                                        <option >9:00 AM</option>
-                                        <option >10:00 AM</option>
-                                        <option >11:00 AM</option>
-                                        <option >12:00 AM</option>
-                                    </select> */}
+									
 									</div>
 									</div>
 								
 							</div>
 							
-							<div class="row">
-								<div class="col-md-6" style={{marginRight:"150px"}}>
-									<div class="form-group">
-									<label style={{color:"white"}}>Distance</label>
-										<input class="form-control" type="text" placeholder="Distance..." name="distance" value={this.state.distance} onChange={this.ChangeItem} required/>
-										
-									</div>
-								</div>
-								{/* <div class="col-md-6">
-									<div class="form-group">
-									<label style={{color:"white"}}>Price</label>
-										<input class="form-control" type="text" placeholder="Price" name="price" value={this.state.price} onChange={this.ChangeItem} required/>
-										
-									</div>
-								</div> */}
-							</div>
+							
 							<div class="form-btn">
 								<button class="submit-btn" onClick={this.SendItems}>Book Now</button>
 							</div>

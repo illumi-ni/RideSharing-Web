@@ -5,9 +5,9 @@ import video from '../video.mp4'
 
 import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import wallpaper1 from '../images/havana.jpg'
-import wallpaper2 from '../images/carrent.jpg'
-import wallpaper3 from '../images/bryte.jpg'
+import wallpaper1 from '../images/taxi.jpg'
+import wallpaper2 from '../images/forest.jpg'
+import wallpaper3 from '../images/drive.jpg'
 
 import { FaOpencart, FaLinkedin, FaInstagram, FaCcVisa, FaAngellist, FaNewspaper, FaServicestack, FaTelegram, FaSignInAlt, FaBell, FaUsers, FaRocketchat, FaSignOutAlt, FaUserCircle, FaPlusCircle, FaRegEye, FaUpload, FaMedapps, FaTelegramPlane, FaUserCog, FaFacebook, FaRegSmile } from 'react-icons/fa';
 

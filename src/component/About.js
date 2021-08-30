@@ -52,127 +52,79 @@ class About extends Component {
                         
                     </div>
           
-                    <section id="speakers">
-      <div class="container" data-aos="fade-up">
-        <div class="section-header">
-          <h2>Our Team</h2>
-          <p>Here are the members of our team</p>
+                    <section id="team" class="team section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Team</h2>
+          <p>Our team members.</p>
         </div>
 
         <div class="row">
-        <div class="col-lg-1 col-md-6"></div>
-          <div class="col-lg-3 col-md-6">
-            <div class="speaker" data-aos="fade-up" data-aos-delay="100">
-              <img src="Ujwal.jpg" alt="Speaker 1" class="img-fluid"/>
-              <div class="details">
-                <h3><a href="speaker-details.html">Ujwal Lamichhane </a></h3>
-                <p>Scrum Master/Product Owner</p>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
+        <div class="col-lg-1 col-md-6 d-flex align-items-stretch"></div>
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="Ujwal.jpg" alt=""/>
+              <h4>Ujwal Lamichhane</h4>
+              <span>Scrum master/ Product owner</span>
+             
+             
             </div>
           </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-              <img src="Meezu.jpg" alt="Speaker 2" class="img-fluid"/>
-              <div class="details">
-                <h3><a href="speaker-details.html">Meezu Lawot </a></h3>
-                <p>Development Team </p>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-              <img src="Salina.jpg" alt="Speaker 3" class="img-fluid"/>
-              <div class="details">
-                <h3><a href="speaker-details.html">Salina Shrestha</a></h3>
-                <p>Develpoment Team </p>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-6"></div>
-          {/* different */}
-          <div class="col-lg-3 col-md-6">
-            <div class="speaker" data-aos="fade-up" data-aos-delay="100">
-              <img src="Reshika.jpg" alt="Speaker 4" class="img-fluid"/>
-              <div class="details">
-                <h3><a href="speaker-details.html">Reshika Shrestha</a></h3>
-                <p>Development Team </p>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-              <img src="Prativa.jpg" alt="Speaker 5" class="img-fluid"/>
-              <div class="details">
-                <h3><a href="speaker-details.html">Prativa Shrestha</a></h3>
-                <p>Development Team </p>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-              <img src="Rahul.jpg" alt="Speaker 6" class="img-fluid"/>
-              <div class="details">
-                <h3><a href="speaker-details.html">Rahul Roy</a></h3>
-                <p>Development Team </p>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-            
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-              <img src="assets/img/speakers/6.jpg" alt="Speaker 6" class="img-fluid"/>
-              <div class="details">
-                <h3><a href="speaker-details.html">Suprit Sharma</a></h3>
-                <p>Development Team </p>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-            
-          </div>
-        </div>
-      </div>
 
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="Meezu.jpg" alt=""/>
+              <h4>Meezu Lawot</h4>
+              <span>Development Team</span> 
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="Salina.jpg" alt=""/>
+              <h4>Salina Shrestha</h4>
+              <span>Development Team</span>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 d-flex align-items-stretch"></div>
+
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="Reshika.jpg" alt=""/>
+              <h4>Reshika Shrestha</h4>
+              <span>Development Team</span>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="Prativa.jpg" alt=""/>
+              <h4>Prativa Shrestha</h4>
+              <span>Development Team</span> 
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="Rahul.jpg" alt=""/>
+              <h4>Rahul Roy</h4>
+              <span>Development Team</span>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="" alt=""/>
+              <h4>Suprit Sharma</h4>
+              <span>Development Team</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
     </section>
 
       </div>

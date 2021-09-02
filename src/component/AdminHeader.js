@@ -7,6 +7,7 @@ import AddIcon from "@material-ui/icons/Add"
 import ForumIcon from "@material-ui/icons/Forum"
 import NotificationActiveIcon from "@material-ui/icons/NotificationsActive"
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import Logout from "@material-ui/icons/ExitToApp";
 
 
 function AdminHeader() {
@@ -51,12 +52,20 @@ function AdminHeader() {
                 <ExpandMoreIcon/>      
                  </Link>
                 </IconButton>
+
+                <IconButton>
+                <Link onClick={logout}>
+                <Logout/>
+                </Link>
+                </IconButton>
              
-                <h4 onClick={logout}>Logout</h4>
+                {/* <h4 onClick={logout}>Logout</h4> */}
                 
+                    
             </div>
         </div>
     )
 }
+
 
 export default AdminHeader

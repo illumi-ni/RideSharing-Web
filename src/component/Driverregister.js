@@ -85,27 +85,33 @@ class Driverregister extends Component{
                             <h4 className="modal-title" style={{color:"white"}}>Driver Details</h4>
                             <div className="row">
                                 <div className="col-sm-6 form-group">
+                                <label style={{color:"white"}}>Fullname</label>
                                 <input class="form-control" type="text" placeholder="fullname..." name="fullname"  value={this.state.fullname} onChange={this.ChangeItems} required/>
                                 </div>
                                 <div className="col-sm-6 form-group">
+                                <label style={{color:"white"}}>Username</label>
                                     <input type="text" name="username" className="form-control" placeholder="username"  value={this.state.username} onChange={this.ChangeItems} />
                                 </div>
                             </div>
 
                             <div className="row">
                                 <div className="col-sm-6 form-group">
+                                <label style={{color:"white"}}>Email</label>
                                     <input type="text" name="email" className="form-control" placeholder="email" required="required" value={this.state.email} onChange={this.ChangeItems} />
                                 </div>
                                 <div className="col-sm-6 form-group">
+                                <label style={{color:"white"}}>Password</label>
                                     <input type="text" name="password" className="form-control" placeholder="password" required="required" value={this.state.password} onChange={this.ChangeItems} />
                                 </div>
                             </div>
 
                             <div className="row ">
                                 <div className="col-sm-6 form-group">
+                                <label style={{color:"white"}}>Phone</label>
                                     <input type="text" name="phone" className="form-control" placeholder="phone" required="required" value={this.state.phone} onChange={this.ChangeItems} />
                                 </div>
                                 <div className="col-sm-6 form-group">
+                                <label style={{color:"white"}}>Citizenship</label>
                                     <input type="text" name="citizenship" className="form-control" placeholder="citizenship" required="required" value={this.state.citizenship} onChange={this.ChangeItems} />
                                 </div>
                                 
@@ -115,10 +121,12 @@ class Driverregister extends Component{
                            
                             <div className="row">
                                 <div className="col-sm-6 form-group">
+                                
                                     <label style={{color:"white"}}>Driver Photo</label>
                                     <input type="file" name="photo" className="form-control" required="required" onChange={this.fileHandler} />
                                 </div>
                                 <div className="col-sm-6 form-group">
+                                
                                     <label style={{color:"white"}}>License Photo</label>
                                     <input type="file" name="licence" className="form-control" required="required" onChange={this.fileHandler} />
                                     
@@ -126,17 +134,21 @@ class Driverregister extends Component{
                             </div>
                             <div className="row ">
                                 <div className="col-sm-6 form-group">
+                                <label style={{color:"white"}}>DOB</label>
                                     <input type="text" name="dob" className="form-control" placeholder="dob" required="required" value={this.state.dob} onChange={this.ChangeItems} />
                                 </div>
                                 <div className="col-sm-6 form-group">
+                                <label style={{color:"white"}}>VechileNo</label>
                                 <input class="form-control" type="text" placeholder="vechileNo..." name="vechileNo"  value={this.state.vechileNo} onChange={this.ChangeItems} required/>
                                 </div>
                             </div>
                             <div className="row ">
                                 <div className="col-sm-6 form-group">
+                                <label style={{color:"white"}}>Car Model</label>
                                     <input type="text" name="model" className="form-control" placeholder="model" required="required" value={this.state.model} onChange={this.ChangeItems} />
                                 </div>
                                 <div className="col-sm-6 form-group">
+                                <label style={{color:"white"}}>Car Brand</label>
                                     <input type="text" name="brand" className="form-control" placeholder="brand" required="required" value={this.state.brand} onChange={this.ChangeItems} />
                                 </div>
                             </div>

@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import '../css/AdminDashboard.css';
 import axios from 'axios';
-import Delete from "@material-ui/icons/Delete"
+import Delete from "@material-ui/icons/Delete";
+import VerticalBar from './VerticalBar';
+import PieChart from './PieChart';
 
 
 class AdminDashboard extends Component{
@@ -43,20 +45,20 @@ deleteAdmin = (id) => {
                        
                        {/* <div className="col-md-12"> */}
                        <div className="col-md-1"></div>
-                            <div className="box col-md-3">
+                            <div className="box1 col-md-3" style={{BackgroundColor:"rgba(255, 99, 132, 0.2)',"}}>
                                 <h1>Weekly gain</h1>
                                 <h2 class=""> Rs.20,0000</h2>
-                                 <h6 class="card-text">Increased by 60%</h6>
+                                 <h6 class="card-text">Increased by 40%</h6>
                             </div>
-                            <div className="box col-md-3">
+                            <div className="box2 col-md-3">
                                 <h1>Total Customer</h1>
                                 <h2 class="">1,208</h2>
                                  <h6 class="card-text">Increased by 60%</h6>
                             </div>
-                            <div className="box col-md-3">
+                            <div className="box3 col-md-3">
                                 <h1>Total Driver</h1>
                                 <h2 class="">200</h2>
-                                 <h6 class="card-text">Increased by 60%</h6>
+                                 <h6 class="card-text">Increased by 20%</h6>
                           </div>
                           <div className="col-md-2"></div>
                             
@@ -64,20 +66,20 @@ deleteAdmin = (id) => {
                        <div className="row">
                        
                        <div className="col-md-1"></div>
-                            <div className="box col-md-3">
+                            <div className="box4 col-md-3">
                                 <h1>Cancle Ride</h1>
                                 <h2 class="">80</h2>
                                  <h6 class="card-text">Increased by 10%</h6>
                             </div>
-                            <div className="box col-md-3">
+                            <div className="box5 col-md-3">
                                 <h1>Total Ride</h1>
                                 <h2 class="">1,500</h2>
-                                 <h6 class="card-text">Increased by 50%</h6>
+                                 <h6 class="card-text">Increased by 62%</h6>
                             </div>
-                            <div className="box col-md-3">
+                            <div className="box6 col-md-3">
                                 <h1>Total Booking</h1>
                                 <h2 class="">200</h2>
-                                 <h6 class="card-text">Increased by 60%</h6>
+                                 <h6 class="card-text">Increased by 49%</h6>
                           </div>
                           <div className="col-md-2"></div>
                             
@@ -89,10 +91,12 @@ deleteAdmin = (id) => {
                 <div class="card">
                   <div class="card-body">
                     <div class="clearfix">
-                      <h4 class="card-title float-left">Chart of customer and driver</h4>
-                      <div id="visit-sale-chart-legend" class="rounded-legend legend-horizontal legend-top-right float-right"></div>
+                      <h4 class="card-title float-left">Monthly Chart of Ride Sharing</h4>
+                      <div id="visit-sale-chart-legend" class="rounded-legend legend-horizontal legend-top-right float-right">
+                      <VerticalBar/>
+                      </div>
                     </div>
-                    <canvas id="visit-sale-chart" class="mt-4"></canvas>
+                   
                   </div>
                 </div>
               </div>
@@ -100,8 +104,10 @@ deleteAdmin = (id) => {
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">Round Chart</h4>
-                    <canvas id="traffic-chart"></canvas>
-                    <div id="traffic-chart-legend" class="rounded-legend legend-vertical legend-bottom-left pt-4"></div>
+                    
+                    <div id="traffic-chart-legend" class="rounded-legend legend-vertical legend-bottom-left pt-4">
+                      <PieChart/>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -109,7 +115,8 @@ deleteAdmin = (id) => {
             <section id="Details">
                     <div className="customerdetailtable">
                         <div className="container-xl">
-                            <div className="table-responsive">
+                          <h2 style={{textAlign:"center"}}>Contact Us Details</h2>
+                            <div className="table-responsive" style={{marginTop:"10px"}}>
                                 <div className="table-wrapper">
                                     <table className="table table-striped table-hover" style={{position:"relative", marginBottom: "30px"}}>
                                         <thead>

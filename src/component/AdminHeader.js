@@ -43,10 +43,7 @@ function AdminHeader() {
                 
                 </IconButton>
 
-                <IconButton>
-                <NotificationActiveIcon/>
-                </IconButton>
-
+        
                 <IconButton>
                 <Link to="/Admindetail">
                 <ExpandMoreIcon/>      

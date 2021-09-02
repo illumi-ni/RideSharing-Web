@@ -63,7 +63,7 @@ class Adminbookingdetail extends Component {
                                         <thead>
                                             <tr>
                                                 <th>Fullname</th>
-                                                <th>Phone </th>
+                                                {/* <th>Phone </th> */}
                                                 <th>From</th>
                                                 <th>To</th>
                                                 <th>Date</th>
@@ -78,7 +78,7 @@ class Adminbookingdetail extends Component {
 
                                             <tr>
                                                 <td>{booking.fullname}</td>
-                                                <td>{booking.phone}</td>
+                                                {/* <td>{booking.phone}</td> */}
                                                 <td>{booking.from}</td>
                                                 <td>{booking.to}</td>
                                                 <td>{booking.date}</td>

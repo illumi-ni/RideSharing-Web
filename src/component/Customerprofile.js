@@ -76,16 +76,7 @@ class Customerprofile extends Component {
             })
     }
 
-    // updateData = (e) => {
-    //     e.preventDefault();
-    //     axios.put('http://localhost:90/consumer_update', this.state)
-    //         .then((response) => {
-    //             console.log(response)
-    //         })
-    //         .catch((err) => {
-    //             console.log(err.response)
-    //         })
-    // }
+  
     render() {
         return (
             <div>

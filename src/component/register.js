@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../css/register.css';
 // import car from './car.jpg'
 import axios from 'axios';
-import carrent from "../images/carrent.jpg"
+import pic from "../images/pic.jpg"
 import { Link } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
 
@@ -61,17 +61,18 @@ class register extends Component {
 
             <div class="page-content">
 		<div class="form-v4-content">
-        <div style={{ backgroundImage: `url(${carrent})`,backgroundRepeat: 'no-repeat' , width :'100%'  }}>
+        <div style={{ backgroundImage: `url(${pic})`,backgroundRepeat: 'no-repeat' , width :'100%'  }}>
 			<div class="form-left">
          
 				<h2>INFOMATION</h2>
-				<p class="text-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et molestie ac feugiat sed. Diam volutpat commodo.</p>
-				<p class="text-2"><span>Eu ultrices:</span> Vitae auctor eu augue ut. Malesuada nunc vel risus commodo viverra. Praesent elementum facilisis leo vel.</p>
+				<p class="text-1">If you alreay have an account than you can click here.</p>
+				
                 <Link to ="/customer">
                 <div class="form-left-last">
 					<input type="submit" name="account" class="account" value="Have An Account"/>
 				</div>
                 </Link>
+                <p class="text-2"><span>Admin?</span>Click here to register your name.</p>
                 <Link to ="/adminregister">
                 <div class="form-left-last">
 					<input type="submit" name="account" class="account" value="Register for Admin"/>

@@ -43,7 +43,7 @@ function App() {
           </Route>
           
           <Route path ="/adminlogin">
-            
+            <Header/>
             <Login/>
             <Footer/>
           </Route>

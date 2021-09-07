@@ -36,6 +36,13 @@ calculatePrice() {
 
 // disable past dates
 
+disablePastDate() {
+    const today = new Date();
+    const dd = String(today.getDate() + 1).padStart(2, "0");
+    const mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+    const yyyy = today.getFullYear();
+    return yyyy + "-" + mm + "-" + dd;
+};
 	
    
 
@@ -195,7 +202,7 @@ SendItems=(e)=>{
 								<div class="col-md-6">
 									<div class="form-group">
 									<label style={{color:"white"}} >Date</label>
-										<input class="form-control" type="date" placeholder="Date..." name="date"  value={this.state.date} onChange={this.ChangeItem} required/>
+										<input class="form-control" type="date" min={this.disablePastDate()} placeholder="Date..." name="date"  value={this.state.date} onChange={this.ChangeItem} required/>
 										
 									</div>
 								</div>

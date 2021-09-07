@@ -170,18 +170,10 @@ class BookingUpdate extends Component{
                         </div>
                         <div class="form-group">
                             <label for="time">Time</label>
-                            <input type="time" class="form-control" id="time" value={this.state.time} onChange={this.changeHandler}/>
+                            <input class="form-control" type="time" id="time" name="time" min="09:00" max="18:00" value={this.state.time} onChange={this.changeHandler}/>
                         </div>
-                        {/* <div class="form-group">
                         
-                        <label for="distance">Distance</label>
-                            <input type="distance" class="form-control" id="distance" placeholder="Distance..." value={this.state.distance} onChange={this.changeHandler}/>
-                        </div>
-                        <div class="form-group">
-                            <label for="gender">Price</label>
-                            <input type="price" class="form-control" id="price" placeholder="Price" value={this.state.price} onChange={this.changeHandler}/>
-                        </div> */}
-                        <button style={{background:"black"}} onClick={this.updateData}>Update</button>
+                        <button style={{background:"black", color:"white", marginTop:"10px"}} onClick={this.updateData}>Update</button>
                         </div>
                         <div className="col-md-3">
                          </div>

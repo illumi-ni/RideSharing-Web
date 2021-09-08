@@ -1,9 +1,9 @@
-import React,{ Component }from 'react';
-import {Pie, Doughnut} from 'react-chartjs-2';
+import React, { Component } from 'react';
+import {Doughnut } from 'react-chartjs-2';
 
 const state = {
   labels: ['Total Customer', 'Total Driver', 'Total Ride',
-           'Cancel Ride', 'Total Booking'],
+    'Cancel Ride', 'Total Booking'],
   datasets: [
     {
       label: 'Rainfall',
@@ -15,46 +15,31 @@ const state = {
         '#6800B4'
       ],
       hoverBackgroundColor: [
-      '#501800',
-      '#4B5000',
-      '#175000',
-      '#003350',
-      '#35014F'
+        '#501800',
+        '#4B5000',
+        '#175000',
+        '#003350',
+        '#35014F'
       ],
       data: [60, 20, 62, 10, 49]
     }
   ]
 }
 
-export default class PieChart extends Component{
+export default class PieChart extends Component {
   render() {
     return (
       <div>
-        {/* <Pie
-          data={state}
-          options={{
-            title:{
-              display:true,
-              text:'Average Rainfall per month',
-              fontSize:20
-            },
-            legend:{
-              display:true,
-              position:'right'
-            }
-          }}
-        /> */}
-
         <Doughnut
           data={state}
           options={{
-            title:{
-              display:true,  
-              fontSize:18
+            title: {
+              display: true,
+              fontSize: 18
             },
-            legend:{
-              display:true,
-              position:'right'
+            legend: {
+              display: true,
+              position: 'right'
             }
           }}
         />

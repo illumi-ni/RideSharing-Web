@@ -1,9 +1,6 @@
-// import { left } from '@popperjs/core';
 import React, { useState, Component } from 'react';
 import '../css/booking.css';
 import axios from 'axios';
-// import DatePicker from "react-datepicker"
-// import $ from 'jquery'; 
 
 class booking extends Component {
     state = {
@@ -19,7 +16,6 @@ class booking extends Component {
         config: {
             headers: { 'authorization': `Bearer ${localStorage.getItem('token')}` }
         }
-
     }
 
     ChangeItem = (e) => {
@@ -27,7 +23,6 @@ class booking extends Component {
             [e.target.name]: e.target.value
         })
     }
-
 
     //img handler
     calculatePrice() {
@@ -46,9 +41,6 @@ class booking extends Component {
         const yyyy = today.getFullYear();
         return yyyy + "-" + mm + "-" + dd;
     };
-
-
-
 
     SendItems = (e) => {
         //preventDefault== By default refresh hunxa so, blank nahoss vannah refresh nahoss vannah
@@ -81,18 +73,14 @@ class booking extends Component {
                 console.log(error.response)
             })
     }
+
     render() {
-
-
         return (
-
             <div>
-
                 <section id="hero2">
                     <div class="hero2-container" data-aos="fade-up">
                         <h1>Welcome to Booking Page</h1>
                         <h2></h2>
-
                     </div>
                 </section>
 
@@ -105,7 +93,6 @@ class booking extends Component {
                                         <h1>Make Advanced Booking</h1>
                                     </div>
                                     <form>
-
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
@@ -200,27 +187,21 @@ class booking extends Component {
                                             </div>
                                         </div>
 
-
-
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label style={{ color: "white" }} >Date</label>
                                                     <input class="form-control" type="date" min={this.disablePastDate()} placeholder="Date..." name="date" value={this.state.date} onChange={this.ChangeItem} required />
-
                                                 </div>
                                             </div>
+
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label style={{ color: "white" }}>PickUp Time</label>
-
                                                     <input class="form-control" type="time" id="time" name="time" min="09:00" max="18:00" value={this.state.time} onChange={this.ChangeItem} required />
-
                                                 </div>
                                             </div>
-
                                         </div>
-
 
                                         <div class="form-btn">
                                             <button class="submit-btn" onClick={this.SendItems}>Book Now</button>
@@ -231,14 +212,7 @@ class booking extends Component {
                         </div>
                     </div>
                 </section>
-
-
-
-
-
-
             </div>
-
         )
     }
 }

@@ -3,11 +3,11 @@ import { Bar } from 'react-chartjs-2';
 
 const data = {
   labels: ['Weekly Gain', 'Customer', 'Driver', 'Cancel Ride', 'Total Ride', 'Booking'],
- 
+
   datasets: [
     {
       label: 'Increased Percentage',
-      data: [40, 60,20, 10, 62, 49,100],
+      data: [40, 60, 20, 10, 62, 49, 100],
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',
         'rgba(54, 162, 235, 0.2)',
@@ -44,13 +44,10 @@ const options = {
 const VerticalBar = () => (
   <>
     <div className='header'>
-     
       <div className='links'>
         <a
           className='btn btn-gh'
-          href='https://github.com/reactchartjs/react-chartjs-2/blob/master/example/src/charts/VerticalBar.js'
-        >
-         
+          href='https://github.com/reactchartjs/react-chartjs-2/blob/master/example/src/charts/VerticalBar.js'>
         </a>
       </div>
     </div>

@@ -2,39 +2,35 @@ import React, { Component } from 'react';
 import '../css/Admindetail.css';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-// import { FaLocationArrow,FaGoogleDrive,FaPhoneAlt } from 'react-icons/fa';
 
 class Admindetail extends Component {
-    state={
-       
-        details:[]
+    state = {
+        details: []
     }
- 
+
     //to get data automatically from database without any click event
-    componentDidMount(){
+    componentDidMount() {
         axios.get("http://localhost:90/customer/all")
-        .then((response)=>{
-            console.log(response)
+            .then((response) => {
+                console.log(response)
                 this.setState({
-                    details:response.data.data
+                    details: response.data.data
                 })
-
-        })
-        .catch((err)=>{
-            console.log(err.response)
-        })
+            })
+            .catch((err) => {
+                console.log(err.response)
+            })
     }
-    render() {
 
+    render() {
         return (
             <div className="container-fluid">
-
                 <section id="Admin">
                     <div className="Admin-container" data-aos="fade-up">
                         <h1>Admin Page</h1>
-
                     </div>
                 </section>
+
                 <div className="row customerdetail">
                     <div className="col-md-4 "></div>
                     <div className="col-md-4 ">
@@ -59,35 +55,32 @@ class Admindetail extends Component {
                             <div className="table-responsive">
                                 <div className="table-wrapper">
                                     <h1>Customer's Detail</h1>
-
-                                    <table className="table table-striped table-hover" style={{position:"relative", marginBottom: "30px"}}>
+                                    <table className="table table-striped table-hover" style={{ position: "relative", marginBottom: "30px" }}>
                                         <thead>
                                             <tr>
                                                 <th>Customer's Name</th>
                                                 <th>Email ID</th>
-                                                
+
                                                 <th>Phone Number</th>
                                                 <th>Gender</th>
                                             </tr>
-                                        {    
-                                            this.state.details.map((consumer)=>{
-                                            return(
 
-                                            <tr>
-                                                <td>{consumer.fullname}</td>
-                                                <td>{consumer.email}</td>
-                                                <td>{consumer.contact}</td>
-                                                <td>{consumer.gender}</td>
+                                            {
+                                                this.state.details.map((consumer) => {
+                                                    return (
 
-                                            </tr>
-                                            )
-                                            })
-                                        }
-                                            
+                                                        <tr>
+                                                            <td>{consumer.fullname}</td>
+                                                            <td>{consumer.email}</td>
+                                                            <td>{consumer.contact}</td>
+                                                            <td>{consumer.gender}</td>
 
+                                                        </tr>
+                                                    )
+                                                })
+                                            }
 
                                         </thead>
-
                                     </table>
                                 </div>
                             </div>
@@ -95,10 +88,8 @@ class Admindetail extends Component {
                     </div>
                 </section>
             </div>
-
         )
     }
 }
-
 
 export default Admindetail

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import '../css/Customerprofile.css';
 import { Link } from 'react-router-dom';
-import profile from "../images/profile.jpg"
 import Delete from "@material-ui/icons/Delete"
 import Update from "@material-ui/icons/Update"
 import Date from "@material-ui/icons/DateRange"
@@ -12,7 +11,6 @@ import axios from "axios"
 
 class UpcomingRide extends Component {
     state = {
-
         details: [],
         config: {
             headers: { 'authorization': `Bearer ${localStorage.getItem('token')}` }
@@ -32,22 +30,8 @@ class UpcomingRide extends Component {
             .catch((err) => {
                 console.log(err.response)
             })
-
-
-            // axios.get("http://localhost:90/booking/all")
-            // .then((response) => {
-            //     console.log("BookingData")
-            //     console.log(response)
-            //     this.setState({
-            //         details: response.data.data
-            //     })
-            // })
-            // .catch((err) => {
-            //     console.log(err.response)
-            // })
     }
 
-    
     DeleteBooking = (BookingId) => {
         axios.delete("http://localhost:90/delete/booking/" + BookingId)
             .then((response) => {
@@ -62,17 +46,15 @@ class UpcomingRide extends Component {
     render() {
         return (
             <div>
-
                 <section id="hero5">
                     <div class="hero5-container" data-aos="fade-up">
                         <h1>Welcome to Profile</h1>
                         <h2></h2>
-
                     </div>
                 </section>
+
                 <div className="container-fluid">
                     <section id="CustomerProfile">
-
                         <div className="row customerdetail">
                             <div className="col-md-4 "></div>
                             <div className="col-md-4 ">
@@ -80,10 +62,10 @@ class UpcomingRide extends Component {
                                     <Link to="/Customerprofile">
                                         <li> Profile </li>
                                     </Link>
+
                                     <Link to="/Upcomingride">
                                         <li> UpcomingRide </li>
                                     </Link>
-
                                 </ul>
                             </div>
                             <div className="col-md-4 "></div>
@@ -111,12 +93,8 @@ class UpcomingRide extends Component {
                     }
 
                 </div>
-
-            
-
             </div>
         )
-
     }
 }
 

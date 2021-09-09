@@ -98,11 +98,11 @@ class register extends Component {
 
                         <div class="form-row " style={{ display: "flex", marginTop: "20px", marginBottom: "20px" }}>
                             <label for="gender">Gender</label>
-                            <input type="radio" value="Male" name="gender" checked={this.state.gender === "Male"}
+                            <input type="radio" value="Male" name="male" checked={this.state.gender === "Male"}
                                 onChange={this.onValueChange} style={{ marginTop: "5px" }} /> Male
-                            <input type="radio" value="Female" name="gender" checked={this.state.gender === "Female"}
+                            <input type="radio" value="Female" name="female" checked={this.state.gender === "Female"}
                                 onChange={this.onValueChange} style={{ marginTop: "5px" }} /> Female
-                            <input type="radio" value="Other" name="gender" checked={this.state.gender === "Other"}
+                            <input type="radio" value="Other" name="other" checked={this.state.gender === "Other"}
                                 onChange={this.onValueChange} style={{ marginTop: "5px" }} /> Other
                         </div>
 

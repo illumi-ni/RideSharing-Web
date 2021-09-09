@@ -13,8 +13,10 @@ class BookingUpdate extends Component {
         distance: "",
         price: "",
         id: this.props.match.params.id,
-
-        chklogin: false
+        chklogin: false,
+        config: {
+            headers: { 'authorization': `Bearer ${localStorage.getItem('token')}` }
+        }
     }
     
     changeHandler = (e) => {
@@ -44,8 +46,9 @@ class BookingUpdate extends Component {
     }
 
     updateData = (e) => {
+        console.log(this.state)
         e.preventDefault();
-        axios.put('http://localhost:90/update/booking', this.state)
+        axios.put('http://localhost:90/update/booking', this.state, this.state.config)
             .then((response) => {
                 console.log(response)
                 this.setState({

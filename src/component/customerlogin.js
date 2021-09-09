@@ -51,7 +51,7 @@ class customerlogin extends Component {
                                         <p className="text-muted mb-4">Please enter your OTP to login.</p>
                                         <form className="demoform">
                                             <div className="group">
-                                                <input type="text" placeholder="OTP...." name="otp" id="otp" value={this.state.otp}
+                                                <input type="text" placeholder="OTP" name="otp" id="otp" value={this.state.otp}
                                                     onChange={(event) => { this.setState({ otp: event.target.value }) }}
                                                     required className="form-control rounded-pill border-0 shadow-sm px-4 text-primary" />
                                             </div>

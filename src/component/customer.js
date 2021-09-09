@@ -50,7 +50,7 @@ class customer extends Component {
                                         <p class="text-muted mb-4">Please enter your email to login.</p>
                                         <form className="demoform">
                                             <div class="form-group">
-                                                <input type="text" placeholder="Enter your email......"
+                                                <input type="text" placeholder="Enter your email"
                                                     value={this.state.email} onChange={(event) => { this.setState({ email: event.target.value }) }}
                                                     name="username" id="username" required class="form-control rounded-pill border-0 shadow-sm px-4 text-primary" />
                                             </div>
